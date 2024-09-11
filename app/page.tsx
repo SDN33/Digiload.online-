@@ -19,7 +19,7 @@ const Home: React.FC = () => {
             <h1 className="text-4xl font-bold mb-8">Découvrez<br />Canva Pro<br />Gratuitement</h1>
             <Link href="https://www.canva.com/pro">
               <a
-                className="bg-white text-blue-700 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-100"
+                className="bg-white text-blue-700 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-500"
                 target="_blank"
                 rel="noopener noreferrer"
               >
