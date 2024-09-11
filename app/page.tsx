@@ -1,7 +1,6 @@
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Link from 'next/link';
-import Image from 'next/image';
 
 <link
   rel="stylesheet"
@@ -73,7 +72,7 @@ const Home: React.FC = () => {
               fontFamily="Oxygen, sans-serif"
               fontWeight="bold"
             >
-            
+
             </text>
           </svg>
         </div>
