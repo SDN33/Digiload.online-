@@ -15,7 +15,7 @@ const Home: React.FC = () => {
         {/* Section gauche avec le bouton */}
         <div className="flex-1 flex items-center justify-center p-8">
           <div className="text-center space-y-4 md:space-y-8">
-            <h1 className="text-4xl font-bold mb-8">Découvrez<br />Canva Pro<br />Gratuitement</h1>
+            <h1 className="text-4xl font-bold mb-8">Obtenez<br />Canva Pro<br />Gratuitement</h1>
             <Link href="https://www.canva.com/pro">
               <a
                 className="bg-white text-blue-700 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-500"
