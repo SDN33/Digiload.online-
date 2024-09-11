@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
+// Import de la police
 const oxygen = localFont({
-  src: "public/fonts/Oxygen.ttf",
+  src: "./fonts/Oxygen.ttf", // Utilisez le chemin relatif
   variable: "--font-oxygen",
   weight: "300 700",
 });
@@ -20,9 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${oxygen.variable} antialiased`}
-      >
+      <body className={`${oxygen.variable} antialiased`}>
         {children}
       </body>
     </html>
