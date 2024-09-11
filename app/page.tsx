@@ -28,8 +28,9 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        {/* Section droite avec le design SVG */}
-        <div className="flex-1 flex items-center justify-center p-8">
+        {/* Section droite avec le design SVG et l'image PNG */}
+        <div className="flex-1 flex flex-col items-center justify-center p-8">
+          {/* SVG */}
           <svg
             width="400"
             height="400"
@@ -61,20 +62,14 @@ const Home: React.FC = () => {
               stroke="white"
               strokeWidth="4"
             />
-            {/* Ajout des lettres "CFP" */}
-            <text
-              x="50%"
-              y="50%"
-              textAnchor="middle"
-              alignmentBaseline="central"
-              fill="white"
-              fontSize="60"
-              fontFamily="Oxygen, sans-serif"
-              fontWeight="bold"
-            >
-
-            </text>
           </svg>
+
+          {/* Ajout du PNG sous le SVG */}
+          <img
+            src="/images/bg.png"
+            alt="Background"
+            className="mt-8 w-full max-w-md opacity-90"
+          />
         </div>
       </main>
       <Footer />
