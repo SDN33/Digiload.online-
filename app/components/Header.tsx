@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-purple-700 text-white p-4 flex justify-between items-center">
+    <header className="bg-transparent text-white p-4 flex justify-between items-center box-border">
       <div className="flex items-center">
         <span className="ml-4 text-lg font-semibold">Canva France Pro</span>
       </div>
