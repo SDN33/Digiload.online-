@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const Home: React.FC = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-r from-purple-700 to-blue-500 text-white">
+    <div className="flex flex-col min-h-screen bg-gradient-to-r from-purple-400 to-blue-500 text-white">
       <Header />
       <main className="flex flex-1 flex-col md:flex-row">
         {/* Section gauche avec le bouton */}
