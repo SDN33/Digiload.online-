@@ -1,18 +1,23 @@
-// components/Header.tsx
 import Link from 'next/link';
 
 const Header: React.FC = () => {
   return (
     <header className="bg-purple-700 text-white p-4 flex justify-between items-center">
       <div className="flex items-center">
-
-        <span className="ml-4 text-lg font-semibold">CanvaFrancePro</span>
+        <span className="ml-4 text-lg font-semibold">Canva France Pro</span>
       </div>
       <nav>
-        <ul className="flex space-x-4">
+        <ul className="flex space-x-4 items-center">
           <li><Link href="/"><a className="hover:text-gray-300">Accueil</a></Link></li>
           <li><Link href="/about"><a className="hover:text-gray-300">Nos Formations</a></Link></li>
           <li><Link href="/contact"><a className="hover:text-gray-300">Contact</a></Link></li>
+          <li>
+            <Link href="/try">
+              <a className="bg-white text-purple-700 px-4 py-2 rounded hover:bg-gray-100 transition">
+                Essayer maintenant
+              </a>
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>

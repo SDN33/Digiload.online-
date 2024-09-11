@@ -76,12 +76,6 @@ const Home: React.FC = () => {
               <strong>CFP</strong>
             </text>
           </svg>
-          <Image
-            src="/images/logo.png" // Assurez-vous de placer votre logo dans le dossier public/images
-            alt="Still-inov Formation Logo"
-            width={150}
-            height={40}
-          />
         </div>
       </main>
       <Footer />
