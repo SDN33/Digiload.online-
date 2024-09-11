@@ -13,7 +13,7 @@ const Header: React.FC = () => {
           <li><Link href="/contact"><a className="hover:text-gray-300">Contact</a></Link></li>
           <li>
             <Link href="/try">
-              <a className="bg-white text-purple-700 px-4 py-2 rounded hover:bg-gray-100 transition">
+              <a className="bg-white text-blue-500 px-4 py-2 rounded hover:bg-gray-100 transition">
                 Essayer maintenant
               </a>
             </Link>
