@@ -1,6 +1,8 @@
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Link from 'next/link';
+import Image from 'next/image';
+
 
 const Home: React.FC = () => {
   return (
@@ -54,6 +56,12 @@ const Home: React.FC = () => {
               strokeWidth="4"
             />
           </svg>
+          <Image
+            src="/images/logo.png" // Assurez-vous de placer votre logo dans le dossier public/images
+            alt="Still-inov Formation Logo"
+            width={150}
+            height={40}
+          />
         </div>
       </main>
       <Footer />
