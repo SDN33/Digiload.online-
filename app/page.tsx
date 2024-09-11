@@ -73,7 +73,7 @@ const Home: React.FC = () => {
               fontFamily="Oxygen, sans-serif"
               fontWeight="bold"
             >
-              CFP
+              <strong>CFP</strong>
             </text>
           </svg>
           <Image
