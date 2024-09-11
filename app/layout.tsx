@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 const oxygen = localFont({
-  src: "./fonts/Oxygen.woff",
+  src: "./fonts/Oxygen.ttf",
   variable: "--font-oxygen",
   weight: "300 700",
 });
