@@ -4,7 +4,7 @@ const Header: React.FC = () => {
   return (
     <header className="bg-transparent text-white p-4 flex justify-between items-center box-border">
       <div className="flex items-center">
-        <span className="ml-4 text-lg font-semibold">Canva France Pro</span>
+        <span className="ml-4 text-lg font-semibold">DigiLoad.xyz</span>
       </div>
       <nav>
         <ul className="flex space-x-4 items-center">
