@@ -4,9 +4,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap"
-      />
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap"
+/>
+
 const Home: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-r from-purple-700 to-blue-500 text-white">
@@ -15,7 +16,7 @@ const Home: React.FC = () => {
         {/* Section gauche avec le bouton */}
         <div className="flex-1 flex items-center justify-center p-8">
           <div className="text-center space-y-4 md:space-y-8">
-            <h1 className="text-4xl font-bold mb-8">Decouvrez<br />Canva Pro<br />Gratuitement</h1>
+            <h1 className="text-4xl font-bold mb-8">Découvrez<br />Canva Pro<br />Gratuitement</h1>
             <Link href="https://www.canva.com/pro">
               <a
                 className="bg-white text-blue-700 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-100"
@@ -61,6 +62,19 @@ const Home: React.FC = () => {
               stroke="white"
               strokeWidth="4"
             />
+            {/* Ajout des lettres "CFP" */}
+            <text
+              x="50%"
+              y="50%"
+              textAnchor="middle"
+              alignmentBaseline="central"
+              fill="white"
+              fontSize="60"
+              fontFamily="Oxygen, sans-serif"
+              fontWeight="bold"
+            >
+              CFP
+            </text>
           </svg>
           <Image
             src="/images/logo.png" // Assurez-vous de placer votre logo dans le dossier public/images
