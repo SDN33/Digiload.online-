@@ -11,16 +11,18 @@ const Home: React.FC = () => {
       <main className="flex flex-1 flex-col md:flex-row">
         {/* Section gauche avec le bouton */}
         <div className="flex-1 flex items-center justify-center p-8">
-          <h1 className="text-4xl font-bold mb-8">Decouvrez Canva Pro Gratuitement</h1>
-          <Link href="https://www.canva.com/pro">
-            <a
-              className="bg-white text-blue-700 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-100"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Canva Pro Gratuit
-            </a>
-          </Link>
+          <div className="text-center space-y-4 md:space-y-8">
+            <h1 className="text-4xl font-bold mb-8">Decouvrez Canva Pro Gratuitement</h1>
+            <Link href="https://www.canva.com/pro">
+              <a
+                className="bg-white text-blue-700 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-100"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Canva Pro Gratuit
+              </a>
+            </Link>
+          </div>
         </div>
 
         {/* Section droite avec le design SVG */}
