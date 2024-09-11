@@ -3,7 +3,10 @@ import Footer from './components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
 
-
+<link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap"
+      />
 const Home: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-r from-purple-700 to-blue-500 text-white">
