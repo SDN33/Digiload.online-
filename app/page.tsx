@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 const Home: React.FC = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-r from-purple-700 to-blue-500 text-white">
+    <div className="flex flex-col min-h-screen bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat bg-[url('/images/bg.png')] text-white">
       <Header />
       <main className="flex flex-1 flex-col md:flex-row">
         {/* Section gauche avec le bouton */}
@@ -28,9 +28,8 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        {/* Section droite avec le design SVG et l'image PNG */}
+        {/* Section droite avec le design SVG */}
         <div className="flex-1 flex flex-col items-center justify-center p-8">
-          {/* SVG */}
           <svg
             width="400"
             height="400"
@@ -63,13 +62,6 @@ const Home: React.FC = () => {
               strokeWidth="4"
             />
           </svg>
-
-          {/* Ajout du PNG sous le SVG */}
-          <img
-            src="/images/bg.png"
-            alt="Background"
-            className="mt-8 w-full max-w-md opacity-90"
-          />
         </div>
       </main>
       <Footer />
