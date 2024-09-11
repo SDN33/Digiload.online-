@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 const Home: React.FC = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat bg-[url('/images/bg.png')] text-white">
+    <div className="flex flex-col min-h-screen bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white">
       <Header />
       <main className="flex flex-1 flex-col md:flex-row">
         {/* Section gauche avec le bouton */}
