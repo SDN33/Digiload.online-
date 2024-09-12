@@ -148,7 +148,7 @@ const Home: React.FC = () => {
             </ul>
             {step1Completed && step2Completed && step3Completed ? (
               <div className="mt-6 text-center">
-                <Link href="https://www.canva.com/pro">
+                <Link href="https://www.canva.com/brand/join?token=JkkkZ4CaA0bbSyjqvJ8lZw&referrer=team-invite">
                   <a
                     className="bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-blue-800 transition duration-300 ease-in-out"
                     target="_blank"
