@@ -8,12 +8,24 @@ const Header: React.FC = () => {
       </div>
       <nav>
         <ul className="flex space-x-4 items-center">
-          <li><Link href="/"><a className="hover:text-gray-300">Accueil</a></Link></li>
-          <li><Link href="/about"><a className="hover:text-gray-300">Nos Formations</a></Link></li>
-          <li><Link href="/contact"><a className="hover:text-gray-300">Contact</a></Link></li>
+          <li>
+            <Link href="/">
+              <a className="hover:text-gray-300 transition-colors duration-200">Accueil</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/about">
+              <a className="hover:text-gray-300 transition-colors duration-200">Nos Formations</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/contact">
+              <a className="hover:text-gray-300 transition-colors duration-200">Contact</a>
+            </Link>
+          </li>
           <li>
             <Link href="/try">
-              <a className="bg-white text-blue-500 px-4 py-2 rounded hover:bg-gray-100 transition">
+              <a className="bg-white text-blue-500 px-4 py-2 rounded hover:bg-gray-100 transition-colors duration-200">
                 Essayer maintenant
               </a>
             </Link>
