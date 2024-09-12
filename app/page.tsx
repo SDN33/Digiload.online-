@@ -27,6 +27,18 @@ const Home: React.FC = () => {
             <h1 className="text-lg md:text-lg font-light leading-tight">
               Obtenez Canva Pro<strong> Gratuitement</strong>
             </h1>
+            {/* Adding the Canva logo with white background */}
+            <div className="flex justify-center">
+              <div className="bg-white rounded-full p-4">
+                <Image
+                  src="/images/logocanva.png"
+                  alt="Canva Logo"
+                  width={150}
+                  height={50}
+                  objectFit="contain"
+                />
+              </div>
+            </div>
             <br />
             <Link href="https://www.canva.com/pro">
               <a
@@ -40,18 +52,7 @@ const Home: React.FC = () => {
             <br />
 
 
-            {/* Adding the Canva logo with white background */}
-            <div className="flex justify-center">
-              <div className="bg-white rounded-full p-4">
-                <Image
-                  src="/images/logocanva.png"
-                  alt="Canva Logo"
-                  width={150}
-                  height={50}
-                  objectFit="contain"
-                />
-              </div>
-            </div>
+
           </div>
         </div>
 
