@@ -10,7 +10,7 @@ const oxygen = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Digiload.online | Formations Canva en ligne",
+  title: "DigiLoad | Formations Canva en ligne",
   description: "La communauté des utilisateurs de Canva Pro en France",
 };
 
