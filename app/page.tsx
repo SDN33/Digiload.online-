@@ -10,10 +10,9 @@ const Home: React.FC = () => {
       <main className="flex flex-1 flex-col md:flex-row items-center">
         {/* Section gauche avec le bouton */}
         <div className="flex-1 flex items-center justify-center p-8 md:p-16">
-          <div className="text-center space-y-4 md:space-y-8 mt-16 md:-mt-12">
-
+          <div className="text-center space-y-4 md:space-y-8 mt-8 md:mt-16">
             {/* Replace h1 with the image */}
-            <div className="flex justify-center">
+            <div className="flex flex-col items-center">
               <Image
                 src="/images/logo.png"
                 alt="Logo"
@@ -21,7 +20,7 @@ const Home: React.FC = () => {
                 height={100}
                 objectFit="contain"
               />
-              <h1 className="text-xl md:text-xl font-bold leading-tight -mt-12">
+              <h1 className="text-xl md:text-2xl font-bold leading-tight mt-4">
                 La communauté des utilisateurs de Canva
               </h1>
             </div>
