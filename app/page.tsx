@@ -22,11 +22,12 @@ const Home: React.FC = () => {
                 objectFit="contain"
               />
             </div>
-
-            {/* h2 changed to h1 without changing the classes */}
-            <h1 className="text-lg md:text-lg font-light leading-tight">
-              Obtenez Canva Pro<strong> Gratuitement</strong>
+            <h1 className="text-2xl md:text-4xl font-bold leading-tight">
+              La communauté des utilisateurs de Canva
             </h1>
+            <h2 className="text-lg md:text-lg font-light leading-tight">
+              Obtenez Canva Pro<strong> Gratuitement</strong>
+            </h2>
             <br />
             <Link href="https://www.canva.com/pro">
               <a
