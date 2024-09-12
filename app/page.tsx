@@ -25,7 +25,7 @@ const Home: React.FC = () => {
             </Link>
             <br />
             <h2 className="text-sm font-bold mb-4 md:mb-8 leading-tight">
-              Obtenez<br />Canva Pro<br /><strong>Gratuitement</strong>
+              Obtenez Canva Pro<strong> Gratuitement</strong>
             </h2>
           </div>
         </div>
