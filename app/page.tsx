@@ -162,6 +162,8 @@ const Home: React.FC = () => {
             ) : (
               <div className="mt-6 text-center text-red-500">
                 Vous devez compléter les trois étapes pour débloquer le lien.
+                <br />
+                <small>(Si le lien ne fonctionne pas, désactivez votre bloqueur de publicités)</small>
               </div>
             )}
           </div>
