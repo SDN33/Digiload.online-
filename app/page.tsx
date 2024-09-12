@@ -10,7 +10,7 @@ const Home: React.FC = () => {
       <main className="flex flex-1 flex-col md:flex-row items-center">
         {/* Section gauche avec le bouton */}
         <div className="flex-1 flex items-center justify-center p-8 md:p-16">
-          <div className="text-center space-y-1 md:space-y-8 mt-8 md:mt-16">
+          <div className="text-center space-y-4 md:space-y-8 mt-8 md:mt-16">
             {/* Replace h1 with the image */}
             <div className="flex flex-col items-center">
               <Image
