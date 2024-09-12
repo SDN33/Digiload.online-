@@ -27,7 +27,7 @@ export const metadata: Metadata & { og: OGMetadata } = {
   og: {
     title: "Canva Pro Gratuit | Rejoignez la Communauté de Canva en France",
     description: "Obtenez Canva Pro gratuitement avec notre communauté exclusive. Profitez des avantages de Canva Pro sans frais et découvrez comment notre communauté d'utilisateurs en France facilite l'accès à Canva Pro.",
-    image: "./images/banner.png",
+    image: "https://digiload.online/images/banner.png", // Utilise le chemin complet
     url: "https://digiload.online",
     type: "website"
   },
@@ -35,9 +35,10 @@ export const metadata: Metadata & { og: OGMetadata } = {
     card: "summary_large_image",
     title: "Canva Pro Gratuit | Rejoignez la Communauté de Canva en France",
     description: "Obtenez Canva Pro gratuitement avec notre communauté exclusive. Profitez des avantages de Canva Pro sans frais et découvrez comment notre communauté d'utilisateurs en France facilite l'accès à Canva Pro.",
-    images: "./images/banner.png"
+    images: "https://digiload.online/images/banner.png" // Chemin complet ici aussi
   }
 };
+
 
 export default function RootLayout({
   children,
