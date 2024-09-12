@@ -1,5 +1,3 @@
-"use client"
-
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -9,6 +7,7 @@ import Footer from './components/Footer';
 const Home: React.FC = () => {
   const [step1Completed, setStep1Completed] = useState(false);
   const [step2Completed, setStep2Completed] = useState(false);
+  const [step3Completed, setStep3Completed] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
 
   const handleStep1Click = () => {
@@ -17,6 +16,10 @@ const Home: React.FC = () => {
 
   const handleStep2Click = () => {
     setStep2Completed(true);
+  };
+
+  const handleStep3Click = () => {
+    setStep3Completed(true);
   };
 
   return (
@@ -128,8 +131,20 @@ const Home: React.FC = () => {
                   Cliquer à nouveau ici
                 </a>
               </li>
+              <li className={`flex items-center ${step3Completed ? 'text-green-600' : ''}`}>
+                {step3Completed ? '✔️' : '➤'} Étape 3:
+                <a
+                  href="https://upodaitie.net/4/8083510"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 underline ml-2"
+                  onClick={handleStep3Click}
+                >
+                  Cliquer une dernière fois ici
+                </a>
+              </li>
             </ul>
-            {step1Completed && step2Completed ? (
+            {step1Completed && step2Completed && step3Completed ? (
               <div className="mt-6 text-center">
                 <Link href="https://www.canva.com/pro">
                   <a
@@ -143,7 +158,7 @@ const Home: React.FC = () => {
               </div>
             ) : (
               <div className="mt-6 text-center text-red-500">
-                Vous devez compléter les deux étapes pour débloquer le lien.
+                Vous devez compléter les trois étapes pour débloquer le lien.
               </div>
             )}
           </div>
