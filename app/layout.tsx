@@ -2,6 +2,15 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
+// Définition du type pour les métadonnées Open Graph
+interface OGMetadata {
+  title: string;
+  description: string;
+  image: string;
+  url: string;
+  type: string;
+}
+
 // Import de la police
 const oxygen = localFont({
   src: "./fonts/Oxygen.ttf", // Utilisez le chemin relatif
@@ -9,7 +18,7 @@ const oxygen = localFont({
   weight: "300 700",
 });
 
-export const metadata: Metadata & { og: any } = {
+export const metadata: Metadata & { og: OGMetadata } = {
   title: "Canva Pro Gratuit | Rejoignez la Communauté de Canva en France",
   description: "Obtenez Canva Pro gratuitement avec notre communauté exclusive. Profitez des avantages de Canva Pro sans frais et découvrez comment notre communauté d'utilisateurs en France facilite l'accès à Canva Pro.",
   keywords: "Canva Pro gratuit, Canva gratuit, obtenir Canva Pro gratuitement, communauté Canva, avantages Canva Pro, offre Canva Pro, Canva Pro France, Canva Pro sans frais, Canva Pro gratuit en France, avoir canva gratuit.",
