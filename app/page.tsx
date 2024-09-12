@@ -11,8 +11,11 @@ const Home: React.FC = () => {
         <div className="flex-1 flex items-center justify-center p-8 md:p-16">
           <div className="text-center space-y-4 md:space-y-8 mt-16 md:-mt-12">
             <h1 className="text-5xl md:text-2xl font-bold leading-tight">
-              DigiLoad<br />La Communautée Digital<br />
+              DigiLoad<br />
             </h1>
+            <p className="text-lg md:text-lg font-light leading-tight">
+              La communauté des utilisateurs de Canva en France
+            </p>
             <br />
             <Link href="https://www.canva.com/pro">
               <a
@@ -24,9 +27,9 @@ const Home: React.FC = () => {
               </a>
             </Link>
             <br />
-            <h2 className="text-sm font-bold mb-4 md:mb-8 leading-tight">
+            <h5 className="text-sm font-bold mb-4 md:mb-8 leading-tight">
               Obtenez Canva Pro<strong> Gratuitement</strong>
-            </h2>
+            </h5>
           </div>
         </div>
 
