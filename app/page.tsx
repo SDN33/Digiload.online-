@@ -13,10 +13,9 @@ const Home: React.FC = () => {
   const [step3Completed, setStep3Completed] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [adBlockerDetected, setAdBlockerDetected] = useState(false);
-  const [isProcessingStep, setIsProcessingStep] = useState(false); // Nouvelle variable pour éviter plusieurs clics à la fois
 
   useEffect(() => {
-    // Fonction pour détecter le bloqueur de publicités
+    // Fonction pour détecter le bloqueur de pub
     const detectAdBlocker = () => {
       const testAd = document.createElement('div');
       testAd.innerHTML = '&nbsp;';
@@ -33,36 +32,44 @@ const Home: React.FC = () => {
     detectAdBlocker();
   }, []);
 
-  // Fonction pour gérer le clic sur une étape avec un délai de 5 secondes
   const handleStepClick = (step: number) => {
-    if (!isProcessingStep) {
-      setIsProcessingStep(true); // Empêche les clics multiples
-
-      setTimeout(() => {
-        switch (step) {
-          case 1:
-            setStep1Completed(true);
-            break;
-          case 2:
-            setStep2Completed(true);
-            break;
-          case 3:
-            setStep3Completed(true);
-            break;
-        }
-        setIsProcessingStep(false); // Autorise de nouveau les clics
-      }, 5000); // Délai de 5 secondes
+    switch (step) {
+      case 1:
+        setStep1Completed(true);
+        break;
+      case 2:
+        setTimeout(() => setStep2Completed(true), 5000); // délai de 5 secondes
+        break;
+      case 3:
+        setTimeout(() => setStep3Completed(true), 5000); // délai de 5 secondes
+        break;
     }
   };
+
+  const validateSteps = () => {
+    if (!adBlockerDetected) {
+      setTimeout(() => setStep1Completed(true), 5000);
+    }
+  };
+
+  useEffect(() => {
+    validateSteps();
+  }, [adBlockerDetected]);
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white">
       <Header />
+
+      {/* Avertissement adblock */}
+      {adBlockerDetected && (
+        <div className="fixed top-0 left-0 right-0 bg-red-500 text-white p-4 text-center">
+          Bloqueur de publicités détecté. Veuillez le désactiver pour accéder à toutes les fonctionnalités du site.
+        </div>
+      )}
+
       <main className="flex flex-1 flex-col md:flex-row items-center">
-        {/* Section gauche avec le bouton */}
         <div className="flex-1 flex items-center justify-center p-8 md:p-16 mt-[-2rem] md:mt-[-4rem]">
           <div className="text-center space-y-4 md:space-y-8">
-            {/* Remplacement du h1 par l'image */}
             <div className="flex flex-col items-center">
               <Image
                 src="/images/logo.png"
@@ -88,7 +95,6 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        {/* Section droite avec le design SVG */}
         <div className="flex-1 flex flex-col items-center justify-center p-8 md:p-16">
           <svg
             width="300"
@@ -125,11 +131,9 @@ const Home: React.FC = () => {
         </div>
       </main>
 
-      {/* Footer */}
       <Footer />
       <Analytics />
 
-      {/* Pop-up */}
       {showPopup && (
         <div className="fixed inset-0 bg-gray-600 bg-opacity-75 flex justify-center items-center">
           <div className="bg-white text-black p-8 rounded-lg shadow-lg relative">
