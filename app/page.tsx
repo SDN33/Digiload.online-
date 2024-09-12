@@ -29,7 +29,7 @@ const Home: React.FC = () => {
             </h1>
             {/* Adding the Canva logo with white background */}
             <div className="flex justify-center">
-              <div className="bg-white rounded-full">
+              <div className="bg-white rounded-full p-4">
                 <Image
                   src="/images/logocanva.png"
                   alt="Canva Logo"
