@@ -96,40 +96,38 @@ const Home: React.FC = () => {
 
         {/* Section droite avec le design SVG */}
         <div className="flex-1 flex flex-col items-center justify-center p-8 md:p-16">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
-          <defs>
-            <filter id="glow">
-              <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
-              <feMerge>
-                <feMergeNode in="coloredBlur"/>
-                <feMergeNode in="SourceGraphic"/>
-              </feMerge>
-            </filter>
-          </defs>
-        
-          <rect width="400" height="400" fill="none"/>
-        
-          <circle cx="200" cy="200" r="150" stroke="white" stroke-width="4" fill="none" filter="url(#glow)"/>
-        
-          <path d="M100 100 Q150 50 200 100 T300 100" stroke="white" stroke-width="4" fill="none" filter="url(#glow)"/>
-          <path d="M100 300 Q150 250 200 300 T300 300" stroke="white" stroke-width="4" fill="none" filter="url(#glow)"/>
-        
-          <path d="M200 100 L200 300" stroke="white" stroke-width="4" filter="url(#glow)"/>
-          <path d="M100 200 L300 200" stroke="white" stroke-width="4" filter="url(#glow)"/>
-        
-          <circle cx="200" cy="200" r="20" fill="white" opacity="0.7"/>
-        
-          <g transform="rotate(45 200 200)">
-            <rect x="180" y="180" width="40" height="40" fill="white" opacity="0.5"/>
-          </g>
-        
-          <path d="M50 50 L100 50 L75 25 Z" fill="white" opacity="0.7"/>
-          <path d="M350 50 L300 50 L325 25 Z" fill="white" opacity="0.7"/>
-          <path d="M50 350 L100 350 L75 375 Z" fill="white" opacity="0.7"/>
-          <path d="M350 350 L300 350 L325 375 Z" fill="white" opacity="0.7"/>
-        
-          <text x="200" y="30" font-family="Arial" font-size="20" fill="white" text-anchor="middle" opacity="0.9">Design Complexe</text>
-        </svg>
+          <svg
+            width="300"
+            height="300"
+            viewBox="0 0 400 400"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="text-white opacity-70 md:w-96 md:h-96"
+          >
+            <circle cx="200" cy="200" r="150" stroke="white" strokeWidth="4" />
+            <path
+              d="M100 100 Q150 50 200 100 T300 100"
+              stroke="white"
+              strokeWidth="4"
+              fill="none"
+            />
+            <path
+              d="M100 300 Q150 250 200 300 T300 300"
+              stroke="white"
+              strokeWidth="4"
+              fill="none"
+            />
+            <path
+              d="M200 100 L200 300"
+              stroke="white"
+              strokeWidth="4"
+            />
+            <path
+              d="M100 200 L300 200"
+              stroke="white"
+              strokeWidth="4"
+            />
+          </svg>
         </div>
       </main>
 
