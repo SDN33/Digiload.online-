@@ -38,11 +38,6 @@ const Header: React.FC = () => {
         <Link href="/"><a className="hover:text-gray-300">Accueil</a></Link>
         <Link href="/about"><a className="hover:text-gray-300">Nos Formations</a></Link>
         <Link href="/contact"><a className="hover:text-gray-300">Contact</a></Link>
-        <Link href="/try">
-          <a className="bg-white text-blue-500 px-4 py-2 rounded hover:bg-gray-300 transition duration-300 ease-in-out">
-            Essayer maintenant
-          </a>
-        </Link>
       </nav>
 
       {/* Menu mobile déroulant */}
@@ -52,13 +47,6 @@ const Header: React.FC = () => {
             <li><Link href="/"><a onClick={() => setIsMenuOpen(false)} className="hover:text-gray-300">Accueil</a></Link></li>
             <li><Link href="/about"><a onClick={() => setIsMenuOpen(false)} className="hover:text-gray-300">Nos Formations</a></Link></li>
             <li><Link href="/contact"><a onClick={() => setIsMenuOpen(false)} className="hover:text-gray-300">Contact</a></Link></li>
-            <li>
-              <Link href="/try">
-                <a onClick={() => setIsMenuOpen(false)} className="bg-white text-blue-500 px-4 py-2 roundedhover:bg-gray-400 transition duration-300 ease-in-out">
-                  Essayer maintenant
-                </a>
-              </Link>
-            </li>
           </ul>
         </nav>
       )}
