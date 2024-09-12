@@ -11,7 +11,7 @@ const Home: React.FC = () => {
         <div className="flex-1 flex items-center justify-center p-8 md:p-16">
           <div className="text-center space-y-4 md:space-y-8 mt-16 md:-mt-12">
             <h1 className="text-4xl md:text-2xl font-bold leading-tight">
-              La communauté<br />francophone<br />Canva
+              DigiLoad<br />La communautée digital<br />
             </h1>
             <br />
             <h2 className="text-sm font-bold mb-4 md:mb-8 leading-tight">
