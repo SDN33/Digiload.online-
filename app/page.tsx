@@ -9,9 +9,9 @@ const Home: React.FC = () => {
       <Header />
       <main className="flex flex-1 flex-col md:flex-row items-center">
         {/* Section gauche avec le bouton */}
-        <div className="flex-1 flex items-center justify-center p-8 md:p-16">
-          <div className="text-center space-y-4 md:space-y-8 mt-8 md:mt-16">
-            {/* Replace h1 with the image */}
+        <div className="flex-1 flex items-center justify-center p-8 md:p-16 mt-[-2rem] md:mt-[-4rem]">
+          <div className="text-center space-y-4 md:space-y-8">
+            {/* Remplacer le h1 par l'image */}
             <div className="flex flex-col items-center">
               <Image
                 src="/images/logo.png"
@@ -20,15 +20,13 @@ const Home: React.FC = () => {
                 height={100}
                 objectFit="contain"
               />
-              <h1 className="text-xl md:text-2xl font-bold leading-tight mt-1">
+              <h1 className="text-xl md:text-2xl font-bold leading-tight mt-2">
                 La communauté des utilisateurs de Canva
               </h1>
             </div>
-            <br /><br />
-            <h2 className="text-lg md:text-lg font-light leading-tight">
+            <h2 className="text-lg md:text-lg font-light leading-tight mt-4">
               Obtenez Canva Pro<strong> Gratuitement</strong>
             </h2>
-            <br />
             <Link href="https://www.canva.com/pro">
               <a
                 className="btn bg-white text-blue-700 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-400 transition duration-300 ease-in-out"
@@ -38,7 +36,6 @@ const Home: React.FC = () => {
                 Canva Pro Gratuit
               </a>
             </Link>
-            <br />
           </div>
         </div>
 
