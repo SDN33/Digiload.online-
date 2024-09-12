@@ -43,6 +43,7 @@ const Header: React.FC = () => {
         <nav className="md:hidden absolute top-16 left-0 w-full bg-gray-800 text-white">
           <ul className="flex flex-col space-y-4 items-center p-4">
             <li><Link href="/"><a onClick={() => setIsMenuOpen(false)} className="hover:text-gray-300">Accueil</a></Link></li>
+            <li><Link href="/contact"><a onClick={() => setIsMenuOpen(false)} className="hover:text-gray-300">Contact</a></Link></li>
           </ul>
         </nav>
       )}

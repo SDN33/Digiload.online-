@@ -36,6 +36,7 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-bold mb-4">Mentions Légales</h3>
             <p>
               <strong>Propriétaire :</strong> Still Inov Agency, stillinov.com <br />
+              <strong>Contact :</strong> Stillinovagency@gmail.com<br />
               <strong>Responsable :</strong> Stéphane Dei-Negri<br />
               <strong>Adresse :</strong> Saint-Caprais-de-Bordeaux<br />
               <strong>Hébergement :</strong> Le site est hébergé par Vercel.<br />
