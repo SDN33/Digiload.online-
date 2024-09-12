@@ -39,7 +39,7 @@ const Header: React.FC = () => {
         <Link href="/about"><a className="hover:text-gray-300">Nos Formations</a></Link>
         <Link href="/contact"><a className="hover:text-gray-300">Contact</a></Link>
         <Link href="/try">
-          <a className="bg-white text-blue-500 px-4 py-2 rounded hover:bg-gray-100 transition">
+          <a className="bg-white text-blue-500 px-4 py-2 rounded hover:bg-gray-300 transition duration-300 ease-in-out">
             Essayer maintenant
           </a>
         </Link>
