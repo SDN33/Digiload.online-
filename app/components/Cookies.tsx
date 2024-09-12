@@ -21,7 +21,7 @@ const Cookies: React.FC = () => {
   if (!showBanner) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4 text-center z-50">
+    <div className="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4 text-center z-50 bg-opacity-50">
       <p className="mb-4">
         En poursuivant votre navigation sur ce site, vous acceptez l&apos;utilisation de cookies pour vous proposer des contenus et services adaptés à vos centres d&apos;intérêts.
       </p>

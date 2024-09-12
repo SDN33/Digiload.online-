@@ -36,6 +36,7 @@ const Header: React.FC = () => {
       {/* Menu de navigation pour grand écran */}
       <nav className="hidden md:flex space-x-4">
         <Link href="/"><a className="hover:text-gray-300">Accueil</a></Link>
+        <Link href="/contact"><a className="hover:text-gray-300">Contact</a></Link>
       </nav>
 
       {/* Menu mobile déroulant */}
