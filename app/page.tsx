@@ -20,7 +20,7 @@ const Home: React.FC = () => {
                 height={100}
                 objectFit="contain"
               />
-              <h1 className="text-xl md:text-2xl font-bold leading-tight mt-4">
+              <h1 className="text-xl md:text-2xl font-bold leading-tight -mt-12">
                 La communauté des utilisateurs de Canva
               </h1>
             </div>
