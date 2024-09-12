@@ -14,7 +14,7 @@ const Home: React.FC = () => {
               La communauté<br />francophone<br />Canva
             </h1>
             <br />
-            <h2 className="text-xl font-bold mb-4 md:mb-8 leading-tight">
+            <h2 className="text-sm font-bold mb-4 md:mb-8 leading-tight">
               Obtenez<br />Canva Pro<br /><strong>Gratuitement</strong>
             </h2>
             <Link href="https://www.canva.com/pro">
