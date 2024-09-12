@@ -11,12 +11,22 @@ const Home: React.FC = () => {
         {/* Section gauche avec le bouton */}
         <div className="flex-1 flex items-center justify-center p-8 md:p-16">
           <div className="text-center space-y-4 md:space-y-8 mt-16 md:-mt-12">
-            <h1 className="text-5xl md:text-2xl font-bold leading-tight">
-              DigiLoad<br />
-            </h1>
-            <p className="text-lg md:text-lg font-light leading-tight">
+
+            {/* Replace h1 with the image */}
+            <div className="flex justify-center">
+              <Image
+                src="/images/logo.png"
+                alt="Logo"
+                width={300}
+                height={100}
+                objectFit="contain"
+              />
+            </div>
+
+            {/* h2 changed to h1 without changing the classes */}
+            <h1 className="text-lg md:text-lg font-light leading-tight">
               La communauté des utilisateurs de Canva
-            </p>
+            </h1>
             <br />
             <Link href="https://www.canva.com/pro">
               <a
@@ -32,7 +42,7 @@ const Home: React.FC = () => {
               Obtenez Canva Pro<strong> Gratuitement</strong>
             </h5>
 
-            {/* Adding the logo with white background */}
+            {/* Adding the Canva logo with white background */}
             <div className="flex justify-center mt-4">
               <div className="bg-white rounded-full p-4">
                 <Image
