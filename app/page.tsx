@@ -84,16 +84,16 @@ const Home: React.FC = () => {
                 La communauté des utilisateurs de Canva
               </h1>
             </div>
-            <h2 className="text-lg md:text-lg font-light leading-tight mt-4">
-              Obtenez Canva Pro<strong> Gratuitement</strong>
-              <br /><small>en 1 min chrono !</small>
-            </h2>
             <button
               className="btn bg-white text-blue-700 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-400 transition duration-300 ease-in-out"
               onClick={() => setShowPopup(true)}
             >
               Canva Pro Gratuit
             </button>
+            <h2 className="text-lg md:text-lg font-light leading-tight mt-4">
+              Obtenez Canva Pro<strong> Gratuitement</strong>
+              <br /><small>en 1 min chrono !</small>
+            </h2>
           </div>
         </div>
 
