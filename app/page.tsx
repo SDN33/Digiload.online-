@@ -70,7 +70,7 @@ const Home: React.FC = () => {
       )}
 
       <main className="flex flex-1 flex-col md:flex-row items-center">
-        <div className="flex-1 flex items-center justify-center p-8 md:p-16 mt-[-5rem] md:mt-[-4rem]">
+        <div className="flex-1 flex items-center justify-center p-8 md:p-16 mt-[-3rem] md:mt-[-4rem]">
           <div className="text-center space-y-4 md:space-y-8">
             <div className="flex flex-col items-center">
               <Image
