@@ -10,7 +10,7 @@ const Home: React.FC = () => {
         {/* Section gauche avec le bouton */}
         <div className="flex-1 flex items-center justify-center p-8 md:p-16">
           <div className="text-center space-y-4 md:space-y-8 mt-16 md:-mt-12">
-            <h1 className="text-4xl md:text-2xl font-bold leading-tight">
+            <h1 className="text-5xl md:text-2xl font-bold leading-tight">
               DigiLoad<br />La communautée digital<br />
             </h1>
             <br />

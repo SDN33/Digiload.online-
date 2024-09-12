@@ -54,7 +54,7 @@ const Header: React.FC = () => {
             <li><Link href="/contact"><a onClick={() => setIsMenuOpen(false)} className="hover:text-gray-300">Contact</a></Link></li>
             <li>
               <Link href="/try">
-                <a onClick={() => setIsMenuOpen(false)} className="bg-white text-blue-500 px-4 py-2 rounded hover:bg-gray-100 transition">
+                <a onClick={() => setIsMenuOpen(false)} className="bg-white text-blue-500 px-4 py-2 roundedhover:bg-gray-400 transition duration-300 ease-in-out">
                   Essayer maintenant
                 </a>
               </Link>
