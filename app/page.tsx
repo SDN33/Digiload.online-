@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { Analytics } from "@vercel/analytics/react"
 
 const Home: React.FC = () => {
   const [step1Completed, setStep1Completed] = useState(false);
@@ -132,6 +133,9 @@ const Home: React.FC = () => {
 
       {/* Footer */}
       <Footer />
+      <Analytics  />
+
+
 
       {/* Pop-up */}
       {showPopup && (
