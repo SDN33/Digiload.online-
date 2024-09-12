@@ -2,23 +2,13 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className="bg-transparent text-white p-4 flex justify-between items-center">
-      {/* Logo */}
-      <div className="flex items-center">
-        <Image
-          src="/images/logo.png"
-          alt="Logo"
-          width={125}
-          height={25}
-          objectFit="contain"
-        />
-      </div>
+      <div className="text-lg font-semibold">DigiLoad.xyz</div>
 
       {/* Menu hamburger pour mobile */}
       <div className="md:hidden">
@@ -64,7 +54,7 @@ const Header: React.FC = () => {
             <li><Link href="/contact"><a onClick={() => setIsMenuOpen(false)} className="hover:text-gray-300">Contact</a></Link></li>
             <li>
               <Link href="/try">
-                <a onClick={() => setIsMenuOpen(false)} className="bg-white text-blue-500 px-4 py-2 rounded hover:bg-gray-400 transition duration-300 ease-in-out">
+                <a onClick={() => setIsMenuOpen(false)} className="bg-white text-blue-500 px-4 py-2 roundedhover:bg-gray-400 transition duration-300 ease-in-out">
                   Essayer maintenant
                 </a>
               </Link>
