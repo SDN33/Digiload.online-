@@ -14,8 +14,8 @@ const Header: React.FC = () => {
         <Image
           src="/images/logo.png"
           alt="Logo"
-          width={300}
-          height={100}
+          width={150}
+          height={50}
           objectFit="contain"
         />
       </div>
