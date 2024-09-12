@@ -9,7 +9,7 @@ const Home: React.FC = () => {
       <main className="flex flex-1 flex-col md:flex-row items-center">
         {/* Section gauche avec le bouton */}
         <div className="flex-1 flex items-center justify-center p-8 md:p-16">
-          <div className="text-center space-y-4 md:space-y-8 mt-16 md:-mt-4">
+          <div className="text-center space-y-4 md:space-y-8 mt-16 md:-mt-12">
             <h1 className="text-4xl font-bold mb-4 md:mb-8 leading-tight">
               Obtenez<br />Canva Pro<br /><strong>Gratuitement</strong>
             </h1>
