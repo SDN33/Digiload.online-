@@ -25,7 +25,7 @@ const Home: React.FC = () => {
 
             {/* h2 changed to h1 without changing the classes */}
             <h1 className="text-lg md:text-lg font-light leading-tight">
-              La communauté des utilisateurs de Canva
+              Obtenez Canva Pro<strong> Gratuitement</strong>
             </h1>
             <br />
             <Link href="https://www.canva.com/pro">
@@ -38,9 +38,7 @@ const Home: React.FC = () => {
               </a>
             </Link>
             <br />
-            <h5 className="text-sm font-bold mb-4 md:mb-8 leading-tight">
-              Obtenez Canva Pro<strong> Gratuitement</strong>
-            </h5>
+
 
             {/* Adding the Canva logo with white background */}
             <div className="flex justify-center">
