@@ -1,6 +1,7 @@
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Home: React.FC = () => {
   return (
@@ -14,7 +15,7 @@ const Home: React.FC = () => {
               DigiLoad<br />
             </h1>
             <p className="text-lg md:text-lg font-light leading-tight">
-              La communauté des utilisateurs de Canva en France
+              La communauté des utilisateurs de Canva
             </p>
             <br />
             <Link href="https://www.canva.com/pro">
@@ -30,6 +31,17 @@ const Home: React.FC = () => {
             <h5 className="text-sm font-bold mb-4 md:mb-8 leading-tight">
               Obtenez Canva Pro<strong> Gratuitement</strong>
             </h5>
+
+            {/* Adding the logo below the text */}
+            <div className="flex justify-center mt-4">
+              <Image
+                src="/images/logocanva.png"
+                alt="Canva Logo"
+                width={150}
+                height={50}
+                objectFit="contain"
+              />
+            </div>
           </div>
         </div>
 
