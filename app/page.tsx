@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Cookies from './components/Cookies';
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
 
 const Home: React.FC = () => {
   const [step1Completed, setStep1Completed] = useState(false);
@@ -15,23 +15,23 @@ const Home: React.FC = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [adBlockerDetected, setAdBlockerDetected] = useState(false);
 
-  useEffect(() => {
-    // Fonction pour détecter le bloqueur de pub
-    const detectAdBlocker = () => {
-      const testAd = document.createElement('div');
-      testAd.innerHTML = '&nbsp;';
-      testAd.className = 'adsbox';
-      document.body.appendChild(testAd);
-      window.setTimeout(() => {
-        if (testAd.offsetHeight === 0) {
-          setAdBlockerDetected(true);
-        }
-        document.body.removeChild(testAd);
-      }, 100);
-    };
-
-    detectAdBlocker();
+  // Fonction pour détecter le bloqueur de pub
+  const detectAdBlocker = useCallback(() => {
+    const testAd = document.createElement('div');
+    testAd.innerHTML = '&nbsp;';
+    testAd.className = 'adsbox';
+    document.body.appendChild(testAd);
+    window.setTimeout(() => {
+      if (testAd.offsetHeight === 0) {
+        setAdBlockerDetected(true);
+      }
+      document.body.removeChild(testAd);
+    }, 100);
   }, []);
+
+  useEffect(() => {
+    detectAdBlocker();
+  }, [detectAdBlocker]);
 
   const handleStepClick = (step: number) => {
     switch (step) {
@@ -47,15 +47,16 @@ const Home: React.FC = () => {
     }
   };
 
-  const validateSteps = () => {
+  // Validation des étapes en fonction du détecteur de bloqueur de pub
+  const validateSteps = useCallback(() => {
     if (!adBlockerDetected) {
       setTimeout(() => setStep1Completed(true), 5000);
     }
-  };
+  }, [adBlockerDetected]);
 
   useEffect(() => {
     validateSteps();
-  }, [adBlockerDetected]);
+  }, [validateSteps]);
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white">
@@ -77,7 +78,7 @@ const Home: React.FC = () => {
                 alt="Logo"
                 width={300}
                 height={100}
-                objectFit="contain"
+                style={{ objectFit: 'contain' }}
               />
               <h1 className="text-xl md:text-2xl font-bold leading-tight mt-2">
                 La communauté des utilisateurs de Canva
@@ -97,6 +98,7 @@ const Home: React.FC = () => {
         </div>
 
         <div className="flex-1 flex flex-col items-center justify-center p-8 md:p-16">
+          {/* Illustration SVG */}
           <svg
             width="300"
             height="300"
