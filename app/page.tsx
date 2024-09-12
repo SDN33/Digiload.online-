@@ -2,19 +2,14 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Link from 'next/link';
 
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap"
-/>
-
 const Home: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white">
       <Header />
-      <main className="flex flex-1 flex-col-reverse md:flex-row items-center">
-        {/* Section gauche avec le bouton, en bas sur mobile */}
+      <main className="flex flex-1 flex-col md:flex-row items-center">
+        {/* Section gauche avec le bouton */}
         <div className="flex-1 flex items-center justify-center p-8 md:p-16">
-          <div className="text-center space-y-4 md:space-y-8">
+          <div className="text-center space-y-4 md:space-y-8 mt-16 md:mt-0">
             <h1 className="text-4xl font-bold mb-4 md:mb-8 leading-tight">
               Obtenez<br />Canva Pro<br /><strong>Gratuitement</strong>
             </h1>
@@ -30,7 +25,7 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        {/* Section droite avec le design SVG, en haut sur mobile */}
+        {/* Section droite avec le design SVG */}
         <div className="flex-1 flex flex-col items-center justify-center p-8 md:p-16">
           <svg
             width="300"
