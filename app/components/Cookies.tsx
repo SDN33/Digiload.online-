@@ -28,13 +28,13 @@ const Cookies: React.FC = () => {
       <div className="space-x-4">
         <button
           onClick={() => handleConsent(true)}
-          className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+          className="bg-white hover:bg-gray-500 text-black font-bold py-2 px-4 rounded"
         >
           Accepter
         </button>
         <button
           onClick={() => handleConsent(false)}
-          className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+          className="bg-black hover:bg-gray-500 text-white font-bold py-2 px-4 rounded"
         >
           Refuser
         </button>
