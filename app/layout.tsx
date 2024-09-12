@@ -9,9 +9,25 @@ const oxygen = localFont({
   weight: "300 700",
 });
 
-export const metadata: Metadata = {
-  title: "DigiLoad | Formations Canva en ligne",
-  description: "La communauté des utilisateurs de Canva Pro en France",
+export const metadata: Metadata & { og: any } = {
+  title: "Canva Pro Gratuit | Rejoignez la Communauté de Canva en France",
+  description: "Obtenez Canva Pro gratuitement avec notre communauté exclusive. Profitez des avantages de Canva Pro sans frais et découvrez comment notre communauté d'utilisateurs en France facilite l'accès à Canva Pro.",
+  keywords: "Canva Pro gratuit, Canva gratuit, obtenir Canva Pro gratuitement, communauté Canva, avantages Canva Pro, offre Canva Pro, Canva Pro France, Canva Pro sans frais, Canva Pro gratuit en France, avoir canva gratuit.",
+  viewport: "width=device-width, initial-scale=1.0",
+  robots: "index, follow",
+  og: {
+    title: "Canva Pro Gratuit | Rejoignez la Communauté de Canva en France",
+    description: "Obtenez Canva Pro gratuitement avec notre communauté exclusive. Profitez des avantages de Canva Pro sans frais et découvrez comment notre communauté d'utilisateurs en France facilite l'accès à Canva Pro.",
+    image: "./images/banner.png",
+    url: "https://digiload.online",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Canva Pro Gratuit | Rejoignez la Communauté de Canva en France",
+    description: "Obtenez Canva Pro gratuitement avec notre communauté exclusive. Profitez des avantages de Canva Pro sans frais et découvrez comment notre communauté d'utilisateurs en France facilite l'accès à Canva Pro.",
+    images: "./images/banner.png"
+  }
 };
 
 export default function RootLayout({
