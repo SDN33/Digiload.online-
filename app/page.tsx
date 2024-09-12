@@ -14,9 +14,6 @@ const Home: React.FC = () => {
               DigiLoad<br />La Communautée Digital<br />
             </h1>
             <br />
-            <h2 className="text-sm font-bold mb-4 md:mb-8 leading-tight">
-              Obtenez<br />Canva Pro<br /><strong>Gratuitement</strong>
-            </h2>
             <Link href="https://www.canva.com/pro">
               <a
                 className="btn bg-white text-blue-700 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-400 transition duration-300 ease-in-out"
@@ -26,6 +23,10 @@ const Home: React.FC = () => {
                 Canva Pro Gratuit
               </a>
             </Link>
+            <br />
+            <h2 className="text-sm font-bold mb-4 md:mb-8 leading-tight">
+              Obtenez<br />Canva Pro<br /><strong>Gratuitement</strong>
+            </h2>
           </div>
         </div>
 
