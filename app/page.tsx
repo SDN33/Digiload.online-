@@ -59,7 +59,7 @@ const Home: React.FC = () => {
   }, [validateSteps]);
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white">
+    <div className="flex flex-col h-[120vh] bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white">
       <Header />
 
       {/* Avertissement adblock */}
