@@ -32,15 +32,17 @@ const Home: React.FC = () => {
               Obtenez Canva Pro<strong> Gratuitement</strong>
             </h5>
 
-            {/* Adding the logo below the text */}
+            {/* Adding the logo with white background */}
             <div className="flex justify-center mt-4">
-              <Image
-                src="/images/logocanva.png"
-                alt="Canva Logo"
-                width={150}
-                height={50}
-                objectFit="contain"
-              />
+              <div className="bg-white rounded-full p-4">
+                <Image
+                  src="/images/logocanva.png"
+                  alt="Canva Logo"
+                  width={150}
+                  height={50}
+                  objectFit="contain"
+                />
+              </div>
             </div>
           </div>
         </div>
