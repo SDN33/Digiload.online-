@@ -1,7 +1,4 @@
-"use client"
-
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Header from './components/Header';
@@ -12,18 +9,54 @@ const Home: React.FC = () => {
   const [step2Completed, setStep2Completed] = useState(false);
   const [step3Completed, setStep3Completed] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const [adBlockerDetected, setAdBlockerDetected] = useState(false);
 
-  const handleStep1Click = () => {
-    setStep1Completed(true);
+  useEffect(() => {
+    // Function to detect ad blocker
+    const detectAdBlocker = () => {
+      const testAd = document.createElement('div');
+      testAd.innerHTML = '&nbsp;';
+      testAd.className = 'adsbox';
+      document.body.appendChild(testAd);
+      window.setTimeout(() => {
+        if (testAd.offsetHeight === 0) {
+          setAdBlockerDetected(true);
+        }
+        document.body.removeChild(testAd);
+      }, 100);
+    };
+
+    detectAdBlocker();
+  }, []);
+
+  const handleStepClick = (step: number) => {
+    switch (step) {
+      case 1:
+        setStep1Completed(true);
+        break;
+      case 2:
+        setStep2Completed(true);
+        break;
+      case 3:
+        setStep3Completed(true);
+        break;
+    }
   };
 
-  const handleStep2Click = () => {
-    setStep2Completed(true);
+  const validateSteps = () => {
+    if (!adBlockerDetected) {
+      // Delay validation for 5 seconds
+      setTimeout(() => {
+        setStep1Completed(true);
+        setStep2Completed(true);
+        setStep3Completed(true);
+      }, 5000);
+    }
   };
 
-  const handleStep3Click = () => {
-    setStep3Completed(true);
-  };
+  useEffect(() => {
+    validateSteps();
+  }, [adBlockerDetected]);
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white">
@@ -117,7 +150,7 @@ const Home: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-500 underline ml-2"
-                  onClick={handleStep1Click}
+                  onClick={() => handleStepClick(1)}
                 >
                   Cliquer ici
                 </a>
@@ -129,7 +162,7 @@ const Home: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-500 underline ml-2"
-                  onClick={handleStep2Click}
+                  onClick={() => handleStepClick(2)}
                 >
                   Cliquer à nouveau ici
                 </a>
@@ -141,7 +174,7 @@ const Home: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-500 underline ml-2"
-                  onClick={handleStep3Click}
+                  onClick={() => handleStepClick(3)}
                 >
                   Cliquer une dernière fois ici
                 </a>
