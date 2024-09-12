@@ -13,9 +13,10 @@ const Home: React.FC = () => {
   const [step3Completed, setStep3Completed] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [adBlockerDetected, setAdBlockerDetected] = useState(false);
+  const [isProcessingStep, setIsProcessingStep] = useState(false); // Nouvelle variable pour éviter plusieurs clics à la fois
 
   useEffect(() => {
-    // Function to detect ad blocker
+    // Fonction pour détecter le bloqueur de publicités
     const detectAdBlocker = () => {
       const testAd = document.createElement('div');
       testAd.innerHTML = '&nbsp;';
@@ -32,34 +33,27 @@ const Home: React.FC = () => {
     detectAdBlocker();
   }, []);
 
+  // Fonction pour gérer le clic sur une étape avec un délai de 5 secondes
   const handleStepClick = (step: number) => {
-    switch (step) {
-      case 1:
-        setStep1Completed(true);
-        break;
-      case 2:
-        setStep2Completed(true);
-        break;
-      case 3:
-        setStep3Completed(true);
-        break;
-    }
-  };
+    if (!isProcessingStep) {
+      setIsProcessingStep(true); // Empêche les clics multiples
 
-  const validateSteps = () => {
-    if (!adBlockerDetected) {
-      // Delay validation for 5 seconds
       setTimeout(() => {
-        setStep1Completed(true);
-        setStep2Completed(true);
-        setStep3Completed(true);
-      }, 5000);
+        switch (step) {
+          case 1:
+            setStep1Completed(true);
+            break;
+          case 2:
+            setStep2Completed(true);
+            break;
+          case 3:
+            setStep3Completed(true);
+            break;
+        }
+        setIsProcessingStep(false); // Autorise de nouveau les clics
+      }, 5000); // Délai de 5 secondes
     }
   };
-
-  useEffect(() => {
-    validateSteps();
-  }, [adBlockerDetected]);
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white">
@@ -68,7 +62,7 @@ const Home: React.FC = () => {
         {/* Section gauche avec le bouton */}
         <div className="flex-1 flex items-center justify-center p-8 md:p-16 mt-[-2rem] md:mt-[-4rem]">
           <div className="text-center space-y-4 md:space-y-8">
-            {/* Remplacer le h1 par l'image */}
+            {/* Remplacement du h1 par l'image */}
             <div className="flex flex-col items-center">
               <Image
                 src="/images/logo.png"
@@ -133,9 +127,7 @@ const Home: React.FC = () => {
 
       {/* Footer */}
       <Footer />
-      <Analytics  />
-
-
+      <Analytics />
 
       {/* Pop-up */}
       {showPopup && (
