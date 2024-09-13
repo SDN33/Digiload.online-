@@ -5,6 +5,7 @@ export default function ContactPage() {
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
         <h1 className="text-2xl font-bold mb-6 text-center">Contactez-nous</h1>
+        <h2 className="text-lg font-light mb-4 text-center">N'hésitez pas à nous contacter pour toute question ou demande.</h2>
         <form
           action="https://formspree.io/f/xwpejoyq"
           method="POST"
