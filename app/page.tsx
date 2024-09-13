@@ -72,7 +72,7 @@ const Home: React.FC = () => {
                 style={{ objectFit: "contain" }}
               />
               <h1 className="text-xl md:text-2xl font-bold leading-tight mt-2">
-                La communauté des utilisateurs de Canva
+                La communauté francophone de Canva
               </h1>
             </div>
             <button
