@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
 
   return (
     <>
-      <footer className="bg-black text-blue-500 p-4 text-center relative">
+      <footer className="bg-white text-black p-4 text-center relative">
         <p>DigiLoad - &copy; {new Date().getFullYear()} Design by Still-inov Agency. Tous droits réservés.</p>
         <button
           onClick={handleLegalClick}
