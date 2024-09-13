@@ -18,7 +18,7 @@ const oxygen = localFont({
   weight: "300 700",
 });
 
-export const metadata: Metadata & { og: OGMetadata } = {
+export const metadata: Metadata & { og: OGMetadata; twitter: { card: string; title: string; description: string; image: string } } = {
   title: "Canva Pro Gratuit | Rejoignez la Communauté de Canva en France",
   description: "Obtenez Canva Pro gratuitement avec notre communauté exclusive. Profitez des avantages de Canva Pro sans frais et découvrez comment notre communauté d'utilisateurs en France facilite l'accès à Canva Pro.",
   keywords: "Canva Pro gratuit, Canva gratuit, obtenir Canva Pro gratuitement, communauté Canva, avantages Canva Pro, offre Canva Pro, Canva Pro France, Canva Pro sans frais, Canva Pro gratuit en France, avoir canva gratuit.",
@@ -27,18 +27,17 @@ export const metadata: Metadata & { og: OGMetadata } = {
   og: {
     title: "Canva Pro Gratuit | Rejoignez la Communauté de Canva en France",
     description: "Obtenez Canva Pro gratuitement avec notre communauté exclusive. Profitez des avantages de Canva Pro sans frais et découvrez comment notre communauté d'utilisateurs en France facilite l'accès à Canva Pro.",
-    image: "https://digiload.online/images/banner.png", // Utilise le chemin complet
+    image: "https://digiload.online/images/banner.png",
     url: "https://digiload.online",
-    type: "website"
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Canva Pro Gratuit | Rejoignez la Communauté de Canva en France",
     description: "Obtenez Canva Pro gratuitement avec notre communauté exclusive. Profitez des avantages de Canva Pro sans frais et découvrez comment notre communauté d'utilisateurs en France facilite l'accès à Canva Pro.",
-    images: "https://digiload.online/images/banner.png" // Chemin complet ici aussi
-  }
+    image: "https://digiload.online/images/banner.png",
+  },
 };
-
 
 export default function RootLayout({
   children,
@@ -46,7 +45,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fr">
+      <head>
+        {/* Ajout de la balise meta pour og:image */}
+        <meta property="og:image" content="https://digiload.online/images/banner.png" />
+      </head>
       <body className={`${oxygen.variable} antialiased`}>
         {children}
       </body>
