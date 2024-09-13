@@ -151,8 +151,8 @@ const Home: React.FC = () => {
                 strokeWidth="4"
               />
             </g>
+            
           </svg>
-          <DotLottiePlayer />
         </div>
       </main>
 
