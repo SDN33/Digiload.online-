@@ -71,7 +71,7 @@ const Home: React.FC = () => {
                 height={100}
                 style={{ objectFit: "contain" }}
               />
-              <h1 className="text-xl md:text-2xl font-bold leading-tight mt-2">
+              <h1 className="text-lg md:text-2xl font-bold leading-tight mt-2">
                 La communauté francophone de Canva
               </h1>
             </div>
