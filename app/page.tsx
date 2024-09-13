@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "./components/Header";
@@ -29,7 +29,7 @@ const Home: React.FC = () => {
     }, 100);
   }, []);
 
-  useEffect(() => {
+  React.useEffect(() => {
     detectAdBlocker();
   }, [detectAdBlocker]);
 
@@ -48,17 +48,6 @@ const Home: React.FC = () => {
         break;
     }
   };
-
-  // Validation automatique de l'étape 1 si pas de bloqueur de pub
-  const validateSteps = useCallback(() => {
-    if (!adBlockerDetected) {
-      setTimeout(() => setStep1Completed(true), 9000); // délai de 9 secondes
-    }
-  }, [adBlockerDetected]);
-
-  useEffect(() => {
-    validateSteps();
-  }, [validateSteps]);
 
   return (
     <div className="flex flex-col h-[110vh] bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white">
