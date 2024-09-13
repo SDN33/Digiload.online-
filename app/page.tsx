@@ -39,10 +39,10 @@ const Home: React.FC = () => {
         setStep1Completed(true);
         break;
       case 2:
-        setTimeout(() => setStep2Completed(true), 5000); // délai de 5 secondes
+        setTimeout(() => setStep2Completed(true), 9000); // délai de 5 secondes
         break;
       case 3:
-        setTimeout(() => setStep3Completed(true), 5000); // délai de 5 secondes
+        setTimeout(() => setStep3Completed(true), 9000); // délai de 5 secondes
         break;
     }
   };
@@ -50,7 +50,7 @@ const Home: React.FC = () => {
   // Validation des étapes en fonction du détecteur de bloqueur de pub
   const validateSteps = useCallback(() => {
     if (!adBlockerDetected) {
-      setTimeout(() => setStep1Completed(true), 5000);
+      setTimeout(() => setStep1Completed(true), 9000);
     }
   }, [adBlockerDetected]);
 
@@ -90,7 +90,7 @@ const Home: React.FC = () => {
             >
               Canva Pro Gratuit
             </button>
-            <h2 className="text-lg md:text-lg font-light leading-tight mt-4">
+            <h2 className="text-sm md:text-lg font-light leading-tight mt-4">
               ✨ Accédez à Canva Pro <strong> Gratuitement</strong>✨
               <br /><small>en 1 min seulement !</small>
             </h2>
