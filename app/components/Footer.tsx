@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
       {/* Popup pour les mentions légales */}
       {showLegalPopup && (
         <div className="fixed inset-0 bg-gray-600 bg-opacity-75 flex justify-center items-center">
-          <div className="bg-black text-black p-8 rounded-lg shadow-lg relative w-full max-w-lg">
+          <div className="bg-white text-black p-8 rounded-lg shadow-lg relative w-full max-w-lg">
             <button
               className="absolute top-2 right-2 text-gray-600 hover:text-gray-900"
               onClick={handleClosePopup}
