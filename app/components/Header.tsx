@@ -7,7 +7,7 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-transparent text-white p-4 flex justify-between items-center">
+    <header className="bg-transparent text-white p-4 flex justify-between items-center relative">
       <div className="text-lg font-semibold">DigiLoad.online</div>
 
       {/* Menu hamburger pour mobile */}
@@ -41,10 +41,18 @@ const Header: React.FC = () => {
 
       {/* Menu mobile déroulant */}
       {isMenuOpen && (
-        <nav className="md:hidden absolute top-16 left-0 w-full bg-gray-800 text-white">
+        <nav className="md:hidden absolute top-16 left-0 w-full bg-gray-800 text-white z-10">
           <ul className="flex flex-col space-y-4 items-center p-4">
-            <li><Link href="/"><a onClick={() => setIsMenuOpen(false)} className="hover:text-gray-300">Accueil</a></Link></li>
-            <li><Link href="/contact"><a onClick={() => setIsMenuOpen(false)} className="hover:text-gray-300">Contact</a></Link></li>
+            <li>
+              <Link href="/">
+                <a onClick={() => setIsMenuOpen(false)} className="hover:text-gray-300">Accueil</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact">
+                <a onClick={() => setIsMenuOpen(false)} className="hover:text-gray-300">Contact</a>
+              </Link>
+            </li>
           </ul>
         </nav>
       )}
