@@ -39,10 +39,10 @@ const Home: React.FC = () => {
         setStep1Completed(true);
         break;
       case 2:
-        setTimeout(() => setStep2Completed(true), 9000); // délai de 9 secondes
+        setTimeout(() => setStep2Completed(true), 4000); // délai de 9 secondes
         break;
       case 3:
-        setTimeout(() => setStep3Completed(true), 9000); // délai de 9 secondes
+        setTimeout(() => setStep3Completed(true), 4000); // délai de 9 secondes
         break;
       default:
         break;
