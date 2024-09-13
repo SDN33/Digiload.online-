@@ -158,7 +158,7 @@ const Home: React.FC = () => {
             <h3 className="text-lg font-bold mb-4">Étapes pour obtenir Canva Pro Gratuit</h3>
             <ul className="space-y-4">
               <li className={`flex items-center ${step1Completed ? "text-green-600" : ""}`}>
-                {step1Completed ? "✔️" : "➤"} Étape 1:
+                {step1Completed ? "✔️" : "➤"} PUB 1:
                 <a
                   href="https://upodaitie.net/4/8083510"
                   target="_blank"
@@ -170,7 +170,7 @@ const Home: React.FC = () => {
                 </a>
               </li>
               <li className={`flex items-center ${step2Completed ? "text-green-600" : ""}`}>
-                {step2Completed ? "✔️" : "➤"} Étape 2:
+                {step2Completed ? "✔️" : "➤"} PUB 2:
                 <a
                   href="https://upodaitie.net/4/8083510"
                   target="_blank"
@@ -182,7 +182,7 @@ const Home: React.FC = () => {
                 </a>
               </li>
               <li className={`flex items-center ${step3Completed ? "text-green-600" : ""}`}>
-                {step3Completed ? "✔️" : "➤"} Étape 3:
+                {step3Completed ? "✔️" : "➤"} PUB 3:
                 <a
                   href="https://upodaitie.net/4/8083510"
                   target="_blank"
@@ -208,7 +208,7 @@ const Home: React.FC = () => {
               </div>
             ) : (
               <div className="mt-6 text-center text-red-500">
-                Vous devez compléter les trois étapes pour débloquer le lien.
+                Vous devez compléter les trois étapes pour débloquer le lien, ne trichez pas ! 😉
                 <br />
                 <small>(Si le lien ne fonctionne pas, désactivez votre bloqueur de publicités)</small>
               </div>
