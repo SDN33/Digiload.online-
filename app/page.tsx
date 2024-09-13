@@ -61,7 +61,7 @@ const Home: React.FC = () => {
   }, [validateSteps]);
 
   return (
-    <div className="flex flex-col h-[110vh] bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white">
+    <div className="flex flex-col h-[110vh] bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white relative">
       <Header />
 
       {/* Avertissement adblock */}
@@ -71,7 +71,7 @@ const Home: React.FC = () => {
         </div>
       )}
 
-      <main className="flex flex-1 flex-col md:flex-row items-center">
+      <main className="flex flex-1 flex-col md:flex-row items-center relative">
         <div className="flex-1 flex items-center justify-center p-8 md:p-16 mt-[-3rem] md:mt-[-2rem]">
           <div className="text-center space-y-4 md:space-y-8">
             <div className="flex flex-col items-center">
@@ -100,7 +100,17 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex-1 flex flex-col items-center justify-center p-8 md:p-16">
+        <div className="flex-1 flex flex-col items-center justify-center p-8 md:p-16 relative">
+          {/* DotLottie Player */}
+          <dotlottie-player
+            src="https://lottie.host/ea55694c-3cb6-4eb7-a6f3-20b39546c02f/6jz56DfMQp.json"
+            background="transparent"
+            speed="1"
+            style={{ width: "300px", height: "300px" }}
+            loop
+            autoplay
+            className="absolute"
+          ></dotlottie-player>
           {/* Illustration SVG */}
           <svg
             width="300"
@@ -108,7 +118,7 @@ const Home: React.FC = () => {
             viewBox="0 0 400 400"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="text-white opacity-70 md:w-96 md:h-96"
+            className="text-white opacity-70 md:w-96 md:h-96 absolute"
           >
             <g>
               <animateTransform

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Script from 'next/script';
 
 // Définition du type pour les métadonnées Open Graph
 interface OGMetadata {
@@ -47,11 +48,23 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
-        {/* Ajout de la balise meta pour og:image */}
         <meta property="og:image" content="https://digiload.online/images/banner.png" />
+        <meta property="og:title" content={metadata.og.title} />
+        <meta property="og:description" content={metadata.og.description} />
+        <meta property="og:url" content={metadata.og.url} />
+        <meta property="og:type" content={metadata.og.type} />
+        <meta name="twitter:card" content={metadata.twitter.card} />
+        <meta name="twitter:title" content={metadata.twitter.title} />
+        <meta name="twitter:description" content={metadata.twitter.description} />
+        <meta name="twitter:image" content={metadata.twitter.image} />
       </head>
       <body className={`${oxygen.variable} antialiased`}>
         {children}
+        {/* Ajout de la balise Script pour DotLottie */}
+        <Script
+          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+          type="module"
+        />
       </body>
     </html>
   );
