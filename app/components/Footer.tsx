@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
         <p>DigiLoad - &copy; {new Date().getFullYear()} Design by Still-inov Agency. Tous droits réservés.</p>
         <button
           onClick={handleLegalClick}
-          className="text-blue-500 underline mt-2"
+          className="text-black underline mt-2"
         >
           Mentions légales
         </button>
