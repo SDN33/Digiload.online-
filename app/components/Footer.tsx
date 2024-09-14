@@ -14,13 +14,25 @@ const Footer: React.FC = () => {
   return (
     <>
       <footer className="bg-transparent text-white p-4 text-center relative">
-      <p>DigiLoad - &copy; <script>document.write(new Date().getFullYear());</script> Concept by <a href="https://stillinov.com" target="_blank">Still-inov Agency</a>. Tous droits réservés.</p>
       <button
           onClick={handleLegalClick}
-          className="text-black mt-2"
+          className="text-white mt-2"
         >
           Mentions légales
         </button>
+        <p>
+          DigiLoad - &copy; {new Date().getFullYear()} Concept by{' '}
+          <a
+            href="https://digiload.online"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-purple-900"
+          >
+            Still-inov Agency
+          </a>
+          . Tous droits réservés.
+        </p>
+
       </footer>
 
       {/* Popup pour les mentions légales */}

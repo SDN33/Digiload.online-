@@ -10,8 +10,8 @@ const Header: React.FC = () => {
     <header className="bg-transparent text-white p-4 flex justify-between items-center relative">
       <div className="text-lg font-semibold">DigiLoad.online</div>
 
-      {/* Menu hamburger pour mobile */}
-      <div className="md:hidden">
+      {/* Menu hamburger pour tous les écrans */}
+      <div>
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="text-white focus:outline-none"
@@ -39,9 +39,9 @@ const Header: React.FC = () => {
         <Link href="/contact"><a className="hover:text-gray-300">Contact</a></Link>
       </nav>
 
-      {/* Menu mobile déroulant */}
+      {/* Menu déroulant pour tous les écrans */}
       {isMenuOpen && (
-        <nav className="md:hidden absolute top-16 left-0 w-full bg-gray-800 text-white z-10">
+        <nav className="absolute top-16 left-0 w-full bg-gray-800 text-white z-10">
           <ul className="flex flex-col space-y-4 items-center p-4">
             <li>
               <Link href="/">
