@@ -112,7 +112,7 @@ const Home: React.FC = () => {
                 cx="200"
                 cy="200"
                 r="150"
-                stroke="#00adbf" // Circle color
+                stroke="#ffffff" // Circle color
                 strokeWidth="4"
               />
               <path
@@ -139,7 +139,7 @@ const Home: React.FC = () => {
               />
             </g>
           </svg>
-          
+
         </div>
       </main>
 
