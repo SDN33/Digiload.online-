@@ -2,24 +2,18 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import localFont from 'next/font/local'; // Assurez-vous que l'import est correct
+import Image from "next/image";
 
-const tanMeringue = localFont({
-  src: 'app/fonts/Tanmeringue.ttf',
-  variable: '--font-tanmeringue',
-});
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className="bg-transparent text-white p-4 flex justify-between items-center relative">
-      <div className={`text-2xl ${tanMeringue.variable}`}>
-        DigiLoad.online
-      </div>
+      <Image src="/logo.png" alt="Logo" width={150} height={50} />
 
-      {/* Menu hamburger pour petits écrans */}
-      <div className="md:hidden absolute right-4 top-4">
+      {/* Menu hamburger pour tous les écrans */}
+      <div className="absolute right-4 top-4">
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="text-white focus:outline-none"
@@ -41,21 +35,23 @@ const Header: React.FC = () => {
         </button>
       </div>
 
-      {/* Menu déroulant pour petits écrans */}
-      <nav className={`md:hidden absolute top-16 right-0 left-0 w-full bg-gray-800 text-white z-10 ${isMenuOpen ? 'block' : 'hidden'}`}>
-        <ul className="flex flex-col space-y-4 items-center p-4">
-          <li>
-            <Link href="/">
-              <a onClick={() => setIsMenuOpen(false)} className="hover:text-gray-300">Accueil</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact">
-              <a onClick={() => setIsMenuOpen(false)} className="hover:text-gray-300">Contact 📨</a>
-            </Link>
-          </li>
-        </ul>
-      </nav>
+      {/* Menu déroulant pour tous les écrans */}
+      {isMenuOpen && (
+        <nav className="absolute top-16 right-0 left-0 w-full bg-gray-800 text-white z-10">
+          <ul className="flex flex-col space-y-4 items-center p-4">
+            <li>
+              <Link href="/">
+                <a onClick={() => setIsMenuOpen(false)} className="hover:text-gray-300">Accueil</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact">
+                <a onClick={() => setIsMenuOpen(false)} className="hover:text-gray-300">Contact 📨</a>
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      )}
     </header>
   );
 };
