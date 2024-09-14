@@ -14,8 +14,8 @@ const Footer: React.FC = () => {
   return (
     <>
       <footer className="bg-white text-black p-4 text-center relative">
-        <p>DigiLoad - &copy; {new Date().getFullYear()} Design by Still-inov Agency. Tous droits réservés.</p>
-        <button
+      <p>DigiLoad - &copy; <script>document.write(new Date().getFullYear());</script> Concept by <a href="https://stillinov.com" target="_blank">Still-inov Agency</a>. Tous droits réservés.</p>
+      <button
           onClick={handleLegalClick}
           className="text-black mt-2"
         >
