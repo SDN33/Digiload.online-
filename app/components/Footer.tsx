@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
             href="https://digiload.online"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-purple-900"
+            className="text-orange-600"
           >
             Still-inov Agency
           </a>
