@@ -11,7 +11,7 @@ const Header: React.FC = () => {
   return (
     <header className="bg-transparent text-white p-4 flex justify-between items-center relative">
       <Image
-        src="/images/logo.png"
+        src="/images/logoh.png"
         alt="Logo"
         width={100} // Réduisez la largeur
         height={33} // Réduisez la hauteur en proportion
