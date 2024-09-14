@@ -112,35 +112,33 @@ const Home: React.FC = () => {
                 cx="200"
                 cy="200"
                 r="150"
-                stroke="#ffffff" // Circle color
-                fill="#ffffff"  // Circle fill color (background)
+                stroke="currentColor"
                 strokeWidth="4"
               />
               <path
                 d="M100 100 Q150 50 200 100 T300 100"
-                stroke="#8c52ff" // Path color
+                stroke="currentColor"
                 strokeWidth="4"
                 fill="none"
               />
               <path
                 d="M100 300 Q150 250 200 300 T300 300"
-                stroke="#8c52ff" // Path color
+                stroke="currentColor"
                 strokeWidth="4"
                 fill="none"
               />
               <path
                 d="M200 100 L200 300"
-                stroke="#00adbf" // Line color
+                stroke="currentColor"
                 strokeWidth="4"
               />
               <path
                 d="M100 200 L300 200"
-                stroke="#00adbf" // Line color
+                stroke="currentColor"
                 strokeWidth="4"
               />
             </g>
           </svg>
-
         </div>
       </main>
 
