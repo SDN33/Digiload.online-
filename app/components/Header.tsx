@@ -44,7 +44,7 @@ const Header: React.FC = () => {
             </li>
             <li>
               <Link href="/contact">
-                <a onClick={() => setIsMenuOpen(false)} className="hover:text-gray-300">Contact</a>
+                <a onClick={() => setIsMenuOpen(false)} className="hover:text-gray-300">Contact 📨</a>
               </Link>
             </li>
           </ul>
