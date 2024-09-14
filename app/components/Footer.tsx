@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
             rel="noopener noreferrer"
             className="text-purple-600 bg-white"
           >
-            Still-inov Agency
+             Still-inov Agency 
           </a>
           . Tous droits réservés.
         </p>
