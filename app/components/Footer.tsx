@@ -23,12 +23,12 @@ const Footer: React.FC = () => {
         <p>
           DigiLoad - &copy; {new Date().getFullYear()} Concept by{' '}
           <a
-            href="https://digiload.online"
+            href="https://STILLINOV.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-purple-600 bg-white"
           >
-             Still-inov Agency 
+             Still-inov Agency
           </a>
           . Tous droits réservés.
         </p>
