@@ -19,10 +19,6 @@ const oxygen = localFont({
   weight: "300 700",
 });
 
-const tanMeringue = localFont({
-  src: "./fonts/TanMeringue.ttf",
-  variable: "--font-tanmeringue",
-});
 
 
 export const metadata: Metadata & { og: OGMetadata; twitter: { card: string; title: string; description: string; image: string } } = {
