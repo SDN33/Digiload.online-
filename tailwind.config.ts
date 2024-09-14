@@ -12,8 +12,12 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        tanmeringue: ['"Tan Meringue"', 'sans-serif'],
+      },
     },
   },
   plugins: [],
 };
+
 export default config;
