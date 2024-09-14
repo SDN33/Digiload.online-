@@ -5,7 +5,7 @@ import Link from 'next/link';
 import localFont from 'next/font/local'; // Assurez-vous que l'import est correct
 
 const tanMeringue = localFont({
-  src: './fonts/Tanmeringue.ttf',
+  src: 'app/fonts/Tanmeringue.ttf',
   variable: '--font-tanmeringue',
 });
 
