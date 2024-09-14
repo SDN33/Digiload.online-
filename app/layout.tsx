@@ -19,11 +19,6 @@ const oxygen = localFont({
   weight: "300 700",
 });
 
-const tanmeringue = localFont({
-  src: "./fonts/TANMERINGUE.ttf",
-  variable: "--font-tanmeringue",
-  weight: "300 700",
-});
 
 export const metadata: Metadata & { og: OGMetadata; twitter: { card: string; title: string; description: string; image: string } } = {
   title: "Canva Pro Gratuit | Rejoignez la Communauté de Canva en France",
