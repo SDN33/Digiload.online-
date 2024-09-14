@@ -57,6 +57,7 @@ export default function RootLayout({
         <meta name="twitter:title" content={metadata.twitter.title} />
         <meta name="twitter:description" content={metadata.twitter.description} />
         <meta name="twitter:image" content={metadata.twitter.image} />
+        <link rel="icon" href="https://digiload.online/app/favicon.ico" type="image/x-icon" />
       </head>
       <body className={`${oxygen.variable} antialiased`}>
         {children}
