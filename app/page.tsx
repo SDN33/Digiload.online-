@@ -113,6 +113,7 @@ const Home: React.FC = () => {
                 cy="200"
                 r="150"
                 stroke="#ffffff" // Circle color
+                fill="#ffffff"  // Circle fill color (background)
                 strokeWidth="4"
               />
               <path
