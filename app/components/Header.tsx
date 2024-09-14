@@ -13,8 +13,8 @@ const Header: React.FC = () => {
       <Image
         src="/images/logo.png"
         alt="Logo"
-        width={150}
-        height={50}
+        width={100} // Réduisez la largeur
+        height={33} // Réduisez la hauteur en proportion
       />
 
       {/* Menu hamburger pour tous les écrans */}
