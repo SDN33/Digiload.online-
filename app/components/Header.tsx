@@ -11,7 +11,7 @@ const Header: React.FC = () => {
       <div className="text-lg font-semibold">DigiLoad.online</div>
 
       {/* Menu hamburger pour tous les écrans */}
-      <div>
+      <div className="absolute right-4 top-4">
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="text-white focus:outline-none"
@@ -33,15 +33,9 @@ const Header: React.FC = () => {
         </button>
       </div>
 
-      {/* Menu de navigation pour grand écran */}
-      <nav className="hidden md:flex space-x-4">
-        <Link href="/"><a className="hover:text-gray-300">Accueil</a></Link>
-        <Link href="/contact"><a className="hover:text-gray-300">Contact</a></Link>
-      </nav>
-
       {/* Menu déroulant pour tous les écrans */}
       {isMenuOpen && (
-        <nav className="absolute top-16 left-0 w-full bg-gray-800 text-white z-10">
+        <nav className="absolute top-16 right-0 left-0 w-full bg-gray-800 text-white z-10">
           <ul className="flex flex-col space-y-4 items-center p-4">
             <li>
               <Link href="/">
