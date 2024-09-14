@@ -135,7 +135,7 @@ const Home: React.FC = () => {
               />
               <path
                 d="M100 200 L300 200"
-                stroke="#ffffff" // Line color
+                stroke="#00adbf" // Line color
                 strokeWidth="4"
               />
             </g>
