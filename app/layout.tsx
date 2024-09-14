@@ -20,7 +20,7 @@ const oxygen = localFont({
 });
 
 const tanMeringue = localFont({
-  src: "./fonts/TanMeringue-Regular.ttf",
+  src: "./fonts/TanMeringue.ttf",
   variable: "--font-tanmeringue",
 });
 
