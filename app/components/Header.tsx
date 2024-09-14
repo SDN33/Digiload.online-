@@ -10,7 +10,7 @@ const Header: React.FC = () => {
 
   return (
     <header className="bg-transparent text-white p-4 flex justify-between items-center relative">
-      <Image src="/logo.png" alt="Logo" width={150} height={50} />
+      <Image src="./images/logo.png" alt="Logo" width={150} height={50} />
 
       {/* Menu hamburger pour tous les écrans */}
       <div className="absolute right-4 top-4">
