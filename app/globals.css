@@ -20,18 +20,6 @@ body {
   font-family: var(--font-oxygen), sans-serif;
 }
 
-@font-face {
-  font-family: 'Tan Meringue';
-  src: url('/app/fonts/Tan Meringue.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-
-.tanmeringue {
-  font-family: 'Tan Meringue', sans-serif;
-}
-
 
 
 @layer utilities {
