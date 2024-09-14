@@ -8,7 +8,7 @@ const Header: React.FC = () => {
 
   return (
     <header className="bg-transparent text-white p-4 flex justify-between items-center relative">
-      <div className="text-lg font-semibold">DigiLoad.online</div>
+      <div className="text-lg font-semibold tanmeringue">DigiLoad.online</div>
 
       {/* Menu hamburger pour tous les écrans */}
       <div className="absolute right-4 top-4">

@@ -20,6 +20,10 @@ body {
   font-family: var(--font-oxygen), sans-serif;
 }
 
+.tanmeringue {
+  font-family: var(--font-tanmeringue), sans-serif;
+}
+
 
 
 @layer utilities {

@@ -19,6 +19,12 @@ const oxygen = localFont({
   weight: "300 700",
 });
 
+const tanmeringue = localFont({
+  src: "./fonts/Tanmeringue.ttf",
+  variable: "--font-tanmeringue",
+  weight: "300 700",
+});
+
 export const metadata: Metadata & { og: OGMetadata; twitter: { card: string; title: string; description: string; image: string } } = {
   title: "Canva Pro Gratuit | Rejoignez la Communauté de Canva en France",
   description: "Obtenez Canva Pro gratuitement avec notre communauté exclusive. Profitez des avantages de Canva Pro sans frais et découvrez comment notre communauté d'utilisateurs en France facilite l'accès à Canva Pro.",
