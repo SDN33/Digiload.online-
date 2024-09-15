@@ -109,6 +109,7 @@ const Home: React.FC = () => {
             </style>
 
             <g>
+              {/* Rotation du cercle */}
               <animateTransform
                 attributeName="transform"
                 type="rotate"
@@ -118,10 +119,12 @@ const Home: React.FC = () => {
                 repeatCount="indefinite"
               />
 
+              {/* Cercle principal */}
               <circle cx="200" cy="200" r="150" fill="none" stroke="currentColor" strokeWidth="4">
                 <animate attributeName="r" values="150;155;150" dur="4s" repeatCount="indefinite" />
               </circle>
 
+              {/* Lignes décoratives */}
               <path d="M100 100 Q150 50 200 100 T300 100" fill="none" stroke="currentColor" strokeWidth="4">
                 <animate
                   attributeName="d"
@@ -144,6 +147,7 @@ const Home: React.FC = () => {
                 />
               </path>
 
+              {/* Lignes centrales */}
               <line x1="200" y1="100" x2="200" y2="300" stroke="currentColor" strokeWidth="4">
                 <animate attributeName="y2" values="300;290;300" dur="4s" repeatCount="indefinite" />
               </line>
@@ -152,10 +156,12 @@ const Home: React.FC = () => {
                 <animate attributeName="x2" values="300;290;300" dur="4s" repeatCount="indefinite" />
               </line>
 
+              {/* Petit cercle central */}
               <circle cx="200" cy="200" r="15" fill="currentColor" className="bounce">
                 <animate attributeName="r" values="15;20;15" dur="2s" repeatCount="indefinite" />
               </circle>
 
+              {/* Flèches */}
               <g>
                 <animateTransform
                   attributeName="transform"
@@ -165,10 +171,14 @@ const Home: React.FC = () => {
                   dur="10s"
                   repeatCount="indefinite"
                 />
-                <path d="M200 50 L220 90 L180 90 Z" fill="currentColor" className="bounce">
+
+                {/* Flèche du haut */}
+                <path d="M200 80 L220 120 L180 120 Z" fill="currentColor" className="bounce">
                   <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite" />
                 </path>
-                <path d="M200 350 L220 310 L180 310 Z" fill="currentColor" className="bounce">
+
+                {/* Flèche du bas */}
+                <path d="M200 320 L220 280 L180 280 Z" fill="currentColor" className="bounce">
                   <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite" />
                 </path>
               </g>
