@@ -93,7 +93,7 @@ const Home: React.FC = () => {
 
         <div className="flex-1 flex flex-col items-center justify-center p-8 md:p-16 relative">
           {/* DotLottie Player */}
-          <div className="absolute inset-0 flex items-center justify-center" style={{ marginTop: '-2rem' }}>
+          <div className="absolute inset-0 flex items-center justify-center" style={{ marginTop: '-5rem' }}>
             <DotLottiePlayer />
           </div>
 
