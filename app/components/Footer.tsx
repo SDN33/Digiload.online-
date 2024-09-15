@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
             >
               &times;
             </button>
-            <h3 className="text-lg font-bold mb-4">Mentions Légales</h3>
+            <h3 className="text-lg font-bold mb-4 text-black">Mentions Légales</h3>
             <p>
               <strong>Propriétaire :</strong> Still Inov Agency, stillinov.com <br />
               <strong>Contact :</strong> Stillinovagency@gmail.com<br />
