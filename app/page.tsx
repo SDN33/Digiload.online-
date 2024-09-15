@@ -90,53 +90,83 @@ const Home: React.FC = () => {
         </div>
 
         <div className="flex-1 flex flex-col items-center justify-center p-8 md:p-16">
-          {/* Illustration SVG */}
-          <svg
-            width="300"
-            height="300"
-            viewBox="0 0 400 400"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="text-white opacity-70 md:w-96 md:h-96"
-          >
-            <g>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" className="w-full h-full">
+            <style>
+              {`
+                .bounce {
+                  animation: bounce 2s infinite;
+                }
+                @keyframes bounce {
+                  0%, 100% { transform: translateY(0); }
+                  50% { transform: translateY(-20px); }
+                }
+              `}
+            </style>
+  
+          <g>
               <animateTransform
                 attributeName="transform"
                 type="rotate"
                 from="0 200 200"
                 to="360 200 200"
-                dur="10s"
+                dur="20s"
                 repeatCount="indefinite"
               />
-              <circle
-                cx="200"
-                cy="200"
-                r="150"
-                stroke="currentColor"
-                strokeWidth="4"
-              />
-              <path
-                d="M100 100 Q150 50 200 100 T300 100"
-                stroke="currentColor"
-                strokeWidth="4"
-                fill="none"
-              />
-              <path
-                d="M100 300 Q150 250 200 300 T300 300"
-                stroke="currentColor"
-                strokeWidth="4"
-                fill="none"
-              />
-              <path
-                d="M200 100 L200 300"
-                stroke="currentColor"
-                strokeWidth="4"
-              />
-              <path
-                d="M100 200 L300 200"
-                stroke="currentColor"
-                strokeWidth="4"
-              />
+  
+            <circle cx="200" cy="200" r="150" fill="none" stroke="currentColor" strokeWidth="4">
+                <animate attributeName="r" values="150;155;150" dur="4s" repeatCount="indefinite" />
+              </circle>
+  
+            <path d="M100 100 Q150 50 200 100 T300 100" fill="none" stroke="currentColor" strokeWidth="4">
+                <animate
+                  attributeName="d"
+                  values="M100 100 Q150 50 200 100 T300 100;
+                          M100 110 Q150 60 200 110 T300 110;
+                          M100 100 Q150 50 200 100 T300 100"
+                  dur="6s"
+                  repeatCount="indefinite"
+                />
+              </path>
+  
+            <path d="M100 300 Q150 250 200 300 T300 300" fill="none" stroke="currentColor" strokeWidth="4">
+                <animate
+                  attributeName="d"
+                  values="M100 300 Q150 250 200 300 T300 300;
+                          M100 290 Q150 240 200 290 T300 290;
+                          M100 300 Q150 250 200 300 T300 300"
+                  dur="6s"
+                  repeatCount="indefinite"
+                />
+              </path>
+  
+            <line x1="200" y1="100" x2="200" y2="300" stroke="currentColor" strokeWidth="4">
+                <animate attributeName="y2" values="300;290;300" dur="4s" repeatCount="indefinite" />
+              </line>
+  
+            <line x1="100" y1="200" x2="300" y2="200" stroke="currentColor" strokeWidth="4">
+                <animate attributeName="x2" values="300;290;300" dur="4s" repeatCount="indefinite" />
+              </line>
+  
+            <circle cx="200" cy="200" r="15" fill="currentColor" className="bounce">
+                <animate attributeName="r" values="15;20;15" dur="2s" repeatCount="indefinite" />
+              </circle>
+  
+            <g>
+                <animateTransform
+                  attributeName="transform"
+                  type="rotate"
+                  from="0 200 200"
+                  to="-360 200 200"
+                  dur="10s"
+                  repeatCount="indefinite"
+                />
+                <path d="M200 50 L220 90 L180 90 Z" fill="currentColor" className="bounce">
+                  <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite" />
+                </path>
+                <path d="M200 350 L220 310 L180 310 Z" fill="currentColor" className="bounce">
+                  <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite" />
+                </path>
+              </g>
             </g>
           </svg>
         </div>
