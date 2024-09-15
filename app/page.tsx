@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "./components/Header";
@@ -48,6 +48,16 @@ const Home: React.FC = () => {
         break;
     }
   };
+
+  useEffect(() => {
+    if (step1Completed && step2Completed && step3Completed) {
+      setCompletedCount(prevCount => prevCount + 1);
+    }
+  }, [step1Completed, step2Completed, step3Completed]);useEffect(() => {
+    if (step1Completed && step2Completed && step3Completed) {
+      setCompletedCount(prevCount => prevCount + 1);
+    }
+  }, [step1Completed, step2Completed, step3Completed]);
 
   return (
     <div className="flex flex-col h-[110vh] bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white overflow-x-hidden">
