@@ -60,6 +60,8 @@ export default function RootLayout({
         <meta name="twitter:description" content={metadata.twitter.description} />
         <meta name="twitter:image" content={metadata.twitter.image} />
         <link rel="icon" href="https://digiload.online/app/favicon.ico" type="image/x-icon" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5355085288090957"
+          crossOrigin="anonymous"></script>
       </head>
       <body className={`${oxygen.variable} antialiased`}>
         {children}
@@ -67,6 +69,7 @@ export default function RootLayout({
         <Script
           src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
           type="module"
+          crossOrigin="anonymous"
         />
       </body>
     </html>
