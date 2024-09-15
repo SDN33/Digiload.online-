@@ -155,7 +155,7 @@ const Home: React.FC = () => {
             >
               &times;
             </button>
-            <h3 className="text-lg font-bold mb-4">Étapes pour obtenir Canva Pro Gratuit</h3>
+            <h3 className="text-lg font-bold mb-4 text-center">Étapes pour obtenir Canva Pro Gratuit</h3>
             <ul className="space-y-4">
               <li className={`flex items-center ${step1Completed ? "text-green-600" : ""}`}>
                 {step1Completed ? "✔️" : "➤"} PUB 1:
