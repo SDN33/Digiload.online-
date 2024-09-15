@@ -10,7 +10,7 @@ const DotLottiePlayer: React.FC = () => {
             src="https://lottie.host/ea55694c-3cb6-4eb7-a6f3-20b39546c02f/6jz56DfMQp.json"
             background="transparent"
             speed="1"
-            style="width: 400px; height: 400px;"  // Increased size
+            style="width: 400px; height: 400px; z-index: 9999;"
             loop
             autoplay
           ></dotlottie-player>
