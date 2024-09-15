@@ -6,8 +6,6 @@ import Image from "next/image";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Cookies from "./components/Cookies";
-import DotLottiePlayer from "./components/DotLottiePlayer";
-
 import { Analytics } from "@vercel/analytics/react";
 
 const Home: React.FC = () => {
