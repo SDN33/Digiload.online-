@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
 
   return (
     <>
-      <footer className="bg-transparent text-white p-4 text-center relative">
+      <footer className="bg-white text-black p-4 text-center relative">
       <button
           onClick={handleLegalClick}
           className="text-white mt-2"
