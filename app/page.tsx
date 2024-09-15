@@ -90,7 +90,12 @@ const Home: React.FC = () => {
         </div>
 
         <div className="flex-1 flex flex-col items-center justify-center p-8 md:p-16">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" className="w-full h-full">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="400"
+            height="400"
+            viewBox="0 0 400 400"
+          >
             <style>
               {`
                 .bounce {
@@ -102,8 +107,8 @@ const Home: React.FC = () => {
                 }
               `}
             </style>
-  
-          <g>
+      
+            <g>
               <animateTransform
                 attributeName="transform"
                 type="rotate"
@@ -112,12 +117,12 @@ const Home: React.FC = () => {
                 dur="20s"
                 repeatCount="indefinite"
               />
-  
-            <circle cx="200" cy="200" r="150" fill="none" stroke="currentColor" strokeWidth="4">
+      
+              <circle cx="200" cy="200" r="150" fill="none" stroke="currentColor" strokeWidth="4">
                 <animate attributeName="r" values="150;155;150" dur="4s" repeatCount="indefinite" />
               </circle>
-  
-            <path d="M100 100 Q150 50 200 100 T300 100" fill="none" stroke="currentColor" strokeWidth="4">
+      
+              <path d="M100 100 Q150 50 200 100 T300 100" fill="none" stroke="currentColor" strokeWidth="4">
                 <animate
                   attributeName="d"
                   values="M100 100 Q150 50 200 100 T300 100;
@@ -127,8 +132,8 @@ const Home: React.FC = () => {
                   repeatCount="indefinite"
                 />
               </path>
-  
-            <path d="M100 300 Q150 250 200 300 T300 300" fill="none" stroke="currentColor" strokeWidth="4">
+      
+              <path d="M100 300 Q150 250 200 300 T300 300" fill="none" stroke="currentColor" strokeWidth="4">
                 <animate
                   attributeName="d"
                   values="M100 300 Q150 250 200 300 T300 300;
@@ -138,20 +143,20 @@ const Home: React.FC = () => {
                   repeatCount="indefinite"
                 />
               </path>
-  
-            <line x1="200" y1="100" x2="200" y2="300" stroke="currentColor" strokeWidth="4">
+      
+              <line x1="200" y1="100" x2="200" y2="300" stroke="currentColor" strokeWidth="4">
                 <animate attributeName="y2" values="300;290;300" dur="4s" repeatCount="indefinite" />
               </line>
-  
-            <line x1="100" y1="200" x2="300" y2="200" stroke="currentColor" strokeWidth="4">
+      
+              <line x1="100" y1="200" x2="300" y2="200" stroke="currentColor" strokeWidth="4">
                 <animate attributeName="x2" values="300;290;300" dur="4s" repeatCount="indefinite" />
               </line>
-  
-            <circle cx="200" cy="200" r="15" fill="currentColor" className="bounce">
+      
+              <circle cx="200" cy="200" r="15" fill="currentColor" className="bounce">
                 <animate attributeName="r" values="15;20;15" dur="2s" repeatCount="indefinite" />
               </circle>
-  
-            <g>
+      
+              <g>
                 <animateTransform
                   attributeName="transform"
                   type="rotate"
