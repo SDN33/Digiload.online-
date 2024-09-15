@@ -50,7 +50,7 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col h-[110vh] bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white">
+    <div className="flex flex-col h-[110vh] bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white overflow-x-hidden">
       <Header />
 
       {/* Avertissement adblock */}
@@ -107,7 +107,7 @@ const Home: React.FC = () => {
                 }
               `}
             </style>
-      
+
             <g>
               <animateTransform
                 attributeName="transform"
@@ -117,11 +117,11 @@ const Home: React.FC = () => {
                 dur="20s"
                 repeatCount="indefinite"
               />
-      
+
               <circle cx="200" cy="200" r="150" fill="none" stroke="currentColor" strokeWidth="4">
                 <animate attributeName="r" values="150;155;150" dur="4s" repeatCount="indefinite" />
               </circle>
-      
+
               <path d="M100 100 Q150 50 200 100 T300 100" fill="none" stroke="currentColor" strokeWidth="4">
                 <animate
                   attributeName="d"
@@ -132,7 +132,7 @@ const Home: React.FC = () => {
                   repeatCount="indefinite"
                 />
               </path>
-      
+
               <path d="M100 300 Q150 250 200 300 T300 300" fill="none" stroke="currentColor" strokeWidth="4">
                 <animate
                   attributeName="d"
@@ -143,19 +143,19 @@ const Home: React.FC = () => {
                   repeatCount="indefinite"
                 />
               </path>
-      
+
               <line x1="200" y1="100" x2="200" y2="300" stroke="currentColor" strokeWidth="4">
                 <animate attributeName="y2" values="300;290;300" dur="4s" repeatCount="indefinite" />
               </line>
-      
+
               <line x1="100" y1="200" x2="300" y2="200" stroke="currentColor" strokeWidth="4">
                 <animate attributeName="x2" values="300;290;300" dur="4s" repeatCount="indefinite" />
               </line>
-      
+
               <circle cx="200" cy="200" r="15" fill="currentColor" className="bounce">
                 <animate attributeName="r" values="15;20;15" dur="2s" repeatCount="indefinite" />
               </circle>
-      
+
               <g>
                 <animateTransform
                   attributeName="transform"
