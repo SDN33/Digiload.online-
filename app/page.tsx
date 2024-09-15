@@ -6,6 +6,8 @@ import Image from "next/image";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Cookies from "./components/Cookies";
+import DotLottiePlayer from "./components/DotLottiePlayer";
+
 import { Analytics } from "@vercel/analytics/react";
 
 const Home: React.FC = () => {
@@ -89,8 +91,13 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex-1 flex flex-col items-center justify-center p-8 md:p-16">
-          {/* Illustration SVG */}
+        <div className="flex-1 flex flex-col items-center justify-center p-8 md:p-16 relative">
+          {/* DotLottie Player */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <DotLottiePlayer />
+          </div>
+
+          {/* Existing SVG */}
           <svg
             width="300"
             height="300"
