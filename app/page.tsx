@@ -91,11 +91,56 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex-1 flex flex-col items-center justify-center p-8 md:p-16 relative">
-          {/* DotLottie Player */}
-          <div className="absolute inset-0 flex items-center justify-center" style={{ marginTop: '-5rem' }}>
-            <DotLottiePlayer />
-          </div>
+        <div className="flex-1 flex flex-col items-center justify-center p-8 md:p-16">
+          {/* Illustration SVG */}
+          <svg
+            width="300"
+            height="300"
+            viewBox="0 0 400 400"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="text-white opacity-70 md:w-96 md:h-96"
+          >
+            <g>
+              <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="0 200 200"
+                to="360 200 200"
+                dur="10s"
+                repeatCount="indefinite"
+              />
+              <circle
+                cx="200"
+                cy="200"
+                r="150"
+                stroke="currentColor"
+                strokeWidth="4"
+              />
+              <path
+                d="M100 100 Q150 50 200 100 T300 100"
+                stroke="currentColor"
+                strokeWidth="4"
+                fill="none"
+              />
+              <path
+                d="M100 300 Q150 250 200 300 T300 300"
+                stroke="currentColor"
+                strokeWidth="4"
+                fill="none"
+              />
+              <path
+                d="M200 100 L200 300"
+                stroke="currentColor"
+                strokeWidth="4"
+              />
+              <path
+                d="M100 200 L300 200"
+                stroke="currentColor"
+                strokeWidth="4"
+              />
+            </g>
+          </svg>
         </div>
       </main>
 
