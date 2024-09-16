@@ -202,9 +202,9 @@ const Home: React.FC = () => {
           </svg>
         </div>
       </main>
-      <div className="bg-white text-blue-700 py-4 text-center">
-        <p className="text-lg font-bold">
-          {completedCount + 280} digiloaders nous ont déjà fait confiance !
+      <div className="bg-white text-blue-700 py-4 text-center w-auto">
+        <p className="text-lg font-bold animate-pulse">
+          {completedCount + 217} digiloaders nous ont déjà fait confiance !
         </p>
       </div>
       <Footer />
