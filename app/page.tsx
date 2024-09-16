@@ -203,9 +203,9 @@ const Home: React.FC = () => {
         </div>
       </main>
       <div
-        className="bg-white text-blue-700 py-4 text-center px-6 inline-block mx-auto"
+        className="bg-white text-blue-700 py-4 text-center px-6 inline-block mx-auto rounded-lg shadow-lg"
       >
-        <p className="text-lg font-bold animate-pulse rounded-lg">
+        <p className="text-lg font-bold animate-pulse">
           {completedCount + 217} digiloaders nous ont déjà fait confiance !
         </p>
       </div>
