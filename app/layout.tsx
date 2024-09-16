@@ -62,6 +62,24 @@ export default function RootLayout({
         <link rel="icon" href="https://digiload.online/app/favicon.ico" type="image/x-icon" />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5355085288090957"
           crossOrigin="anonymous"></script>
+        <Script
+          id="brevo-conversations"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(d, w, c) {
+                w.BrevoConversationsID = '66e74748bc1eee12ff09caba';
+                w[c] = w[c] || function() {
+                  (w[c].q = w[c].q || []).push(arguments);
+                };
+                var s = d.createElement('script');
+                s.async = true;
+                s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+                if (d.head) d.head.appendChild(s);
+              })(document, window, 'BrevoConversations');
+            `,
+          }}
+        />
       </head>
       <body className={`${oxygen.variable} antialiased`}>
         {children}
