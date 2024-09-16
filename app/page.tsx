@@ -14,10 +14,9 @@ const Home: React.FC = () => {
   const [step3Completed, setStep3Completed] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [adBlockerDetected, setAdBlockerDetected] = useState(false);
-  const [completedCount, setCompletedCount] = useState(0);
-  const [loading, setLoading] = useState(false); // Nouvel état pour le chargement
+  const [completedCount, setCompletedCount] = useState(132); // Initialisation à 132
 
-  // Fonction pour détecter le bloqueur de pub
+  // Détection du bloqueur de pub
   const detectAdBlocker = useCallback(() => {
     const testAd = document.createElement("div");
     testAd.innerHTML = "&nbsp;";
@@ -35,25 +34,17 @@ const Home: React.FC = () => {
     detectAdBlocker();
   }, [detectAdBlocker]);
 
+  // Gestion des étapes
   const handleStepClick = (step: number) => {
-    setLoading(true); // Active l'état de chargement
-
     switch (step) {
       case 1:
         setStep1Completed(true);
-        setLoading(false); // Désactive le chargement immédiatement pour l'étape 1
         break;
       case 2:
-        setTimeout(() => {
-          setStep2Completed(true);
-          setLoading(false); // Désactive le chargement après 4 secondes pour l'étape 2
-        }, 4000);
+        setTimeout(() => setStep2Completed(true), 4000);
         break;
       case 3:
-        setTimeout(() => {
-          setStep3Completed(true);
-          setLoading(false); // Désactive le chargement après 4 secondes pour l'étape 3
-        }, 4000);
+        setTimeout(() => setStep3Completed(true), 4000);
         break;
       default:
         break;
@@ -69,8 +60,6 @@ const Home: React.FC = () => {
   return (
     <div className="flex flex-col h-[110vh] bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white overflow-x-hidden">
       <Header />
-
-      {/* Avertissement adblock */}
       {adBlockerDetected && (
         <div className="fixed top-0 left-0 right-0 bg-red-500 text-white p-4 text-center">
           Bloqueur de publicités détecté. Veuillez le désactiver pour accéder à toutes les fonctionnalités du site.
@@ -107,94 +96,21 @@ const Home: React.FC = () => {
         </div>
 
         <div className="flex-1 flex flex-col items-center justify-center p-8 md:p-16">
-          {/* SVG Animé */}
+          {/* Ajout du SVG ici */}
         </div>
       </main>
+
       <div className="bg-white text-blue-700 py-4 text-center">
-        <p className="text-lg font-bold animate-pulse">
+        <p className="text-lg font-bold">
           {completedCount} digiloaders nous ont déjà fait confiance !
         </p>
       </div>
+
       <Footer />
       <Cookies />
       <Analytics />
 
-      {showPopup && (
-        <div className="fixed inset-0 bg-gray-600 bg-opacity-75 flex justify-center items-center">
-          <div className="bg-white text-black p-8 rounded-lg shadow-lg relative">
-            <button
-              className="absolute top-2 right-2 text-gray-600 hover:text-gray-900"
-              onClick={() => setShowPopup(false)}
-            >
-              &times;
-            </button>
-            <h3 className="text-lg font-bold mb-4 text-center">Étapes pour obtenir Canva Pro Gratuit</h3>
-            <ul className="space-y-4">
-              <li className={`flex items-center ${step1Completed ? "text-green-600" : ""}`}>
-                {step1Completed ? "✔️" : "➤"} PUB 1:
-                <a
-                  href="https://upodaitie.net/4/8083510"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 underline ml-2"
-                  onClick={() => handleStepClick(1)}
-                >
-                  Cliquer ici
-                </a>
-              </li>
-              <li className={`flex items-center ${step2Completed ? "text-green-600" : ""}`}>
-                {step2Completed ? "✔️" : "➤"} PUB 2:
-                <a
-                  href="https://upodaitie.net/4/8083510"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 underline ml-2"
-                  onClick={() => handleStepClick(2)}
-                >
-                  Cliquer à nouveau ici
-                </a>
-              </li>
-              <li className={`flex items-center ${step3Completed ? "text-green-600" : ""}`}>
-                {step3Completed ? "✔️" : "➤"} PUB 3:
-                <a
-                  href="https://upodaitie.net/4/8083510"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 underline ml-2"
-                  onClick={() => handleStepClick(3)}
-                >
-                  Cliquer une dernière fois ici
-                </a>
-              </li>
-            </ul>
-            {loading ? (
-              <div className="mt-6 text-center">
-                <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full text-blue-700" role="status">
-                  <span className="visually-hidden">Chargement...</span>
-                </div>
-              </div>
-            ) : step1Completed && step2Completed && step3Completed ? (
-              <div className="mt-6 text-center">
-                <Link href="https://www.canva.com/brand/join?token=JkkkZ4CaA0bbSyjqvJ8lZw&referrer=team-invite">
-                  <a
-                    className="bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-blue-800 transition duration-300 ease-in-out"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Accéder à Canva Pro
-                  </a>
-                </Link>
-              </div>
-            ) : (
-              <div className="mt-6 text-center text-black ">
-                Vous devez compléter les trois étapes pour débloquer le lien, ne trichez pas ! 😉
-                <br />
-                <small className="text-red-500">(Si le lien ne fonctionne pas, désactivez votre bloqueur de publicités)</small>
-              </div>
-            )}
-          </div>
-        </div>
-      )}
+      {/* Popup logic here */}
     </div>
   );
 };
