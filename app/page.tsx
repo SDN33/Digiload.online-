@@ -202,7 +202,12 @@ const Home: React.FC = () => {
           </svg>
         </div>
       </main>
-      <div className="bg-white text-blue-700 py-4 text-center w-auto">
+      <div
+        className="bg-white text-blue-700 py-4 text-center px-6 inline-block mx-auto"
+        style={{
+          clipPath: "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)",
+        }}
+      >
         <p className="text-lg font-bold animate-pulse">
           {completedCount + 217} digiloaders nous ont déjà fait confiance !
         </p>
