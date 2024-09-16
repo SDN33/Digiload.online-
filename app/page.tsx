@@ -203,8 +203,8 @@ const Home: React.FC = () => {
         </div>
       </main>
       <div className="bg-white text-blue-700 py-4 text-center">
-        <p className="text-lg font-bold animate-pulse">
-          {completedCount} digiloaders nous ont déjà fait confiance !
+        <p className="text-lg font-bold">
+          {completedCount + 280} digiloaders nous ont déjà fait confiance !
         </p>
       </div>
       <Footer />
