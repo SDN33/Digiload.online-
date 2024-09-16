@@ -99,7 +99,7 @@ const Home: React.FC = () => {
               Canva Pro Gratuit
             </button>
             <h2 className="text-sm md:text-lg font-light leading-tight mt-4">
-              ✨ Accédez à Canva Pro <strong> Gratuitement</strong>✨
+              ✨ Accédez à Canva Pro <strong> Gratuitement </strong>✨
               <br />
               <small>en 1 min seulement !</small>
             </h2>
