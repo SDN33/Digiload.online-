@@ -206,6 +206,8 @@ const Home: React.FC = () => {
         className="bg-white text-blue-700 py-4 text-center px-6 inline-block mx-auto"
         style={{
           clipPath: "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)",
+          padding: "0.5rem 1rem", // Ajoute du padding pour espacer le texte
+
         }}
       >
         <p className="text-lg font-bold animate-pulse">
