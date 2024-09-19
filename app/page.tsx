@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useCallback, useEffect } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -15,7 +14,7 @@ const Home: React.FC = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [adBlockerDetected, setAdBlockerDetected] = useState(false);
   const [completedCount, setCompletedCount] = useState(0);
-  const [loading, setLoading] = useState(false); // Nouvel état pour le chargement
+  const [adClickCount, setAdClickCount] = useState(0);
 
   // Fonction pour détecter le bloqueur de pub
   const detectAdBlocker = useCallback(() => {
@@ -36,23 +35,19 @@ const Home: React.FC = () => {
   }, [detectAdBlocker]);
 
   const handleStepClick = (step: number) => {
-    setLoading(true); // Active l'état de chargement
-
     switch (step) {
       case 1:
         setStep1Completed(true);
-        setLoading(false); // Désactive le chargement immédiatement pour l'étape 1
+        setAdClickCount((prevCount) => prevCount + 1);
         break;
       case 2:
         setTimeout(() => {
           setStep2Completed(true);
-          setLoading(false); // Désactive le chargement après 4 secondes pour l'étape 2
         }, 4000);
         break;
       case 3:
         setTimeout(() => {
           setStep3Completed(true);
-          setLoading(false); // Désactive le chargement après 4 secondes pour l'étape 3
         }, 4000);
         break;
       default:
@@ -61,10 +56,10 @@ const Home: React.FC = () => {
   };
 
   useEffect(() => {
-    if (step1Completed && step2Completed && step3Completed) {
+    if (adClickCount >= 3 && step1Completed && step2Completed && step3Completed) {
       setCompletedCount((prevCount) => prevCount + 1);
     }
-  }, [step1Completed, step2Completed, step3Completed]);
+  }, [adClickCount, step1Completed, step2Completed, step3Completed]);
 
   // Fonction pour gérer le compteur de visiteurs avec localStorage
   useEffect(() => {
@@ -79,12 +74,12 @@ const Home: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    if (step1Completed && step2Completed && step3Completed) {
+    if (adClickCount >= 3 && step1Completed && step2Completed && step3Completed) {
       const newCount = completedCount + 1;
       setCompletedCount(newCount);
       localStorage.setItem("visitorCount", newCount.toString()); // Mise à jour de localStorage avec le nouveau compte
     }
-  }, [step1Completed, step2Completed, step3Completed]);
+  }, [adClickCount, step1Completed, step2Completed, step3Completed, completedCount]);
 
   return (
     <div className="flex flex-col h-[110vh] bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white overflow-x-hidden">
@@ -114,10 +109,18 @@ const Home: React.FC = () => {
             </div>
             <button
               className="btn bg-white text-blue-700 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-400 transition duration-300 ease-in-out"
-              onClick={() => setShowPopup(true)}
+              onClick={() => handleStepClick(1)}
             >
-              Canva Pro Gratuit
+              Cliquez ici pour la pub
             </button>
+            {adClickCount >= 3 && (
+              <button
+                className="btn bg-white text-blue-700 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-400 transition duration-300 ease-in-out"
+                onClick={() => setShowPopup(true)}
+              >
+                Canva Pro Gratuit
+              </button>
+            )}
             <h2 className="text-sm md:text-lg font-light leading-tight mt-4">
               ✨ Accédez à Canva Pro <strong> Gratuitement </strong>✨
               <br />
@@ -203,17 +206,13 @@ const Home: React.FC = () => {
                   type="rotate"
                   from="0 200 200"
                   to="-360 200 200"
-                  dur="10s"
+                  dur="6s"
                   repeatCount="indefinite"
                 />
-
-                {/* Flèche du haut */}
-                <path d="M200 80 L220 120 L180 120 Z" fill="currentColor" className="bounce">
+                <path d="M190 170 L210 170 L200 150 Z" fill="currentColor" className="bounce">
                   <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite" />
                 </path>
-
-                {/* Flèche du bas */}
-                <path d="M200 320 L220 280 L180 280 Z" fill="currentColor" className="bounce">
+                <path d="M230 190 L230 210 L250 200 Z" fill="currentColor" className="bounce">
                   <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite" />
                 </path>
               </g>
@@ -223,7 +222,7 @@ const Home: React.FC = () => {
       </main>
 
       {/* Popup pour Canva */}
-      {showPopup && (
+      {completedCount >= 1 && (
         <div className="fixed inset-0 flex items-center justify-center bg-gray-600 bg-opacity-70 z-50">
           <div className="bg-white text-black p-6 rounded-lg shadow-lg relative max-w-md w-full">
             <button
@@ -237,12 +236,14 @@ const Home: React.FC = () => {
               Profitez de Canva Pro gratuitement grâce à notre offre spéciale ! <br />
               Enregistrez-vous maintenant et bénéficiez de tous les avantages de Canva Pro.
             </p>
-            <button
-              className="btn bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300"
-              onClick={() => setShowPopup(false)}
+            <a
+              href="https://www.canva.com/brand/join?token=JkkkZ4CaA0bbSyjqvJ8lZw&referrer=team-invite"
+              className="btn bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300 mb-4 block text-center"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Accéder à l'offre
-            </button>
+            </a>
           </div>
         </div>
       )}
