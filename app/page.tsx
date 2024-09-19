@@ -127,7 +127,7 @@ const Home: React.FC = () => {
         </div>
 
         <div className="flex-1 flex flex-col items-center justify-center p-8 md:p-16">
-        <svg
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             width="400"
             height="400"
@@ -142,7 +142,6 @@ const Home: React.FC = () => {
                 50% { transform: translateY(-20px); }
               }
             `}</style>
-
 
             <g>
               {/* Rotation du cercle */}
@@ -223,92 +222,34 @@ const Home: React.FC = () => {
         </div>
       </main>
 
-      <div className="bg-white text-blue-700 py-4 text-center px-6 inline-block mx-auto rounded-lg shadow-lg mb-8">
-        <p className="text-sm font-bold animate-pulse">
-          🎉 {completedCount + 217} digiloaders nous ont déjà fait confiance ! 🎉
-        </p>
-      </div>
-
-      <Footer />
-      <Cookies />
-      <Analytics />
-
+      {/* Popup pour Canva */}
       {showPopup && (
-        <div className="fixed inset-0 bg-gray-600 bg-opacity-75 flex justify-center items-center">
-          <div className="bg-white text-black p-8 rounded-lg shadow-lg relative">
+        <div className="fixed inset-0 flex items-center justify-center bg-gray-600 bg-opacity-70 z-50">
+          <div className="bg-white text-black p-6 rounded-lg shadow-lg relative max-w-md w-full">
             <button
               className="absolute top-2 right-2 text-gray-600 hover:text-gray-900"
               onClick={() => setShowPopup(false)}
             >
               &times;
             </button>
-            <h3 className="text-lg font-bold mb-4 text-center">Étapes pour obtenir Canva Pro Gratuit</h3>
-            <ul className="space-y-4">
-              <li className={`flex items-center ${step1Completed ? "text-green-600" : ""}`}>
-                {step1Completed ? "✔️" : "➤"} PUB 1:
-                <a
-                  href="https://upodaitie.net/4/8083510"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 underline ml-2"
-                  onClick={() => handleStepClick(1)}
-                >
-                  Cliquer ici
-                </a>
-              </li>
-              <li className={`flex items-center ${step2Completed ? "text-green-600" : ""}`}>
-                {step2Completed ? "✔️" : "➤"} PUB 2:
-                <a
-                  href="https://upodaitie.net/4/8083510"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 underline ml-2"
-                  onClick={() => handleStepClick(2)}
-                >
-                  Cliquer à nouveau ici
-                </a>
-              </li>
-              <li className={`flex items-center ${step3Completed ? "text-green-600" : ""}`}>
-                {step3Completed ? "✔️" : "➤"} PUB 3:
-                <a
-                  href="https://upodaitie.net/4/8083510"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 underline ml-2"
-                  onClick={() => handleStepClick(3)}
-                >
-                  Cliquer une dernière fois ici
-                </a>
-              </li>
-            </ul>
-            {loading ? (
-              <div className="mt-6 text-center">
-                <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full text-blue-700" role="status">
-                  <span className="visually-hidden">Chargement...</span>
-                </div>
-              </div>
-            ) : step1Completed && step2Completed && step3Completed ? (
-              <div className="mt-6 text-center">
-                <Link href="https://www.canva.com/brand/join?token=JkkkZ4CaA0bbSyjqvJ8lZw&referrer=team-invite">
-                  <a
-                    className="bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-blue-800 transition duration-300 ease-in-out"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Accéder à Canva Pro
-                  </a>
-                </Link>
-              </div>
-            ) : (
-              <div className="mt-6 text-center text-black ">
-                Vous devez compléter les trois étapes pour débloquer le lien, ne trichez pas ! 😉
-                <br />
-                <small className="text-red-500">(Si le lien ne se débloque pas après la 3ème pub, réessayez)</small>
-              </div>
-            )}
+            <h2 className="text-xl font-semibold mb-4">Canva Pro Gratuit</h2>
+            <p className="mb-4">
+              Profitez de Canva Pro gratuitement grâce à notre offre spéciale ! <br />
+              Enregistrez-vous maintenant et bénéficiez de tous les avantages de Canva Pro.
+            </p>
+            <button
+              className="btn bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300"
+              onClick={() => setShowPopup(false)}
+            >
+              Accéder à l'offre
+            </button>
           </div>
         </div>
       )}
+
+      <Footer />
+      <Cookies />
+      <Analytics />
     </div>
   );
 };
