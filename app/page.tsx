@@ -110,7 +110,7 @@ const Home: React.FC = () => {
               className="btn bg-white text-blue-700 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-400 transition duration-300 ease-in-out"
               onClick={() => handleStepClick(1)}
             >
-              Cliquez ici pour la pub
+              Accéder à Canva Pro Gratuit
             </button>
             {adClickCount >= 3 && (
               <button
@@ -223,7 +223,7 @@ const Home: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Accéder à l'offre
+              Accéder à Canva Pro
             </a>
           </div>
         </div>
