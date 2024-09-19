@@ -204,7 +204,7 @@ const Home: React.FC = () => {
                   className="btn bg-blue-500 text-white font-bold py-2 px-4 rounded-lg mb-4"
                   onClick={() => handleStepClick(1)}
                 >
-                  Complétez l'étape 1
+                  Complétez l&apos;étape 1
                 </button>
               )}
               {!step2Completed && (
@@ -212,7 +212,7 @@ const Home: React.FC = () => {
                   className="btn bg-blue-500 text-white font-bold py-2 px-4 rounded-lg mb-4"
                   onClick={() => handleStepClick(2)}
                 >
-                  Complétez l'étape 2
+                  Complétez l&apos;étape 2
                 </button>
               )}
               {!step3Completed && (
@@ -220,7 +220,7 @@ const Home: React.FC = () => {
                   className="btn bg-blue-500 text-white font-bold py-2 px-4 rounded-lg mb-4"
                   onClick={() => handleStepClick(3)}
                 >
-                  Complétez l'étape 3
+                  Complétez l&apos;étape 3
                 </button>
               )}
               {step1Completed && step2Completed && step3Completed ? (
