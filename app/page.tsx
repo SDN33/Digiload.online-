@@ -32,29 +32,8 @@ const Home: React.FC = () => {
     detectAdBlocker();
   }, [detectAdBlocker]);
 
-  const handleStepClick = (step: number) => {
-    switch (step) {
-      case 1:
-        setStep1Completed(true);
-        break;
-      case 2:
-        setTimeout(() => {
-          setStep2Completed(true);
-        }, 4000);
-        break;
-      case 3:
-        setTimeout(() => {
-          setStep3Completed(true);
-        }, 4000);
-        break;
-      default:
-        break;
-    }
-  };
-
   useEffect(() => {
     if (step1Completed && step2Completed && step3Completed) {
-      // Increment the count only when all steps are completed
       setCompletedCount((prevCount) => {
         const newCount = prevCount + 1;
         localStorage.setItem("visitorCount", newCount.toString());
@@ -72,6 +51,25 @@ const Home: React.FC = () => {
       setCompletedCount(217);
     }
   }, []);
+
+  const handleStepClick = (step: number) => {
+    switch (step) {
+      case 1:
+        window.open("https://www.canva.com/brand/join?token=JkkkZ4CaA0bbSyjqvJ8lZw&referrer=team-invite", "_blank");
+        setStep1Completed(true);
+        break;
+      case 2:
+        window.open("https://www.canva.com/brand/join?token=JkkkZ4CaA0bbSyjqvJ8lZw&referrer=team-invite", "_blank");
+        setStep2Completed(true);
+        break;
+      case 3:
+        window.open("https://www.canva.com/brand/join?token=JkkkZ4CaA0bbSyjqvJ8lZw&referrer=team-invite", "_blank");
+        setStep3Completed(true);
+        break;
+      default:
+        break;
+    }
+  };
 
   return (
     <div className="flex flex-col h-[110vh] bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white overflow-x-hidden">
@@ -201,6 +199,30 @@ const Home: React.FC = () => {
                 &times;
               </button>
               <h2 className="text-2xl font-bold mb-4">Étapes Complètes</h2>
+              {!step1Completed && (
+                <button
+                  className="btn bg-blue-500 text-white font-bold py-2 px-4 rounded-lg mb-4"
+                  onClick={() => handleStepClick(1)}
+                >
+                  Complétez l'étape 1
+                </button>
+              )}
+              {!step2Completed && (
+                <button
+                  className="btn bg-blue-500 text-white font-bold py-2 px-4 rounded-lg mb-4"
+                  onClick={() => handleStepClick(2)}
+                >
+                  Complétez l'étape 2
+                </button>
+              )}
+              {!step3Completed && (
+                <button
+                  className="btn bg-blue-500 text-white font-bold py-2 px-4 rounded-lg mb-4"
+                  onClick={() => handleStepClick(3)}
+                >
+                  Complétez l'étape 3
+                </button>
+              )}
               {step1Completed && step2Completed && step3Completed ? (
                 <p className="text-lg font-semibold">
                   🎉 Vous avez complété toutes les étapes ! 🎉<br />
