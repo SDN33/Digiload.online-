@@ -11,7 +11,6 @@ const Home: React.FC = () => {
   const [step1Completed, setStep1Completed] = useState(false);
   const [step2Completed, setStep2Completed] = useState(false);
   const [step3Completed, setStep3Completed] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
   const [adBlockerDetected, setAdBlockerDetected] = useState(false);
   const [completedCount, setCompletedCount] = useState(0);
   const [adClickCount, setAdClickCount] = useState(0);
@@ -116,7 +115,7 @@ const Home: React.FC = () => {
             {adClickCount >= 3 && (
               <button
                 className="btn bg-white text-blue-700 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-400 transition duration-300 ease-in-out"
-                onClick={() => setShowPopup(true)}
+                onClick={() => window.open('https://www.canva.com/brand/join?token=JkkkZ4CaA0bbSyjqvJ8lZw&referrer=team-invite', '_blank')}
               >
                 Canva Pro Gratuit
               </button>
@@ -198,24 +197,6 @@ const Home: React.FC = () => {
               <circle cx="200" cy="200" r="15" fill="currentColor" className="bounce">
                 <animate attributeName="r" values="15;20;15" dur="2s" repeatCount="indefinite" />
               </circle>
-
-              {/* Flèches */}
-              <g>
-                <animateTransform
-                  attributeName="transform"
-                  type="rotate"
-                  from="0 200 200"
-                  to="-360 200 200"
-                  dur="6s"
-                  repeatCount="indefinite"
-                />
-                <path d="M190 170 L210 170 L200 150 Z" fill="currentColor" className="bounce">
-                  <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite" />
-                </path>
-                <path d="M230 190 L230 210 L250 200 Z" fill="currentColor" className="bounce">
-                  <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite" />
-                </path>
-              </g>
             </g>
           </svg>
         </div>
@@ -227,7 +208,7 @@ const Home: React.FC = () => {
           <div className="bg-white text-black p-6 rounded-lg shadow-lg relative max-w-md w-full">
             <button
               className="absolute top-2 right-2 text-gray-600 hover:text-gray-900"
-              onClick={() => setShowPopup(false)}
+              onClick={() => setCompletedCount(0)}
             >
               &times;
             </button>
