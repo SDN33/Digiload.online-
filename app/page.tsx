@@ -7,7 +7,6 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Cookies from "./components/Cookies";
 import { Analytics } from "@vercel/analytics/react";
-import { Circle } from 'lucide-react';
 
 const Home: React.FC = () => {
   const [step1Completed, setStep1Completed] = useState(false);
@@ -16,7 +15,7 @@ const Home: React.FC = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [adBlockerDetected, setAdBlockerDetected] = useState(false);
   const [completedCount, setCompletedCount] = useState(0);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false); // Nouvel état pour le chargement
 
   // Fonction pour détecter le bloqueur de pub
   const detectAdBlocker = useCallback(() => {
@@ -37,23 +36,23 @@ const Home: React.FC = () => {
   }, [detectAdBlocker]);
 
   const handleStepClick = (step: number) => {
-    setLoading(true);
+    setLoading(true); // Active l'état de chargement
 
     switch (step) {
       case 1:
         setStep1Completed(true);
-        setLoading(false);
+        setLoading(false); // Désactive le chargement immédiatement pour l'étape 1
         break;
       case 2:
         setTimeout(() => {
           setStep2Completed(true);
-          setLoading(false);
+          setLoading(false); // Désactive le chargement après 4 secondes pour l'étape 2
         }, 4000);
         break;
       case 3:
         setTimeout(() => {
           setStep3Completed(true);
-          setLoading(false);
+          setLoading(false); // Désactive le chargement après 4 secondes pour l'étape 3
         }, 4000);
         break;
       default:
@@ -67,14 +66,15 @@ const Home: React.FC = () => {
     }
   }, [step1Completed, step2Completed, step3Completed]);
 
+  // Fonction pour gérer le compteur de visiteurs avec localStorage
   useEffect(() => {
     const storedCount = localStorage.getItem("visitorCount");
 
     if (storedCount) {
-      setCompletedCount(parseInt(storedCount, 10));
+      setCompletedCount(parseInt(storedCount, 10)); // Charge le nombre stocké dans localStorage
     } else {
-      localStorage.setItem("visitorCount", "217");
-      setCompletedCount(217);
+      localStorage.setItem("visitorCount", "217"); // Initialisation à 217 si aucune donnée
+      setCompletedCount(217); // Assure que le compteur commence à 217
     }
   }, []);
 
@@ -82,11 +82,9 @@ const Home: React.FC = () => {
     if (step1Completed && step2Completed && step3Completed) {
       const newCount = completedCount + 1;
       setCompletedCount(newCount);
-      localStorage.setItem("visitorCount", newCount.toString());
+      localStorage.setItem("visitorCount", newCount.toString()); // Mise à jour de localStorage avec le nouveau compte
     }
   }, [step1Completed, step2Completed, step3Completed]);
-
-  const progress = (completedCount - 217) * 33.33; // Calcul du progrès basé sur le compteur
 
   return (
     <div className="flex flex-col h-[110vh] bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white overflow-x-hidden">
@@ -129,7 +127,7 @@ const Home: React.FC = () => {
         </div>
 
         <div className="flex-1 flex flex-col items-center justify-center p-8 md:p-16">
-          <svg
+        <svg
             xmlns="http://www.w3.org/2000/svg"
             width="400"
             height="400"
@@ -145,7 +143,9 @@ const Home: React.FC = () => {
               }
             `}</style>
 
+
             <g>
+              {/* Rotation du cercle */}
               <animateTransform
                 attributeName="transform"
                 type="rotate"
@@ -154,9 +154,13 @@ const Home: React.FC = () => {
                 dur="20s"
                 repeatCount="indefinite"
               />
+
+              {/* Cercle principal */}
               <circle cx="200" cy="200" r="150" fill="none" stroke="currentColor" strokeWidth="4">
                 <animate attributeName="r" values="150;155;150" dur="4s" repeatCount="indefinite" />
               </circle>
+
+              {/* Lignes décoratives */}
               <path d="M100 100 Q150 50 200 100 T300 100" fill="none" stroke="currentColor" strokeWidth="4">
                 <animate
                   attributeName="d"
@@ -167,6 +171,7 @@ const Home: React.FC = () => {
                   repeatCount="indefinite"
                 />
               </path>
+
               <path d="M100 300 Q150 250 200 300 T300 300" fill="none" stroke="currentColor" strokeWidth="4">
                 <animate
                   attributeName="d"
@@ -177,15 +182,22 @@ const Home: React.FC = () => {
                   repeatCount="indefinite"
                 />
               </path>
+
+              {/* Lignes centrales */}
               <line x1="200" y1="100" x2="200" y2="300" stroke="currentColor" strokeWidth="4">
                 <animate attributeName="y2" values="300;290;300" dur="4s" repeatCount="indefinite" />
               </line>
+
               <line x1="100" y1="200" x2="300" y2="200" stroke="currentColor" strokeWidth="4">
                 <animate attributeName="x2" values="300;290;300" dur="4s" repeatCount="indefinite" />
               </line>
+
+              {/* Petit cercle central */}
               <circle cx="200" cy="200" r="15" fill="currentColor" className="bounce">
                 <animate attributeName="r" values="15;20;15" dur="2s" repeatCount="indefinite" />
               </circle>
+
+              {/* Flèches */}
               <g>
                 <animateTransform
                   attributeName="transform"
@@ -195,16 +207,14 @@ const Home: React.FC = () => {
                   dur="10s"
                   repeatCount="indefinite"
                 />
+
+                {/* Flèche du haut */}
                 <path d="M200 80 L220 120 L180 120 Z" fill="currentColor" className="bounce">
                   <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite" />
                 </path>
+
+                {/* Flèche du bas */}
                 <path d="M200 320 L220 280 L180 280 Z" fill="currentColor" className="bounce">
-                  <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite" />
-                </path>
-                <path d="M80 200 L120 180 L120 220 Z" fill="currentColor" className="bounce">
-                  <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite" />
-                </path>
-                <path d="M320 200 L280 180 L280 220 Z" fill="currentColor" className="bounce">
                   <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite" />
                 </path>
               </g>
@@ -213,47 +223,92 @@ const Home: React.FC = () => {
         </div>
       </main>
 
-      <Footer />
+      <div className="bg-white text-blue-700 py-4 text-center px-6 inline-block mx-auto rounded-lg shadow-lg mb-8">
+        <p className="text-sm font-bold animate-pulse">
+          🎉 {completedCount + 217} digiloaders nous ont déjà fait confiance ! 🎉
+        </p>
+      </div>
 
-      {/* Pop-up des tâches */}
+      <Footer />
+      <Cookies />
+      <Analytics />
+
       {showPopup && (
-        <div className="fixed inset-0 flex items-center justify-center bg-gray-600 bg-opacity-75 z-50">
-          <div className="relative bg-white text-black p-8 rounded-lg w-11/12 max-w-lg">
+        <div className="fixed inset-0 bg-gray-600 bg-opacity-75 flex justify-center items-center">
+          <div className="bg-white text-black p-8 rounded-lg shadow-lg relative">
             <button
               className="absolute top-2 right-2 text-gray-600 hover:text-gray-900"
               onClick={() => setShowPopup(false)}
             >
-              <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-              </svg>
+              &times;
             </button>
-            <h3 className="text-lg font-semibold mb-4">Avancement des tâches</h3>
-            <div className="flex flex-col space-y-4">
-              <div className="flex items-center">
-                <Circle className="w-5 h-5 mr-2" color={step1Completed ? "green" : "gray"} />
-                <span>Étape 1: Complété</span>
+            <h3 className="text-lg font-bold mb-4 text-center">Étapes pour obtenir Canva Pro Gratuit</h3>
+            <ul className="space-y-4">
+              <li className={`flex items-center ${step1Completed ? "text-green-600" : ""}`}>
+                {step1Completed ? "✔️" : "➤"} PUB 1:
+                <a
+                  href="https://upodaitie.net/4/8083510"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 underline ml-2"
+                  onClick={() => handleStepClick(1)}
+                >
+                  Cliquer ici
+                </a>
+              </li>
+              <li className={`flex items-center ${step2Completed ? "text-green-600" : ""}`}>
+                {step2Completed ? "✔️" : "➤"} PUB 2:
+                <a
+                  href="https://upodaitie.net/4/8083510"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 underline ml-2"
+                  onClick={() => handleStepClick(2)}
+                >
+                  Cliquer à nouveau ici
+                </a>
+              </li>
+              <li className={`flex items-center ${step3Completed ? "text-green-600" : ""}`}>
+                {step3Completed ? "✔️" : "➤"} PUB 3:
+                <a
+                  href="https://upodaitie.net/4/8083510"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 underline ml-2"
+                  onClick={() => handleStepClick(3)}
+                >
+                  Cliquer une dernière fois ici
+                </a>
+              </li>
+            </ul>
+            {loading ? (
+              <div className="mt-6 text-center">
+                <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full text-blue-700" role="status">
+                  <span className="visually-hidden">Chargement...</span>
+                </div>
               </div>
-              <div className="flex items-center">
-                <Circle className="w-5 h-5 mr-2" color={step2Completed ? "green" : "gray"} />
-                <span>Étape 2: Complété</span>
+            ) : step1Completed && step2Completed && step3Completed ? (
+              <div className="mt-6 text-center">
+                <Link href="https://www.canva.com/brand/join?token=JkkkZ4CaA0bbSyjqvJ8lZw&referrer=team-invite">
+                  <a
+                    className="bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-blue-800 transition duration-300 ease-in-out"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Accéder à Canva Pro
+                  </a>
+                </Link>
               </div>
-              <div className="flex items-center">
-                <Circle className="w-5 h-5 mr-2" color={step3Completed ? "green" : "gray"} />
-                <span>Étape 3: Complété</span>
+            ) : (
+              <div className="mt-6 text-center text-black ">
+                Vous devez compléter les trois étapes pour débloquer le lien, ne trichez pas ! 😉
+                <br />
+                <small className="text-red-500">(Si le lien ne se débloque pas après la 3ème pub, réessayez)</small>
               </div>
-            </div>
-            <div className="w-full bg-gray-200 h-2 mt-4 rounded-full overflow-hidden">
-              <div
-                className="bg-blue-500 h-full"
-                style={{ width: `${progress}%` }}
-              />
-            </div>
+            )}
           </div>
         </div>
       )}
-
-      <Cookies />
-      <Analytics />
     </div>
   );
 };
