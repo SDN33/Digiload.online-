@@ -1,13 +1,11 @@
 "use client";
 
 import React, { useState, useCallback, useEffect } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Cookies from "./components/Cookies";
 import { Analytics } from "@vercel/analytics/react";
-import { Circle } from 'lucide-react';
 
 const Home: React.FC = () => {
   const [step1Completed, setStep1Completed] = useState(false);
@@ -16,7 +14,6 @@ const Home: React.FC = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [adBlockerDetected, setAdBlockerDetected] = useState(false);
   const [completedCount, setCompletedCount] = useState(0);
-  const [loading, setLoading] = useState(false);
 
   const detectAdBlocker = useCallback(() => {
     const testAd = document.createElement("div");
@@ -36,22 +33,18 @@ const Home: React.FC = () => {
   }, [detectAdBlocker]);
 
   const handleStepClick = (step: number) => {
-    setLoading(true);
     switch (step) {
       case 1:
         setStep1Completed(true);
-        setLoading(false);
         break;
       case 2:
         setTimeout(() => {
           setStep2Completed(true);
-          setLoading(false);
         }, 4000);
         break;
       case 3:
         setTimeout(() => {
           setStep3Completed(true);
-          setLoading(false);
         }, 4000);
         break;
       default:
@@ -82,11 +75,7 @@ const Home: React.FC = () => {
       setCompletedCount(newCount);
       localStorage.setItem("visitorCount", newCount.toString());
     }
-  }, [step1Completed, step2Completed, step3Completed]);
-
-  const totalSteps = 3;
-  const completedSteps = [step1Completed, step2Completed, step3Completed].filter(Boolean).length;
-  const progress = (completedSteps / totalSteps) * 100;
+  }, [step1Completed, step2Completed, step3Completed, completedCount]);
 
   return (
     <div className="flex flex-col h-[110vh] bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white overflow-x-hidden">
@@ -129,8 +118,8 @@ const Home: React.FC = () => {
         </div>
 
         {/* SVG animé dans le pop-up */}
-        <div className="fixed inset-0 bg-gray-600 bg-opacity-75 flex justify-center items-center">
-          {showPopup && (
+        {showPopup && (
+          <div className="fixed inset-0 bg-gray-600 bg-opacity-75 flex justify-center items-center">
             <div className="bg-white text-black p-8 rounded-lg shadow-lg relative">
               <button
                 className="absolute top-2 right-2 text-gray-600 hover:text-gray-900"
@@ -178,53 +167,65 @@ const Home: React.FC = () => {
                 `}</style>
               </div>
               <h3 className="text-lg font-bold mb-4 text-center">Étapes pour obtenir Canva Pro Gratuit</h3>
-              <ul className="space-y-4">
-                <li className={`flex items-center ${step1Completed ? "text-green-600" : ""}`}>
-                  {step1Completed ? "✔️" : "➤"} PUB 1:
+              {step1Completed && step2Completed && step3Completed ? (
+                <div className="text-center">
+                  <p className="text-lg font-bold mb-4">CANVA PRO GRATUIT :</p>
                   <a
-                    href="https://upodaitie.net/4/8083510"
+                    href="https://www.canva.com/brand/join?token=JkkkZ4CaA0bbSyjqvJ8lZw&referrer=team-invite"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-500 underline ml-2"
-                    onClick={() => handleStepClick(1)}
+                    className="text-blue-500 underline"
                   >
-                    Voir la pub
+                    Obtenez Canva Pro Gratuitement ici
                   </a>
-                </li>
-                <li className={`flex items-center ${step2Completed ? "text-green-600" : ""}`}>
-                  {step2Completed ? "✔️" : "➤"} PUB 2:
-                  <a
-                    href="https://upodaitie.net/4/8083520"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-500 underline ml-2"
-                    onClick={() => handleStepClick(2)}
-                  >
-                    Voir la pub
-                  </a>
-                </li>
-                <li className={`flex items-center ${step3Completed ? "text-green-600" : ""}`}>
-                  {step3Completed ? "✔️" : "➤"} PUB 3:
-                  <a
-                    href="https://upodaitie.net/4/8083530"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-500 underline ml-2"
-                    onClick={() => handleStepClick(3)}
-                  >
-                    Voir la pub
-                  </a>
-                </li>
-              </ul>
+                </div>
+              ) : (
+                <ul className="space-y-4">
+                  <li className={`flex items-center ${step1Completed ? "text-green-600" : ""}`}>
+                    {step1Completed ? "✔️" : "➤"} PUB 1:
+                    <a
+                      href="https://upodaitie.net/4/8083510"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-500 underline ml-2"
+                      onClick={() => handleStepClick(1)}
+                    >
+                      Voir la pub
+                    </a>
+                  </li>
+                  <li className={`flex items-center ${step2Completed ? "text-green-600" : ""}`}>
+                    {step2Completed ? "✔️" : "➤"} PUB 2:
+                    <a
+                      href="https://upodaitie.net/4/8083520"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-500 underline ml-2"
+                      onClick={() => handleStepClick(2)}
+                    >
+                      Voir la pub
+                    </a>
+                  </li>
+                  <li className={`flex items-center ${step3Completed ? "text-green-600" : ""}`}>
+                    {step3Completed ? "✔️" : "➤"} PUB 3:
+                    <a
+                      href="https://upodaitie.net/4/8083530"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-500 underline ml-2"
+                      onClick={() => handleStepClick(3)}
+                    >
+                      Voir la pub
+                    </a>
+                  </li>
+                </ul>
+              )}
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </main>
 
       <div className="bg-white text-blue-700 py-4 text-center px-6 inline-block mx-auto rounded-lg shadow-lg mb-8">
-        <p className="text-sm font-bold animate-pulse">
-          🎉 {completedCount + 217} digiloaders nous ont déjà fait confiance ! 🎉
-        </p>
+        <p className="text-lg font-bold">Vous êtes notre visiteur numéro : {completedCount}</p>
       </div>
 
       <Footer />
