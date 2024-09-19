@@ -104,8 +104,8 @@ const Home: React.FC = () => {
               <Image
                 src="/images/logo.png"
                 alt="Logo"
-                width={300}
-                height={100}
+                width={400}
+                height={200}
                 style={{ objectFit: "contain" }}
               />
               <h1 className="text-lg md:text-2xl font-bold leading-tight mt-2">
