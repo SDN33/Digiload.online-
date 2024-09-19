@@ -71,15 +71,20 @@ const Home: React.FC = () => {
     const storedCount = localStorage.getItem("visitorCount");
 
     if (storedCount) {
-      setCompletedCount(parseInt(storedCount, 10)); // Convertit la valeur récupérée en nombre
+      setCompletedCount(parseInt(storedCount, 10)); // Charge le nombre stocké dans localStorage
     } else {
-      localStorage.setItem("visitorCount", "217"); // Initialiser avec 217 si aucune donnée n'existe
+      localStorage.setItem("visitorCount", "217"); // Initialisation à 217 si aucune donnée
+      setCompletedCount(217); // Assure que le compteur commence à 217
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("visitorCount", (completedCount + 217).toString());
-  }, [completedCount]);
+    if (step1Completed && step2Completed && step3Completed) {
+      const newCount = completedCount + 1;
+      setCompletedCount(newCount);
+      localStorage.setItem("visitorCount", newCount.toString()); // Mise à jour de localStorage avec le nouveau compte
+    }
+  }, [step1Completed, step2Completed, step3Completed]);
 
   return (
     <div className="flex flex-col h-[110vh] bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white overflow-x-hidden">
