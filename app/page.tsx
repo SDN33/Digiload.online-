@@ -1,19 +1,22 @@
 "use client";
 
 import React, { useState, useCallback, useEffect } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Cookies from "./components/Cookies";
 import { Analytics } from "@vercel/analytics/react";
+import { Circle } from 'lucide-react';
 
 const Home: React.FC = () => {
   const [step1Completed, setStep1Completed] = useState(false);
   const [step2Completed, setStep2Completed] = useState(false);
   const [step3Completed, setStep3Completed] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
   const [adBlockerDetected, setAdBlockerDetected] = useState(false);
   const [completedCount, setCompletedCount] = useState(0);
-  const [adClickCount, setAdClickCount] = useState(0);
+  const [loading, setLoading] = useState(false);
 
   // Fonction pour détecter le bloqueur de pub
   const detectAdBlocker = useCallback(() => {
@@ -34,19 +37,23 @@ const Home: React.FC = () => {
   }, [detectAdBlocker]);
 
   const handleStepClick = (step: number) => {
+    setLoading(true);
+
     switch (step) {
       case 1:
         setStep1Completed(true);
-        setAdClickCount((prevCount) => prevCount + 1);
+        setLoading(false);
         break;
       case 2:
         setTimeout(() => {
           setStep2Completed(true);
+          setLoading(false);
         }, 4000);
         break;
       case 3:
         setTimeout(() => {
           setStep3Completed(true);
+          setLoading(false);
         }, 4000);
         break;
       default:
@@ -55,30 +62,31 @@ const Home: React.FC = () => {
   };
 
   useEffect(() => {
-    if (adClickCount >= 3 && step1Completed && step2Completed && step3Completed) {
+    if (step1Completed && step2Completed && step3Completed) {
       setCompletedCount((prevCount) => prevCount + 1);
     }
-  }, [adClickCount, step1Completed, step2Completed, step3Completed]);
+  }, [step1Completed, step2Completed, step3Completed]);
 
-  // Fonction pour gérer le compteur de visiteurs avec localStorage
   useEffect(() => {
     const storedCount = localStorage.getItem("visitorCount");
 
     if (storedCount) {
-      setCompletedCount(parseInt(storedCount, 10)); // Charge le nombre stocké dans localStorage
+      setCompletedCount(parseInt(storedCount, 10));
     } else {
-      localStorage.setItem("visitorCount", "217"); // Initialisation à 217 si aucune donnée
-      setCompletedCount(217); // Assure que le compteur commence à 217
+      localStorage.setItem("visitorCount", "217");
+      setCompletedCount(217);
     }
   }, []);
 
   useEffect(() => {
-    if (adClickCount >= 3 && step1Completed && step2Completed && step3Completed) {
+    if (step1Completed && step2Completed && step3Completed) {
       const newCount = completedCount + 1;
       setCompletedCount(newCount);
-      localStorage.setItem("visitorCount", newCount.toString()); // Mise à jour de localStorage avec le nouveau compte
+      localStorage.setItem("visitorCount", newCount.toString());
     }
-  }, [adClickCount, step1Completed, step2Completed, step3Completed, completedCount]);
+  }, [step1Completed, step2Completed, step3Completed]);
+
+  const progress = (completedCount - 217) * 33.33; // Calcul du progrès basé sur le compteur
 
   return (
     <div className="flex flex-col h-[110vh] bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white overflow-x-hidden">
@@ -108,18 +116,10 @@ const Home: React.FC = () => {
             </div>
             <button
               className="btn bg-white text-blue-700 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-400 transition duration-300 ease-in-out"
-              onClick={() => handleStepClick(1)}
+              onClick={() => setShowPopup(true)}
             >
-              Accéder à Canva Pro Gratuit
+              Canva Pro Gratuit
             </button>
-            {adClickCount >= 3 && (
-              <button
-                className="btn bg-white text-blue-700 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-400 transition duration-300 ease-in-out"
-                onClick={() => window.open('https://www.canva.com/brand/join?token=JkkkZ4CaA0bbSyjqvJ8lZw&referrer=team-invite', '_blank')}
-              >
-                Canva Pro Gratuit
-              </button>
-            )}
             <h2 className="text-sm md:text-lg font-light leading-tight mt-4">
               ✨ Accédez à Canva Pro <strong> Gratuitement </strong>✨
               <br />
@@ -146,7 +146,6 @@ const Home: React.FC = () => {
             `}</style>
 
             <g>
-              {/* Rotation du cercle */}
               <animateTransform
                 attributeName="transform"
                 type="rotate"
@@ -155,13 +154,9 @@ const Home: React.FC = () => {
                 dur="20s"
                 repeatCount="indefinite"
               />
-
-              {/* Cercle principal */}
               <circle cx="200" cy="200" r="150" fill="none" stroke="currentColor" strokeWidth="4">
                 <animate attributeName="r" values="150;155;150" dur="4s" repeatCount="indefinite" />
               </circle>
-
-              {/* Lignes décoratives */}
               <path d="M100 100 Q150 50 200 100 T300 100" fill="none" stroke="currentColor" strokeWidth="4">
                 <animate
                   attributeName="d"
@@ -172,7 +167,6 @@ const Home: React.FC = () => {
                   repeatCount="indefinite"
                 />
               </path>
-
               <path d="M100 300 Q150 250 200 300 T300 300" fill="none" stroke="currentColor" strokeWidth="4">
                 <animate
                   attributeName="d"
@@ -183,53 +177,81 @@ const Home: React.FC = () => {
                   repeatCount="indefinite"
                 />
               </path>
-
-              {/* Lignes centrales */}
               <line x1="200" y1="100" x2="200" y2="300" stroke="currentColor" strokeWidth="4">
                 <animate attributeName="y2" values="300;290;300" dur="4s" repeatCount="indefinite" />
               </line>
-
               <line x1="100" y1="200" x2="300" y2="200" stroke="currentColor" strokeWidth="4">
                 <animate attributeName="x2" values="300;290;300" dur="4s" repeatCount="indefinite" />
               </line>
-
-              {/* Petit cercle central */}
               <circle cx="200" cy="200" r="15" fill="currentColor" className="bounce">
                 <animate attributeName="r" values="15;20;15" dur="2s" repeatCount="indefinite" />
               </circle>
+              <g>
+                <animateTransform
+                  attributeName="transform"
+                  type="rotate"
+                  from="0 200 200"
+                  to="-360 200 200"
+                  dur="10s"
+                  repeatCount="indefinite"
+                />
+                <path d="M200 80 L220 120 L180 120 Z" fill="currentColor" className="bounce">
+                  <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite" />
+                </path>
+                <path d="M200 320 L220 280 L180 280 Z" fill="currentColor" className="bounce">
+                  <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite" />
+                </path>
+                <path d="M80 200 L120 180 L120 220 Z" fill="currentColor" className="bounce">
+                  <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite" />
+                </path>
+                <path d="M320 200 L280 180 L280 220 Z" fill="currentColor" className="bounce">
+                  <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite" />
+                </path>
+              </g>
             </g>
           </svg>
         </div>
       </main>
 
-      {/* Popup pour Canva */}
-      {completedCount >= 1 && (
-        <div className="fixed inset-0 flex items-center justify-center bg-gray-600 bg-opacity-70 z-50">
-          <div className="bg-white text-black p-6 rounded-lg shadow-lg relative max-w-md w-full">
+      <Footer />
+
+      {/* Pop-up des tâches */}
+      {showPopup && (
+        <div className="fixed inset-0 flex items-center justify-center bg-gray-600 bg-opacity-75 z-50">
+          <div className="relative bg-white text-black p-8 rounded-lg w-11/12 max-w-lg">
             <button
               className="absolute top-2 right-2 text-gray-600 hover:text-gray-900"
-              onClick={() => setCompletedCount(0)}
+              onClick={() => setShowPopup(false)}
             >
-              &times;
+              <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
             </button>
-            <h2 className="text-xl font-semibold mb-4">Canva Pro Gratuit</h2>
-            <p className="mb-4">
-              Profitez de Canva Pro gratuitement grâce à notre offre spéciale ! <br />
-              Enregistrez-vous maintenant et bénéficiez de tous les avantages de Canva Pro.
-            </p>
-            <a
-              href="https://www.canva.com/brand/join?token=JkkkZ4CaA0bbSyjqvJ8lZw&referrer=team-invite"
-              className="btn bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300 mb-4 block text-center"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Accéder à Canva Pro
-            </a>
+            <h3 className="text-lg font-semibold mb-4">Avancement des tâches</h3>
+            <div className="flex flex-col space-y-4">
+              <div className="flex items-center">
+                <Circle className="w-5 h-5 mr-2" color={step1Completed ? "green" : "gray"} />
+                <span>Étape 1: Complété</span>
+              </div>
+              <div className="flex items-center">
+                <Circle className="w-5 h-5 mr-2" color={step2Completed ? "green" : "gray"} />
+                <span>Étape 2: Complété</span>
+              </div>
+              <div className="flex items-center">
+                <Circle className="w-5 h-5 mr-2" color={step3Completed ? "green" : "gray"} />
+                <span>Étape 3: Complété</span>
+              </div>
+            </div>
+            <div className="w-full bg-gray-200 h-2 mt-4 rounded-full overflow-hidden">
+              <div
+                className="bg-blue-500 h-full"
+                style={{ width: `${progress}%` }}
+              />
+            </div>
           </div>
         </div>
       )}
 
-      <Footer />
       <Cookies />
       <Analytics />
     </div>
