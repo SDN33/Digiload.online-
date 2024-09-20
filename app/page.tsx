@@ -60,21 +60,11 @@ const Home: React.FC = () => {
     }
   };
 
-  // 
   useEffect(() => {
     if (step1Completed && step2Completed && step3Completed) {
       setCompletedCount((prevCount) => prevCount + 1);
     }
   }, [step1Completed, step2Completed, step3Completed]);
-
-
-  useEffect(() => {
-    // Vérifiez si le code s'exécute côté client
-    if (typeof window !== 'undefined') {
-      // Réinitialisez localStorage ici
-      localStorage.setItem('visitorCount', '217'); // Modifiez ou supprimez selon vos besoins
-    }
-  }, []);
 
   // Fonction pour gérer le compteur de visiteurs avec localStorage
   useEffect(() => {
