@@ -76,6 +76,8 @@ const PopupContent: React.FC<PopupContentProps> = ({
           &times;
         </button>
         <h3 className="text-xl font-bold mb-6 text-center">Étapes pour obtenir Canva Pro Gratuit</h3>
+        <p>Complétez les trois étapes pour débloquer l&apos;accès à Canva Pro.</p>
+
 
         <TaskStep
           completed={step1Completed}
@@ -114,7 +116,6 @@ const PopupContent: React.FC<PopupContentProps> = ({
           </div>
         ) : (
           <div className="mt-6 text-center text-gray-700">
-            <p>Complétez les trois étapes pour débloquer l&apos;accès à Canva Pro.</p>
             <p className="text-sm mt-2">Notre site est 100% sécurisé et ne nécessite aucune information personnelle</p>
             <p className="text-sm text-red-500 mt-2">
               (Si le lien ne se débloque pas après la 3ème pub, réessayez ou désactivez votre bloqueur de publicités)
