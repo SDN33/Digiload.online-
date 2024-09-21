@@ -36,7 +36,7 @@ const CookieConsent = () => {
         <div className="mb-4">
           <div className="flex items-start mb-2">
             <Info className="mr-2 flex-shrink-0 text-blue-600" size={20} />
-            <p className="text-sm">Publicités et contenu personnalisés, mesure de performance des publicités et du contenu, études d'audience et développement de services</p>
+            <p className="text-sm">Publicités et contenu personnalisés, mesure de performance des publicités et du contenu, études d&apos;audience et développement de services</p>
           </div>
           <div className="flex items-start">
             <Info className="mr-2 flex-shrink-0 text-blue-600" size={20} />
@@ -49,7 +49,7 @@ const CookieConsent = () => {
             Vos données à caractère personnel seront traitées, et les informations liées à votre appareil (cookies, identifiants uniques et autres types de données) pourront être stockées et consultées par 136 fournisseur(s) TCF et 61 partenaires publicitaires, ainsi que partagées avec eux, ou utilisées spécifiquement par ce site ou cette application.
           </p>
           <p className="mt-2 text-xs">
-            Certains fournisseurs sont susceptibles de traiter vos données à caractère personnel selon le principe de l'intérêt légitime. Vous pouvez vous y opposer en gérant vos options ci-dessous. Cliquez sur le lien en bas de cette page pour gérer ou retirer votre consentement des paramètres de confidentialité.
+            Certains fournisseurs sont susceptibles de traiter vos données à caractère personnel selon le principe de l&apos;intérêt légitime. Vous pouvez vous y opposer en gérant vos options ci-dessous. Cliquez sur le lien en bas de cette page pour gérer ou retirer votre consentement des paramètres de confidentialité.
           </p>
         </details>
         <div className="flex justify-between">
