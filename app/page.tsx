@@ -7,7 +7,6 @@ import Footer from "./components/Footer";
 import Cookies from "./components/Cookies";
 import PopupContent from "./components/PopupContent";
 import { Analytics } from "@vercel/analytics/react";
-import DotLottiePlayer from "./components/DotLottiePlayer";
 
 const Home: React.FC = () => {
   const [step1Completed, setStep1Completed] = useState(false);
@@ -237,9 +236,6 @@ const Home: React.FC = () => {
               <span><span className="font-bold">Et bien plus encore...</span></span>
             </li>
           </ul>
-        </div>
-        <div className="mt-8 w-3/4 max-w-lg animate-pulse">
-         <DotLottiePlayer />
         </div>
       </div>
 
