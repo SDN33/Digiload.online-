@@ -213,23 +213,23 @@ const Home: React.FC = () => {
           <ul className="text-lg md:text-xl text-left mt-8 space-y-4 md:space-y-6 animate-slide-in">
             <li className="flex items-start mb-2">
               <span className="font-bold text-yellow-500  mr-2">✓</span>
-              <span className="text-black">Des <span className="font-bold text-white">milliers de modèles</span> pour tous vos projets</span>
+              <span className="text-white">Des <span className="font-bold text-white">milliers de modèles pour tous vos projets</span></span>
             </li>
             <li className="flex items-start mb-2">
               <span className="font-bold text-yellow-500  mr-2">✓</span>
-              <span className="text-black">Des <span className="font-bold text-white">millions d&apos;images</span> et d&apos;illustrations gratuites</span>
+              <span className="text-white">Des <span className="font-bold text-white">millions d&apos;images et d&apos;illustrations gratuites</span></span>
             </li>
             <li className="flex items-start mb-2">
               <span className="font-bold text-yellow-500  mr-2">✓</span>
-              <span className="text-black">Des <span className="font-bold text-white">outils de design</span> professionnels</span>
+              <span className="text-white">Des <span className="font-bold text-white">outils de design professionnels</span></span>
             </li>
             <li className="flex items-start mb-2">
               <span className="font-bold text-yellow-500  mr-2">✓</span>
-              <span className="text-black">Des <span className="font-bold text-white">fonctionnalités avancées</span> pour gagner du temps</span>
+              <span className="text-white">Des <span className="font-bold text-white">fonctionnalités avancées pour gagner du temps</span></span>
             </li>
             <li className="flex items-start mb-2">
               <span className="font-bold text-yellow-500  mr-2">✓</span>
-              <span className="text-black">Des <span className="font-bold text-white">collaborations</span> simplifiées</span>
+              <span className="text-white">Des <span className="font-bold text-white">collaborations simplifiées</span></span>
             </li>
             <li className="flex items-start mb-2">
               <span className="font-bold text-yellow-500 mr-2">✓</span>
