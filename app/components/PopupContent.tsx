@@ -75,7 +75,7 @@ const PopupContent: React.FC<PopupContentProps> = ({
         >
           &times;
         </button>
-        <h3 className="text-xl font-bold text-center">Vous êtes à 3 clics de Canva Pro</h3>
+        <h3 className="text-xl font-bold text-center">Vous êtes à 3 clics de Canva Pro...</h3>
         <p className='mb-6 text-center'> Complétez les étapes ! 🚀 </p>
 
 
