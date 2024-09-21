@@ -13,11 +13,11 @@ const Footer: React.FC = () => {
 
   return (
     <>
-      <footer className="bg-white text-black p-4 text-center relative">
+      <footer className="bg-black text-white p-4 text-center relative">
 
       <button
           onClick={handleLegalClick}
-          className="text-black mt-1 font-bold"
+          className="mt-1 font-bold"
         >
           Mentions légales
         </button>
@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
             href="https://STILLINOV.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-black"
+            className="text-yellow-500"
           >
              Still-inov Agency
           </a>
