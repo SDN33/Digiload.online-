@@ -205,7 +205,7 @@ const Home: React.FC = () => {
 
       <div className="flex flex-col items-center justify-center p-6 md:p-16 bg-white">
 
-        <div className="flex flex-col items-center justify-center p-6 md:p-16 bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat overflow-x-hidden animate-gradient-x">
+        <div className="flex flex-col items-center justify-center p-6 md:p-16 bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat overflow-x-hidden animate-gradient-x border border-white rounded-lg shadow-lg">
           <h2 className="text-3xl md:text-4xl font-extrabold text-center animate-fade-in">
             Découvrez les avantages de <span className="text-blue-700 ">Canva Pro</span>
           </h2>
