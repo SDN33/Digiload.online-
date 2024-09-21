@@ -28,27 +28,27 @@ const CookieConsent = () => {
           <div className="bg-blue-600 text-white rounded-full p-2 mr-3">
             <span className="font-bold text-xl">DL</span>
           </div>
-          <h2 className="text-xl font-bold">DIGILOAD</h2>
+          <h2 className="text-xl font-bold text-black">DIGILOAD</h2>
         </div>
-        <p className="mb-4 text-sm">
+        <p className="mb-4 text-sm text-black">
           digiload.online demande votre consentement pour utiliser vos données à caractère personnel dans les cas suivants :
         </p>
         <div className="mb-4">
           <div className="flex items-start mb-2">
             <Info className="mr-2 flex-shrink-0 text-blue-600" size={20} />
-            <p className="text-sm">Publicités et contenu personnalisés, mesure de performance des publicités et du contenu, études d&apos;audience et développement de services</p>
+            <p className="text-sm text-black">Publicités et contenu personnalisés, mesure de performance des publicités et du contenu, études d&apos;audience et développement de services</p>
           </div>
           <div className="flex items-start">
             <Info className="mr-2 flex-shrink-0 text-blue-600" size={20} />
-            <p className="text-sm">Stocker et/ou accéder à des informations sur un appareil</p>
+            <p className="text-sm text-black">Stocker et/ou accéder à des informations sur un appareil</p>
           </div>
         </div>
         <details className="mb-4">
           <summary className="text-sm text-blue-600 cursor-pointer">En savoir plus</summary>
-          <p className="mt-2 text-xs">
+          <p className="mt-2 text-xs text-black">
             Vos données à caractère personnel seront traitées, et les informations liées à votre appareil (cookies, identifiants uniques et autres types de données) pourront être stockées et consultées par 136 fournisseur(s) TCF et 61 partenaires publicitaires, ainsi que partagées avec eux, ou utilisées spécifiquement par ce site ou cette application.
           </p>
-          <p className="mt-2 text-xs">
+          <p className="mt-2 text-xs text-black">
             Certains fournisseurs sont susceptibles de traiter vos données à caractère personnel selon le principe de l&apos;intérêt légitime. Vous pouvez vous y opposer en gérant vos options ci-dessous. Cliquez sur le lien en bas de cette page pour gérer ou retirer votre consentement des paramètres de confidentialité.
           </p>
         </details>
