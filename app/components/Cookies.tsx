@@ -27,15 +27,8 @@ const CookieConsent = () => {
       <div className="bg-white rounded-lg shadow-lg max-w-md w-full p-6">
         <div className="flex items-center mb-4">
           <div className="bg-blue-600 text-white rounded-full p-2 mr-3">
-            <span className="font-bold text-xl">DL</span>
+            <span className="font-bold text-xl">🍪</span>
           </div>
-          <Image
-                src="/images/logoh.png"
-                alt="Logo"
-                width={400}
-                height={200}
-                style={{ objectFit: "contain" }}
-          />
         </div>
         <p className="mb-4 text-sm text-black">
           digiload.online demande votre consentement pour utiliser vos données à caractère personnel dans les cas suivants :
