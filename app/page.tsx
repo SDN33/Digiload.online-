@@ -117,6 +117,8 @@ const Home: React.FC = () => {
         <p className="text-sm font-bold text-black">Notre site est 100% sécurisé 🔒<br />et ne nécessite aucune information personnelle.</p>
       </div>
 
+      <br />
+
       <div className="border-t border-gray-200 py-4 text-center"></div>
 
       <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white overflow-x-hidden animate-gradient-x">
