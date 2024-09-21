@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
 
       <button
           onClick={handleLegalClick}
-          className="text-black mt-1"
+          className="text-black mt-1 font-bold"
         >
           Mentions légales
         </button>
