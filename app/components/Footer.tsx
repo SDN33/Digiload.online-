@@ -14,6 +14,8 @@ const Footer: React.FC = () => {
   return (
     <>
       <footer className="bg-white text-black p-4 text-center relative">
+      <p className="text-sm mt-2">Notre site est 100% sécurisé et ne nécessite aucune information personnelle</p>
+
       <button
           onClick={handleLegalClick}
           className="text-black mt-2"
