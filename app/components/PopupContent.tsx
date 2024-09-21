@@ -109,13 +109,15 @@ const PopupContent: React.FC<PopupContentProps> = ({
               >
                 Accéder à Canva Pro
               </a>
+              <p className="text-sm mt-2">Félicitations, vous avez débloqué l&apos;accès à Canva Pro !</p>
             </Link>
           </div>
         ) : (
           <div className="mt-6 text-center text-gray-700">
             <p>Complétez les trois étapes pour débloquer l&apos;accès à Canva Pro.</p>
+            <p className="text-sm mt-2">Notre site est 100% sécurisé et ne nécessite aucune information personnelle</p>
             <p className="text-sm text-red-500 mt-2">
-              (Si le lien ne se débloque pas après la 3ème pub, réessayez)
+              (Si le lien ne se débloque pas après la 3ème pub, réessayez ou désactivez votre bloqueur de publicités)
             </p>
           </div>
         )}
