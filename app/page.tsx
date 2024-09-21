@@ -165,12 +165,12 @@ const Home: React.FC = () => {
             transition={{ delay: 1, duration: 0.6 }}
             className="bg-gray-100 p-6 text-center"
           >
-            <a
+            <button
+              className="btn bg-white text-blue-700 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-400 transition duration-300 ease-in-out"
               onClick={() => setShowPopup(true)}
-              className="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300"
             >
-              Essayer Canva Pro gratuitement
-            </a>
+              Essayez Canva Pro Gratuitement
+            </button>
           </motion.div>
         </motion.div>
       </div>
