@@ -76,7 +76,7 @@ const PopupContent: React.FC<PopupContentProps> = ({
           &times;
         </button>
         <h3 className="text-xl font-bold mb-6 text-center">Étapes pour obtenir Canva Pro Gratuit</h3>
-        <p>Complétez les trois étapes pour débloquer l&apos;accès à Canva Pro.</p>
+        <p>Complétez les trois étapes ! </p>
 
 
         <TaskStep
