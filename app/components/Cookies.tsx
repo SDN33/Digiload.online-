@@ -30,7 +30,7 @@ const CookieConsent = () => {
           </div>
         </div>
         <p className="mb-4 text-sm text-black">
-          digiload.online demande votre consentement pour utiliser vos données à caractère personnel dans les cas suivants :
+          <strong>DigiLoad</strong> demande votre consentement pour utiliser vos données à caractère personnel dans les cas suivants :
         </p>
         <div className="mb-4">
           <div className="flex items-start mb-2">
