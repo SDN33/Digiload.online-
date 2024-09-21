@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Info } from 'lucide-react';
+import Image from 'next/image';
 
 const CookieConsent = () => {
   const [showBanner, setShowBanner] = useState(false);
@@ -28,7 +29,13 @@ const CookieConsent = () => {
           <div className="bg-blue-600 text-white rounded-full p-2 mr-3">
             <span className="font-bold text-xl">DL</span>
           </div>
-          <h2 className="text-xl font-bold text-black">DIGILOAD</h2>
+          <Image
+                src="/images/logoh.png"
+                alt="Logo"
+                width={400}
+                height={200}
+                style={{ objectFit: "contain" }}
+          />
         </div>
         <p className="mb-4 text-sm text-black">
           digiload.online demande votre consentement pour utiliser vos données à caractère personnel dans les cas suivants :
