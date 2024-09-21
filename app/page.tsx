@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Cookies from "./components/Cookies";
 import PopupContent from "./components/PopupContent";
+import Svg from "./components/Svg";
 import { motion } from 'framer-motion';
 import { Analytics } from "@vercel/analytics/react";
 
@@ -63,37 +64,6 @@ const Home: React.FC = () => {
     }
   };
 
-  const CanvaProAdvantages: React.FC = () => {
-    const listItems: string[] = [
-      "Des milliers de modèles pour tous vos projets",
-      "Des millions d'images et d'illustrations gratuites",
-      "Des outils de design professionnels",
-      "Des fonctionnalités avancées pour gagner du temps",
-      "Des collaborations simplifiées",
-      "Et bien plus encore..."
-    ];
-
-    return (
-      <ul className="space-y-4">
-        {listItems.map((item: string, index: number) => (
-          <motion.li
-            key={index}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
-            className="flex items-center text-lg md:text-xl"
-          >
-            <span className="text-yellow-500 mr-4">✨</span>
-            <span className="text-gray-800">{item}</span>
-          </motion.li>
-        ))}
-      </ul>
-    );
-  };
-
-
-
-
   return (
     <div className="flex flex-col h-[110vh] bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white overflow-x-hidden animate-gradient-x">
       <Header />
@@ -135,178 +105,37 @@ const Home: React.FC = () => {
         </div>
 
         <div className="flex-1 flex flex-col items-center justify-center p-8 md:p-16">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="400"
-            height="400"
-            viewBox="0 0 400 400"
-          >
-            <style jsx>{`
-              .bounce {
-                animation: bounce 2s infinite;
-              }
-              @keyframes bounce {
-                0%, 100% { transform: translateY(0); }
-                50% { transform: translateY(-20px); }
-              }
-            `}</style>
-
-            <g>
-              <animateTransform
-                attributeName="transform"
-                type="rotate"
-                from="0 200 200"
-                to="360 200 200"
-                dur="20s"
-                repeatCount="indefinite"
-              />
-
-              <circle cx="200" cy="200" r="150" fill="none" stroke="currentColor" strokeWidth="4">
-                <animate attributeName="r" values="150;155;150" dur="4s" repeatCount="indefinite" />
-              </circle>
-
-              <path d="M100 100 Q150 50 200 100 T300 100" fill="none" stroke="currentColor" strokeWidth="4">
-                <animate
-                  attributeName="d"
-                  values="M100 100 Q150 50 200 100 T300 100;
-                          M100 110 Q150 60 200 110 T300 110;
-                          M100 100 Q150 50 200 100 T300 100"
-                  dur="6s"
-                  repeatCount="indefinite"
-                />
-              </path>
-
-              <path d="M100 300 Q150 250 200 300 T300 300" fill="none" stroke="currentColor" strokeWidth="4">
-                <animate
-                  attributeName="d"
-                  values="M100 300 Q150 250 200 300 T300 300;
-                          M100 290 Q150 240 200 290 T300 290;
-                          M100 300 Q150 250 200 300 T300 300"
-                  dur="6s"
-                  repeatCount="indefinite"
-                />
-              </path>
-
-              <line x1="200" y1="100" x2="200" y2="300" stroke="currentColor" strokeWidth="4">
-                <animate attributeName="y2" values="300;290;300" dur="4s" repeatCount="indefinite" />
-              </line>
-
-              <line x1="100" y1="200" x2="300" y2="200" stroke="currentColor" strokeWidth="4">
-                <animate attributeName="x2" values="300;290;300" dur="4s" repeatCount="indefinite" />
-              </line>
-
-              <circle cx="200" cy="200" r="15" fill="currentColor" className="bounce">
-                <animate attributeName="r" values="15;20;15" dur="2s" repeatCount="indefinite" />
-              </circle>
-
-              <g>
-                <animateTransform
-                  attributeName="transform"
-                  type="rotate"
-                  from="0 200 200"
-                  to="-360 200 200"
-                  dur="10s"
-                  repeatCount="indefinite"
-                />
-
-                <path d="M200 80 L220 120 L180 120 Z" fill="currentColor" className="bounce">
-                  <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite" />
-                </path>
-
-                <path d="M200 320 L220 280 L180 280 Z" fill="currentColor" className="bounce">
-                  <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite" />
-                </path>
-              </g>
-            </g>
-          </svg>
+          <Svg />
         </div>
       </main>
 
-      {/* Message de confiance */}
-      <div className="bg-white  py-4 text-center px-6 inline-block mx-auto rounded-lg shadow-lg mb-8">
-        <p className="text-sm font-bold animate-pulse text-blue-700 mb-2">
-          🎉 Plus de 450 digiloaders nous ont déjà fait confiance ! 🎉
-        </p>
-        <p className="text-sm font-bold text-black">Notre site est 100% sécurisé 🔒<br />et ne nécessite aucune information personnelle.</p>
-
-      </div>
-
-      <br />
-
-      <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-purple-100 to-blue-100 p-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden"
-        >
-          <div className="bg-gradient-to-r from-purple-600 to-blue-500 p-8 text-white">
-            <motion.h2
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-3xl md:text-4xl font-extrabold text-center mb-6"
-            >
-              Découvrez les avantages de <span className="text-yellow-300">Canva Pro</span>
-            </motion.h2>
-          </div>
-          <div className="p-8">
-            <ul className="space-y-4">
-              {[
-                "Des milliers de modèles pour tous vos projets",
-                "Des millions d'images et d'illustrations gratuites",
-                "Des outils de design professionnels",
-                "Des fonctionnalités avancées pour gagner du temps",
-                "Des collaborations simplifiées",
-                "Et bien plus encore..."
-              ].map((item: string, index: number) => (
-                <motion.li
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
-                  className="flex items-center text-lg md:text-xl"
-                >
-                  <span className="text-yellow-500 mr-4">✨</span>
-                  <span className="text-gray-800">{item}</span>
-                </motion.li>
-              ))}
-            </ul>
-          </div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.6 }}
-            className="bg-gray-100 p-6 text-center"
-          >
-            <a
-              href="#"
-              className="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300"
-            >
-              Essayer Canva Pro gratuitement
-            </a>
-          </motion.div>
-        </motion.div>
-      </div>
-
+      <Footer />
 
       {showPopup && (
-        <PopupContent
-          setShowPopup={setShowPopup}
-          step1Completed={step1Completed}
-          step2Completed={step2Completed}
-          step3Completed={step3Completed}
-          loading={loading}
-          handleStepClick={handleStepClick}
-        />
+        <div className="fixed inset-0 bg-gray-600 bg-opacity-75 flex items-center justify-center z-50">
+          <div className="bg-white p-8 rounded-lg shadow-lg relative">
+            <button
+              className="absolute top-2 right-2 text-gray-700 hover:text-gray-900"
+              onClick={() => setShowPopup(false)}
+            >
+              &times;
+            </button>
+            <PopupContent
+              setShowPopup={setShowPopup}
+              step1Completed={step1Completed}
+              step2Completed={step2Completed}
+              step3Completed={step3Completed}
+              handleStepClick={handleStepClick}
+              loading={loading}
+            />
+          </div>
+        </div>
       )}
 
-
-      <Footer />
       <Cookies />
+
       <Analytics />
     </div>
-
   );
 };
 
