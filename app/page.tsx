@@ -115,9 +115,9 @@ const Home: React.FC = () => {
           🎉 Plus de 450 digiloaders nous ont déjà fait confiance ! 🎉
         </p>
         <p className="text-sm font-bold text-black">Notre site est 100% sécurisé 🔒<br />et ne nécessite aucune information personnelle.</p>
-
       </div>
 
+      <div className="border-t border-b border-gray-200 py-4 text-center"></div>
 
       <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white overflow-x-hidden animate-gradient-x ">
         <motion.div
@@ -166,7 +166,7 @@ const Home: React.FC = () => {
             className="bg-gray-100 p-6 text-center"
           >
             <a
-              href="#"
+              onClick={() => setShowPopup(true)}
               className="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300"
             >
               Essayer Canva Pro gratuitement
