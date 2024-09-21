@@ -119,7 +119,7 @@ const Home: React.FC = () => {
 
       <div className="border-t border-gray-200 py-4 text-center"></div>
 
-      <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white overflow-x-hidden animate-gradient-x w-60 ">
+      <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white overflow-x-hidden animate-gradient-x">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
