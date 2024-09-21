@@ -52,7 +52,7 @@ const CookieConsent = () => {
             Certains fournisseurs sont susceptibles de traiter vos données à caractère personnel selon le principe de l&apos;intérêt légitime. Vous pouvez vous y opposer en gérant vos options ci-dessous. Cliquez sur le lien en bas de cette page pour gérer ou retirer votre consentement des paramètres de confidentialité.
           </p>
         </details>
-        <div className="flex justify-between">
+        <div className="flex justify-center">
           <button
             onClick={() => handleConsent(false)}
             className="bg-red-600 hover:bg-red-800 text-white font-bold py-2 px-4 rounded"
