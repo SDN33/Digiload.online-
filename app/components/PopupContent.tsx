@@ -30,7 +30,7 @@ const TaskStep: React.FC<TaskStepProps> = ({ completed, loading, onClick, stepNu
     </button>
     <div className="flex-1">
       <p className={`font-semibold ${completed ? 'text-green-600' : 'text-gray-700'}`}>
-        Étape {stepNumber}
+        Pub #{stepNumber}
       </p>
       <a
         href="#"
