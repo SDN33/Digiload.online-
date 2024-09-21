@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState, useCallback, useEffect } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Cookies from "./components/Cookies";
+import PopupContent from "./components/PopupContent";
 import { Analytics } from "@vercel/analytics/react";
 
 const Home: React.FC = () => {
@@ -229,86 +229,24 @@ const Home: React.FC = () => {
         </p>
       </div>
 
+      {showPopup && (
+         <PopupContent
+          showPopup={showPopup}
+          setShowPopup={setShowPopup}
+          step1Completed={step1Completed}
+          step2Completed={step2Completed}
+          step3Completed={step3Completed}
+          loading={loading}
+          handleStepClick={handleStepClick}
+        />
+      )}
+
       <Footer />
       <Cookies />
       <Analytics />
 
-      {showPopup && (
-        <div className="fixed inset-0 bg-gray-600 bg-opacity-75 flex justify-center items-center">
-          <div className="bg-white text-black p-8 rounded-lg shadow-lg relative">
-            <button
-              className="absolute top-2 right-2 text-gray-600 hover:text-gray-900"
-              onClick={() => setShowPopup(false)}
-            >
-              &times;
-            </button>
-            <h3 className="text-lg font-bold mb-4 text-center">Étapes pour obtenir Canva Pro Gratuit</h3>
-            <ul className="space-y-4">
-              <li className={`flex items-center ${step1Completed ? "text-green-600" : ""}`}>
-                {step1Completed ? "✔️" : "➤"} PUB 1:
-                <a
-                  href="https://upodaitie.net/4/8083510"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 underline ml-2"
-                  onClick={() => handleStepClick(1)}
-                >
-                  Cliquer ici
-                </a>
-              </li>
-              <li className={`flex items-center ${step2Completed ? "text-green-600" : ""}`}>
-                {step2Completed ? "✔️" : "➤"} PUB 2:
-                <a
-                  href="https://upodaitie.net/4/8083510"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 underline ml-2"
-                  onClick={() => handleStepClick(2)}
-                >
-                  Cliquer à nouveau ici
-                </a>
-              </li>
-              <li className={`flex items-center ${step3Completed ? "text-green-600" : ""}`}>
-                {step3Completed ? "✔️" : "➤"} PUB 3:
-                <a
-                  href="https://upodaitie.net/4/8083510"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 underline ml-2"
-                  onClick={() => handleStepClick(3)}
-                >
-                  Cliquer une dernière fois ici
-                </a>
-              </li>
-            </ul>
-            {loading ? (
-              <div className="mt-6 text-center">
-                <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full text-blue-700" role="status">
-                  <span className="visually-hidden">Chargement...</span>
-                </div>
-              </div>
-            ) : step1Completed && step2Completed && step3Completed ? (
-              <div className="mt-6 text-center">
-                <Link href="https://www.canva.com/brand/join?token=JkkkZ4CaA0bbSyjqvJ8lZw&referrer=team-invite">
-                  <a
-                    className="bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-blue-800 transition duration-300 ease-in-out"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Accéder à Canva Pro
-                  </a>
-                </Link>
-              </div>
-            ) : (
-              <div className="mt-6 text-center text-black ">
-                Vous devez compléter les trois étapes pour débloquer le lien, ne trichez pas ! 😉
-                <br />
-                <small className="text-red-500">(Si le lien ne se débloque pas après la 3ème pub, réessayez)</small>
-              </div>
-            )}
-          </div>
-        </div>
-      )}
+
+
     </div>
   );
 };
