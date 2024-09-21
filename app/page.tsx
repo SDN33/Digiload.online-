@@ -206,40 +206,44 @@ const Home: React.FC = () => {
 
       <div className="flex flex-col items-center justify-center p-6 md:p-16 bg-gradient-to-r from-blue-600 to-blue-400 text-blue-700">
         <h2 className="text-3xl md:text-4xl font-extrabold text-center mt-6 animate-fade-in">
-          Découvrez les avantages de <span className="text-yellow-300">Canva Pro</span>
+          Découvrez les avantages de <span className="text-blue-700 ">Canva Pro</span>
         </h2>
 
-        <ul className="text-lg md:text-xl text-left mt-8 space-y-4 md:space-y-6 animate-slide-in">
-          <li className="flex items-start mb-2">
-            <span className="font-bold text-yellow-200 mr-2">✓</span>
-            <span>Des <span className="font-bold">milliers de modèles</span> pour tous vos projets</span>
-          </li>
-          <li className="flex items-start mb-2">
-            <span className="font-bold text-yellow-200 mr-2">✓</span>
-            <span>Des <span className="font-bold">millions d'images</span> et d'illustrations gratuites</span>
-          </li>
-          <li className="flex items-start mb-2">
-            <span className="font-bold text-yellow-200 mr-2">✓</span>
-            <span>Des <span className="font-bold">outils de design</span> professionnels</span>
-          </li>
-          <li className="flex items-start mb-2">
-            <span className="font-bold text-yellow-200 mr-2">✓</span>
-            <span>Des <span className="font-bold">fonctionnalités avancées</span> pour gagner du temps</span>
-          </li>
-          <li className="flex items-start mb-2">
-            <span className="font-bold text-yellow-200 mr-2">✓</span>
-            <span>Des <span className="font-bold">collaborations</span> simplifiées</span>
-          </li>
-          <li className="flex items-start mb-2">
-            <span className="font-bold text-yellow-200 mr-2">✓</span>
-            <span><span className="font-bold">Et bien plus encore...</span></span>
-          </li>
-        </ul>
+        <div className="flex flex-col items-center justify-center p-6 md:p-16 bg-gradient-to-r from-blue-600 to-blue-400 text-blue-700">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-center mt-6 animate-fade-in">
+            Découvrez les avantages de <span className="text-blue-700 ">Canva Pro</span>
+          </h2>
 
+          <ul className="text-lg md:text-xl text-left mt-8 space-y-4 md:space-y-6 animate-slide-in">
+            <li className="flex items-start mb-2">
+              <span className="font-bold text-blue-700  mr-2">✓</span>
+              <span>Des <span className="font-bold">milliers de modèles</span> pour tous vos projets</span>
+            </li>
+            <li className="flex items-start mb-2">
+              <span className="font-bold text-blue-700  mr-2">✓</span>
+              <span>Des <span className="font-bold">millions d&apos;images</span> et d&apos;illustrations gratuites</span>
+            </li>
+            <li className="flex items-start mb-2">
+              <span className="font-bold text-blue-700  mr-2">✓</span>
+              <span>Des <span className="font-bold">outils de design</span> professionnels</span>
+            </li>
+            <li className="flex items-start mb-2">
+              <span className="font-bold text-blue-700  mr-2">✓</span>
+              <span>Des <span className="font-bold">fonctionnalités avancées</span> pour gagner du temps</span>
+            </li>
+            <li className="flex items-start mb-2">
+              <span className="font-bold text-blue-700  mr-2">✓</span>
+              <span>Des <span className="font-bold">collaborations</span> simplifiées</span>
+            </li>
+            <li className="flex items-start mb-2">
+              <span className="font-bold text-blue-700 mr-2">✓</span>
+              <span><span className="font-bold">Et bien plus encore...</span></span>
+            </li>
+          </ul>
+        </div>
         <div className="mt-8 w-3/4 max-w-lg animate-pulse">
          <DotLottiePlayer />
         </div>
-
       </div>
 
 
@@ -259,6 +263,7 @@ const Home: React.FC = () => {
       <Cookies />
       <Analytics />
     </div>
+
   );
 };
 
