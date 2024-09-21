@@ -212,28 +212,28 @@ const Home: React.FC = () => {
 
           <ul className="text-lg md:text-xl text-left mt-8 space-y-4 md:space-y-6 animate-slide-in">
             <li className="flex items-start mb-2">
-              <span className="font-bold text-black  mr-2">✓</span>
-              <span>Des <span className="font-bold">milliers de modèles</span> pour tous vos projets</span>
+              <span className="font-bold text-blue-700  mr-2">✓</span>
+              <span>Des <span className="font-bold text-black">milliers de modèles</span> pour tous vos projets</span>
             </li>
             <li className="flex items-start mb-2">
-              <span className="font-bold text-black  mr-2">✓</span>
-              <span>Des <span className="font-bold">millions d&apos;images</span> et d&apos;illustrations gratuites</span>
+              <span className="font-bold text-blue-700  mr-2">✓</span>
+              <span>Des <span className="font-bold text-black">millions d&apos;images</span> et d&apos;illustrations gratuites</span>
             </li>
             <li className="flex items-start mb-2">
-              <span className="font-bold text-black  mr-2">✓</span>
-              <span>Des <span className="font-bold">outils de design</span> professionnels</span>
+              <span className="font-bold text-blue-700  mr-2">✓</span>
+              <span>Des <span className="font-bold text-black">outils de design</span> professionnels</span>
             </li>
             <li className="flex items-start mb-2">
-              <span className="font-bold text-black  mr-2">✓</span>
-              <span>Des <span className="font-bold">fonctionnalités avancées</span> pour gagner du temps</span>
+              <span className="font-bold text-blue-700  mr-2">✓</span>
+              <span>Des <span className="font-bold text-black">fonctionnalités avancées</span> pour gagner du temps</span>
             </li>
             <li className="flex items-start mb-2">
-              <span className="font-bold text-black  mr-2">✓</span>
-              <span>Des <span className="font-bold">collaborations</span> simplifiées</span>
+              <span className="font-bold text-blue-700  mr-2">✓</span>
+              <span>Des <span className="font-bold text-black">collaborations</span> simplifiées</span>
             </li>
             <li className="flex items-start mb-2">
-              <span className="font-bold text-black mr-2">✓</span>
-              <span><span className="font-bold">Et bien plus encore...</span></span>
+              <span className="font-bold text-blue-700 mr-2">✓</span>
+              <span><span className="font-bold text-black">Et bien plus encore...</span></span>
             </li>
           </ul>
         </div>
