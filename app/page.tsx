@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Cookies from "./components/Cookies";
 import PopupContent from "./components/PopupContent";
 import { Analytics } from "@vercel/analytics/react";
+import DotLottiePlayer from "./components/DotLottiePlayer";
 
 const Home: React.FC = () => {
   const [step1Completed, setStep1Completed] = useState(false);
@@ -198,6 +199,37 @@ const Home: React.FC = () => {
           🎉 Plus de 450 digiloaders nous ont déjà fait confiance ! 🎉
         </p>
         <p className="text-sm font-bold text-blue-700">Notre site est 100% sécurisé 🔒<br />et ne nécessite aucune information personnelle.</p>
+
+      </div>
+
+      <br />
+
+      <div className="flex flex-col items-center justify-center p-8 md:p-16 bg-white text-blue-700">
+        <h2 className="text-2xl font-bold text-center mt-4">Découvrez les avantages de Canva Pro</h2>
+        <ul className="text-lg text-left mt-4">
+          <li className="mb-2">
+            <span className="font-bold">Des milliers de modèles</span> pour tous vos projets
+          </li>
+          <li className="mb-2">
+            <span className="font-bold">Des millions d'images</span> et d'illustrations gratuites
+          </li>
+          <li className="mb-2">
+            <span className="font-bold">Des outils de design</span> professionnels
+          </li>
+          <li className="mb-2">
+            <span className="font-bold">Des fonctionnalités avancées</span> pour gagner du temps
+          </li>
+          <li className="mb-2">
+            <span className="font-bold">Des collaborations</span> simplifiées
+          </li>
+
+          <li className="mb-2">
+            <span className="font-bold">Et bien plus encore...</span>
+          </li>
+        </ul>
+
+        < DotLottiePlayer>
+        </DotLottiePlayer>
 
       </div>
 
