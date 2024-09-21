@@ -194,10 +194,11 @@ const Home: React.FC = () => {
 
       {/* Message de confiance */}
       <div className="bg-white  py-4 text-center px-6 inline-block mx-auto rounded-lg shadow-lg mb-8">
-        <p className="text-sm font-bold mb-2 text-black">Notre site est 100% sécurisé et ne nécessite aucune information personnelle</p>
-        <p className="text-sm font-bold animate-pulse text-blue-700">
+        <p className="text-sm font-bold animate-pulse text-blue-700 mb-2">
           🎉 Plus de 450 digiloaders nous ont déjà fait confiance ! 🎉
         </p>
+        <p className="text-sm font-bold text-black">Notre site est 100% sécurisé et ne nécessite aucune information personnelle</p>
+
       </div>
 
       {showPopup && (
