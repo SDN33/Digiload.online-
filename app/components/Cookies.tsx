@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Info } from 'lucide-react';
-import Image from 'next/image';
 
 const CookieConsent = () => {
   const [showBanner, setShowBanner] = useState(false);
