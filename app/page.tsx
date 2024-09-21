@@ -109,6 +109,17 @@ const Home: React.FC = () => {
         </div>
       </main>
 
+      {/* Message de confiance */}
+      <div className="bg-white  py-4 text-center px-6 inline-block mx-auto rounded-lg shadow-lg mb-8">
+        <p className="text-sm font-bold animate-pulse text-blue-700 mb-2">
+          🎉 Plus de 450 digiloaders nous ont déjà fait confiance ! 🎉
+        </p>
+        <p className="text-sm font-bold text-black">Notre site est 100% sécurisé 🔒<br />et ne nécessite aucune information personnelle.</p>
+
+      </div>
+
+      <br />
+
       <br />
 
       <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-purple-100 to-blue-100 p-4">
