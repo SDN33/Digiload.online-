@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
               <strong>Propriétaire :</strong> Still Inov Agency, stillinov.com <br />
               <strong>Contact :</strong> Stillinovagency@gmail.com<br />
               <strong>Responsable :</strong> Stéphane Dei-Negri<br />
-              <strong>Adresse :</strong> Saint-Caprais-de-Bordeaux<br />
+              <strong>Adresse :</strong> 31 route de Madirac Censot,France<br />
               <strong>Hébergement :</strong> Le site est hébergé par Vercel.<br />
               <strong>Utilisation des cookies :</strong> Les cookies sont utilisés pour les statistiques du site.<br />
             </p>
