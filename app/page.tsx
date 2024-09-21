@@ -197,7 +197,7 @@ const Home: React.FC = () => {
         <p className="text-sm font-bold animate-pulse text-blue-700 mb-2">
           🎉 Plus de 450 digiloaders nous ont déjà fait confiance ! 🎉
         </p>
-        <p className="text-sm font-bold text-black">Notre site est 100% sécurisé et ne nécessite aucune information personnelle</p>
+        <p className="text-sm font-bold text-yellow-500">Notre site est 100% sécurisé et ne nécessite aucune information personnelle</p>
 
       </div>
 
