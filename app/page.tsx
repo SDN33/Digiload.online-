@@ -41,23 +41,27 @@ const Home: React.FC = () => {
       case 1:
         setStep1Completed(true);
         setLoading(false); // Désactive le chargement immédiatement pour l'étape 1
+        window.location.href = "https://noohapou.com/4/8083510"; // Redirection après avoir cliqué sur l'étape 1
         break;
       case 2:
         setTimeout(() => {
           setStep2Completed(true);
           setLoading(false); // Désactive le chargement après 4 secondes pour l'étape 2
+          window.location.href = "https://noohapou.com/4/8083510"; // Redirection après avoir cliqué sur l'étape 2
         }, 4000);
         break;
       case 3:
         setTimeout(() => {
           setStep3Completed(true);
           setLoading(false); // Désactive le chargement après 4 secondes pour l'étape 3
+          window.location.href = "https://noohapou.com/4/8083510"; // Redirection après avoir cliqué sur l'étape 3
         }, 4000);
         break;
       default:
         break;
     }
   };
+
 
   return (
     <div className="flex flex-col h-[110vh] bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white overflow-x-hidden">

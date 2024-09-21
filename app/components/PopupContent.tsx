@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { CheckCircle, Circle, Loader } from 'lucide-react';
 
@@ -33,9 +33,7 @@ const TaskStep: React.FC<TaskStepProps> = ({ completed, loading, onClick, stepNu
         Étape {stepNumber}
       </p>
       <a
-        href="https://upodaitie.net/4/8083510"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="#"
         className={`text-sm ${completed ? 'text-green-600' : 'text-blue-500 hover:underline'}`}
         onClick={(e) => {
           e.preventDefault();
