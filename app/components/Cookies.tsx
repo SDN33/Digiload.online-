@@ -26,7 +26,7 @@ const CookieConsent = () => {
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-lg shadow-lg max-w-md w-full p-6">
         <div className="flex items-center mb-4">
-          <div className="bg-blue-600 text-white rounded-full p-2 mr-3">
+          <div className="bg-gradient-to-r from-purple-700 to-blue-500 text-white rounded-full p-2 mr-3">
             <span className="font-bold text-xl">🍪</span>
           </div>
         </div>
