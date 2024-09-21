@@ -26,7 +26,7 @@ const CookieConsent = () => {
       <div className="bg-white rounded-lg shadow-lg max-w-md w-full p-6">
         <div className="flex items-center mb-4">
           <div className="bg-blue-600 text-white rounded-full p-2 mr-3">
-            <span className="font-bold text-xl">WD</span>
+            <span className="font-bold text-xl">DL</span>
           </div>
           <h2 className="text-xl font-bold">DIGILOAD</h2>
         </div>
