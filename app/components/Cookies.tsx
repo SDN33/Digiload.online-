@@ -55,13 +55,13 @@ const CookieConsent = () => {
         <div className="flex justify-center">
           <button
             onClick={() => handleConsent(false)}
-            className="bg-red-600 hover:bg-red-800 text-white font-bold py-2 px-4 rounded"
+            className="bg-red-600 hover:bg-red-800 text-white font-bold py-2 px-4 rounded mr-2"
           >
             Refuser
           </button>
           <button
             onClick={() => handleConsent(true)}
-            className="bg-green-600 hover:bg-green-800 text-white font-bold py-2 px-4 rounded"
+            className="bg-green-600 hover:bg-green-800 text-white font-bold py-2 px-4 rounded ml-2"
           >
             Autoriser
           </button>
