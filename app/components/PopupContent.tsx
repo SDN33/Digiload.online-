@@ -14,11 +14,12 @@ interface TaskStepProps {
 
 const TaskStep: React.FC<TaskStepProps> = ({ completed, loading, onClick, stepNumber, text }) => (
   <div className="flex items-center mb-4">
-    <div
+    <button
       className={`w-12 h-12 rounded-full flex items-center justify-center mr-4 transition-all duration-300 ${
         completed ? 'bg-green-500' : loading ? 'bg-blue-400' : 'bg-gray-300'
       }`}
       onClick={onClick}
+      aria-label={`Étape ${stepNumber}`}
     >
       {completed ? (
         <CheckCircle className="text-white" size={24} />
@@ -27,7 +28,7 @@ const TaskStep: React.FC<TaskStepProps> = ({ completed, loading, onClick, stepNu
       ) : (
         <Circle className="text-gray-600" size={24} />
       )}
-    </div>
+    </button>
     <div className="flex-1">
       <p className={`font-semibold ${completed ? 'text-green-600' : 'text-gray-700'}`}>
         Étape {stepNumber}
@@ -37,12 +38,17 @@ const TaskStep: React.FC<TaskStepProps> = ({ completed, loading, onClick, stepNu
         target="_blank"
         rel="noopener noreferrer"
         className={`text-sm ${completed ? 'text-green-600' : 'text-blue-500 hover:underline'}`}
+        onClick={(e) => {
+          e.preventDefault();
+          onClick();
+        }}
       >
         {text}
       </a>
     </div>
   </div>
 );
+
 interface PopupContentProps {
   showPopup: boolean;
   setShowPopup: (show: boolean) => void;
@@ -70,6 +76,7 @@ const PopupContent: React.FC<PopupContentProps> = ({
         <button
           className="absolute top-2 right-2 text-gray-600 hover:text-gray-900 text-xl"
           onClick={() => setShowPopup(false)}
+          aria-label="Fermer"
         >
           &times;
         </button>
@@ -99,7 +106,7 @@ const PopupContent: React.FC<PopupContentProps> = ({
 
         {allStepsCompleted ? (
           <div className="mt-6 text-center">
-            <Link href="https://www.canva.com/brand/join?token=JkkkZ4CaA0bbSyjqvJ8lZw&referrer=team-invite">
+            <Link href="https://www.canva.com/brand/join?token=JkkkZ4CaA0bbSyjqvJ8lZw&referrer=team-invite" passHref>
               <a
                 className="bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-green-700 transition duration-300 ease-in-out inline-block"
                 target="_blank"
