@@ -197,7 +197,7 @@ const Home: React.FC = () => {
         <p className="text-sm font-bold animate-pulse text-blue-700 mb-2">
           🎉 Plus de 450 digiloaders nous ont déjà fait confiance ! 🎉
         </p>
-        <p className="text-sm font-bold text-blue-700">Notre site est 100% sécurisé 🔒<br />et ne nécessite aucune information personnelle.</p>
+        <p className="text-sm font-bold text-black">Notre site est 100% sécurisé 🔒<br />et ne nécessite aucune information personnelle.</p>
 
       </div>
 
@@ -212,27 +212,27 @@ const Home: React.FC = () => {
 
           <ul className="text-lg md:text-xl text-left mt-8 space-y-4 md:space-y-6 animate-slide-in">
             <li className="flex items-start mb-2">
-              <span className="font-bold text-blue-700  mr-2">✓</span>
+              <span className="font-bold text-black  mr-2">✓</span>
               <span>Des <span className="font-bold">milliers de modèles</span> pour tous vos projets</span>
             </li>
             <li className="flex items-start mb-2">
-              <span className="font-bold text-blue-700  mr-2">✓</span>
+              <span className="font-bold text-black  mr-2">✓</span>
               <span>Des <span className="font-bold">millions d&apos;images</span> et d&apos;illustrations gratuites</span>
             </li>
             <li className="flex items-start mb-2">
-              <span className="font-bold text-blue-700  mr-2">✓</span>
+              <span className="font-bold text-black  mr-2">✓</span>
               <span>Des <span className="font-bold">outils de design</span> professionnels</span>
             </li>
             <li className="flex items-start mb-2">
-              <span className="font-bold text-blue-700  mr-2">✓</span>
+              <span className="font-bold text-black  mr-2">✓</span>
               <span>Des <span className="font-bold">fonctionnalités avancées</span> pour gagner du temps</span>
             </li>
             <li className="flex items-start mb-2">
-              <span className="font-bold text-blue-700  mr-2">✓</span>
+              <span className="font-bold text-black  mr-2">✓</span>
               <span>Des <span className="font-bold">collaborations</span> simplifiées</span>
             </li>
             <li className="flex items-start mb-2">
-              <span className="font-bold text-blue-700 mr-2">✓</span>
+              <span className="font-bold text-black mr-2">✓</span>
               <span><span className="font-bold">Et bien plus encore...</span></span>
             </li>
           </ul>
