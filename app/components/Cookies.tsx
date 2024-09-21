@@ -28,6 +28,7 @@ const CookieConsent = () => {
           <div className="bg-gradient-to-r from-purple-700 to-blue-500 text-white rounded-full p-2 mr-3">
             <span className="font-bold text-xl">🍪</span>
           </div>
+          <h2 className="text-lg text-black font-bold">Consentement aux cookies</h2>
         </div>
         <p className="mb-4 text-sm text-black">
           <strong>DigiLoad</strong> demande votre consentement pour utiliser vos données à caractère personnel dans les cas suivants :
