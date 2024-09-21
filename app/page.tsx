@@ -14,7 +14,6 @@ const Home: React.FC = () => {
   const [step3Completed, setStep3Completed] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [adBlockerDetected, setAdBlockerDetected] = useState(false);
-  const [completedCount, setCompletedCount] = useState(0);
   const [loading, setLoading] = useState(false); // Nouvel état pour le chargement
 
   // Fonction pour détecter le bloqueur de pub
@@ -60,32 +59,6 @@ const Home: React.FC = () => {
     }
   };
 
-  useEffect(() => {
-    if (step1Completed && step2Completed && step3Completed) {
-      setCompletedCount((prevCount) => prevCount + 1);
-    }
-  }, [step1Completed, step2Completed, step3Completed]);
-
-  // Fonction pour gérer le compteur de visiteurs avec localStorage
-  useEffect(() => {
-    const storedCount = localStorage.getItem("visitorCount");
-
-    if (storedCount) {
-      setCompletedCount(parseInt(storedCount, 10)); // Charge le nombre stocké dans localStorage
-    } else {
-      localStorage.setItem("visitorCount", "217"); // Initialisation à 217 si aucune donnée
-      setCompletedCount(217); // Assure que le compteur commence à 217
-    }
-  }, []);
-
-  useEffect(() => {
-    if (step1Completed && step2Completed && step3Completed) {
-      const newCount = completedCount + 1;
-      setCompletedCount(newCount);
-      localStorage.setItem("visitorCount", newCount.toString()); // Mise à jour de localStorage avec le nouveau compte
-    }
-  }, [step1Completed, step2Completed, step3Completed]);
-
   return (
     <div className="flex flex-col h-[110vh] bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white overflow-x-hidden">
       <Header />
@@ -127,7 +100,7 @@ const Home: React.FC = () => {
         </div>
 
         <div className="flex-1 flex flex-col items-center justify-center p-8 md:p-16">
-        <svg
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             width="400"
             height="400"
@@ -143,9 +116,7 @@ const Home: React.FC = () => {
               }
             `}</style>
 
-
             <g>
-              {/* Rotation du cercle */}
               <animateTransform
                 attributeName="transform"
                 type="rotate"
@@ -155,12 +126,10 @@ const Home: React.FC = () => {
                 repeatCount="indefinite"
               />
 
-              {/* Cercle principal */}
               <circle cx="200" cy="200" r="150" fill="none" stroke="currentColor" strokeWidth="4">
                 <animate attributeName="r" values="150;155;150" dur="4s" repeatCount="indefinite" />
               </circle>
 
-              {/* Lignes décoratives */}
               <path d="M100 100 Q150 50 200 100 T300 100" fill="none" stroke="currentColor" strokeWidth="4">
                 <animate
                   attributeName="d"
@@ -183,7 +152,6 @@ const Home: React.FC = () => {
                 />
               </path>
 
-              {/* Lignes centrales */}
               <line x1="200" y1="100" x2="200" y2="300" stroke="currentColor" strokeWidth="4">
                 <animate attributeName="y2" values="300;290;300" dur="4s" repeatCount="indefinite" />
               </line>
@@ -192,12 +160,10 @@ const Home: React.FC = () => {
                 <animate attributeName="x2" values="300;290;300" dur="4s" repeatCount="indefinite" />
               </line>
 
-              {/* Petit cercle central */}
               <circle cx="200" cy="200" r="15" fill="currentColor" className="bounce">
                 <animate attributeName="r" values="15;20;15" dur="2s" repeatCount="indefinite" />
               </circle>
 
-              {/* Flèches */}
               <g>
                 <animateTransform
                   attributeName="transform"
@@ -208,12 +174,10 @@ const Home: React.FC = () => {
                   repeatCount="indefinite"
                 />
 
-                {/* Flèche du haut */}
                 <path d="M200 80 L220 120 L180 120 Z" fill="currentColor" className="bounce">
                   <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite" />
                 </path>
 
-                {/* Flèche du bas */}
                 <path d="M200 320 L220 280 L180 280 Z" fill="currentColor" className="bounce">
                   <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite" />
                 </path>
@@ -225,13 +189,12 @@ const Home: React.FC = () => {
 
       <div className="bg-white text-blue-700 py-4 text-center px-6 inline-block mx-auto rounded-lg shadow-lg mb-8">
         <p className="text-sm font-bold animate-pulse">
-          🎉 {completedCount + 217} digiloaders nous ont déjà fait confiance ! 🎉
+          🎉 Plus de 450 digiloaders nous ont déjà fait confiance ! 🎉
         </p>
       </div>
 
       {showPopup && (
-         <PopupContent
-          showPopup={showPopup}
+        <PopupContent
           setShowPopup={setShowPopup}
           step1Completed={step1Completed}
           step2Completed={step2Completed}
@@ -241,12 +204,10 @@ const Home: React.FC = () => {
         />
       )}
 
+
       <Footer />
       <Cookies />
       <Analytics />
-
-
-
     </div>
   );
 };

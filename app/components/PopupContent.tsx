@@ -1,5 +1,4 @@
 'use client';
-
 import React from 'react';
 import Link from 'next/link';
 import { CheckCircle, Circle, Loader } from 'lucide-react';
@@ -50,7 +49,6 @@ const TaskStep: React.FC<TaskStepProps> = ({ completed, loading, onClick, stepNu
 );
 
 interface PopupContentProps {
-  showPopup: boolean;
   setShowPopup: (show: boolean) => void;
   step1Completed: boolean;
   step2Completed: boolean;
@@ -60,7 +58,6 @@ interface PopupContentProps {
 }
 
 const PopupContent: React.FC<PopupContentProps> = ({
-  showPopup,
   setShowPopup,
   step1Completed,
   step2Completed,
@@ -106,7 +103,7 @@ const PopupContent: React.FC<PopupContentProps> = ({
 
         {allStepsCompleted ? (
           <div className="mt-6 text-center">
-            <Link href="https://www.canva.com/brand/join?token=JkkkZ4CaA0bbSyjqvJ8lZw&referrer=team-invite" passHref>
+            <Link href="https://www.canva.com/brand/join?token=JkkkZ4CaA0bbSyjqvJ8lZw&referrer=team-invite">
               <a
                 className="bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-green-700 transition duration-300 ease-in-out inline-block"
                 target="_blank"
