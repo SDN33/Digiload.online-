@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Cookies from "./components/Cookies";
 import PopupContent from "./components/PopupContent";
+import { motion } from 'framer-motion';
 import { Analytics } from "@vercel/analytics/react";
 
 const Home: React.FC = () => {
@@ -61,6 +62,35 @@ const Home: React.FC = () => {
         break;
     }
   };
+
+  const CanvaProAdvantages: React.FC = () => {
+    const listItems: string[] = [
+      "Des milliers de modèles pour tous vos projets",
+      "Des millions d'images et d'illustrations gratuites",
+      "Des outils de design professionnels",
+      "Des fonctionnalités avancées pour gagner du temps",
+      "Des collaborations simplifiées",
+      "Et bien plus encore..."
+    ];
+
+    return (
+      <ul className="space-y-4">
+        {listItems.map((item: string, index: number) => (
+          <motion.li
+            key={index}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
+            className="flex items-center text-lg md:text-xl"
+          >
+            <span className="text-yellow-500 mr-4">✨</span>
+            <span className="text-gray-800">{item}</span>
+          </motion.li>
+        ))}
+      </ul>
+    );
+  };
+
 
 
 
@@ -203,40 +233,60 @@ const Home: React.FC = () => {
 
       <br />
 
-      <div className="flex flex-col items-center justify-center p-6 md:p-16 bg-white">
-
-        <div className="flex flex-col items-center justify-center p-6 md:p-16 bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat overflow-x-hidden animate-gradient-x border border-white rounded-lg shadow-lg">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-center animate-fade-in">
-            Découvrez les avantages de <span className="text-blue-700 ">Canva Pro</span>
-          </h2>
-
-          <ul className="text-lg md:text-xl text-left mt-8 space-y-4 md:space-y-6 animate-slide-in">
-            <li className="flex items-start mb-2">
-              <span className="font-bold text-yellow-500  mr-2">✨</span>
-              <span className="text-white">Des <span className="font-bold text-white">milliers de modèles pour tous vos projets</span></span>
-            </li>
-            <li className="flex items-start mb-2">
-              <span className="font-bold text-yellow-500  mr-2">✨</span>
-              <span className="text-white">Des <span className="font-bold text-white">millions d&apos;images et d&apos;illustrations gratuites</span></span>
-            </li>
-            <li className="flex items-start mb-2">
-              <span className="font-bold text-yellow-500  mr-2">✨</span>
-              <span className="text-white">Des <span className="font-bold text-white">outils de design professionnels</span></span>
-            </li>
-            <li className="flex items-start mb-2">
-              <span className="font-bold text-yellow-500  mr-2">✨</span>
-              <span className="text-white">Des <span className="font-bold text-white">fonctionnalités avancées pour gagner du temps</span></span>
-            </li>
-            <li className="flex items-start mb-2">
-              <span className="font-bold text-yellow-500  mr-2">✨</span>
-              <span className="text-white">Des <span className="font-bold text-white">collaborations simplifiées</span></span>
-            </li>
-            <li className="flex items-start mb-2">
-              <span className="font-bold text-yellow-500 mr-2">✨</span>
-              <span><span className="font-bold text-white">Et bien plus encore...</span></span>
-            </li>
-          </ul>
-        </div>
+      <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-purple-100 to-blue-100 p-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden"
+        >
+          <div className="bg-gradient-to-r from-purple-600 to-blue-500 p-8 text-white">
+            <motion.h2
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="text-3xl md:text-4xl font-extrabold text-center mb-6"
+            >
+              Découvrez les avantages de <span className="text-yellow-300">Canva Pro</span>
+            </motion.h2>
+          </div>
+          <div className="p-8">
+            <ul className="space-y-4">
+              {[
+                "Des milliers de modèles pour tous vos projets",
+                "Des millions d'images et d'illustrations gratuites",
+                "Des outils de design professionnels",
+                "Des fonctionnalités avancées pour gagner du temps",
+                "Des collaborations simplifiées",
+                "Et bien plus encore..."
+              ].map((item: string, index: number) => (
+                <motion.li
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
+                  className="flex items-center text-lg md:text-xl"
+                >
+                  <span className="text-yellow-500 mr-4">✨</span>
+                  <span className="text-gray-800">{item}</span>
+                </motion.li>
+              ))}
+            </ul>
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 0.6 }}
+            className="bg-gray-100 p-6 text-center"
+          >
+            <a
+              href="#"
+              className="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300"
+            >
+              Essayer Canva Pro gratuitement
+            </a>
+          </motion.div>
+        </motion.div>
       </div>
 
 
