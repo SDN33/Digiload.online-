@@ -120,7 +120,6 @@ const Home: React.FC = () => {
 
       <br />
 
-      <div className="border-t-8 border-[#00c4cc] text-center"></div>
       <div className="border-t-8 border-white pb-4 text-center"></div>
 
 
