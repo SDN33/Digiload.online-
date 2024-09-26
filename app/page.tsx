@@ -121,7 +121,7 @@ const Home: React.FC = () => {
       <br />
 
       <div className="border-t-8 border-[#00c4cc] text-center"></div>
-      <div className="border-t-8 border-black pb-4 text-center"></div>
+      <div className="border-t-8 border-white pb-4 text-center"></div>
 
 
       <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white overflow-x-hidden animate-gradient-x">
