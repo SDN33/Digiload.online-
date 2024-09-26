@@ -129,7 +129,7 @@ const Home: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-full max-w-xl bg-white rounded-2xl shadow-2xl overflow-hidden sm:w-3/4 md:w-2/3 lg:w-1/2"
+          className="w-full max-w-xl bg-white rounded-2xl shadow-2xl overflow-hidden mx-auto sm:w-11/12 md:w-3/4 lg:w-1/2"
         >
           <div className="bg-gradient-to-r from-purple-600 to-blue-500 p-8 text-white">
             <motion.h2
@@ -179,6 +179,7 @@ const Home: React.FC = () => {
           </motion.div>
         </motion.div>
       </div>
+
       <br />
       <br />
 
