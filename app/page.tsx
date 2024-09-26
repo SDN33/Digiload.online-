@@ -119,9 +119,9 @@ const Home: React.FC = () => {
 
       <br />
 
-      <div className="absolute top-0 left-0 w-full h-[1px] bg-[#7d2ae7]"></div>
-      <div className="absolute top-1 left-0 w-full h-[1px] bg-[#6420ff]"></div>
-      <div className="absolute top-2 left-0 w-full h-[1px] bg-[#00c4cc]"></div>
+      <div className="w-full h-[1px] bg-[#7d2ae7]"></div>
+      <div className="w-full h-[1px] bg-[#6420ff]"></div>
+      <div className="w-full h-[1px] bg-[#00c4cc]"></div>
 
 
       <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white overflow-x-hidden animate-gradient-x">
