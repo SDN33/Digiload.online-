@@ -20,7 +20,7 @@ const ShareComponent: React.FC = () => {
         onClick={toggleShare}
         className="bg-[#00c4cc] hover:bg-[#007377] text-white rounded-full p-3 shadow-lg"
       >
-        <Share2 sizewhite
+        <Share2 size={24} />
       </button>
       {isOpen && (
         <div className="mt-2 space-y-2">
