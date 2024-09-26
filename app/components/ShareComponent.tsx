@@ -28,7 +28,7 @@ const ShareComponent: React.FC = () => {
             href="https://twitter.com/intent/tweet?url=https://digiload.online"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 text-white hover:text-blue-400"
+            className="flex items-center space-x-2 text-white hover:text-[#007377]"
           >
             <SiX size={20} />
             <span>X</span>
@@ -37,7 +37,7 @@ const ShareComponent: React.FC = () => {
             href="https://www.facebook.com/sharer/sharer.php?u=https://digiload.online"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 text-white hover:text-blue-600"
+            className="flex items-center space-x-2 text-white hover:text-[#007377]"
           >
             <SiFacebook size={20} />
             <span>Facebook</span>
@@ -46,14 +46,14 @@ const ShareComponent: React.FC = () => {
             href="https://www.linkedin.com/shareArticle?mini=true&url=https://digiload.online"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 text-white hover:text-blue-700"
+            className="flex items-center space-x-2 text-white hover:text-[#007377]"
           >
             <Linkedin size={20} />
             <span>LinkedIn</span>
           </a>
           <button
             onClick={copyLink}
-            className="flex items-center space-x-2 text-white hover:text-green-500"
+            className="flex items-center space-x-2 text-white hover:text-purple-300"
           >
             <Link size={20} />
             <span>Copier le lien</span>
