@@ -93,7 +93,7 @@ const Home: React.FC = () => {
             {/* Button content */}
             <button
               className="
-                relative px-7 py-4 from-green-400 via-blue-500 to-purple-600 blur group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt
+                relative px-7 py-4 from-green-400 via-blue-500 to-purple-600 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt
                 bg-black text-white font-bold text-lg
                 rounded-lg
                 leading-none
