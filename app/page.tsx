@@ -119,7 +119,7 @@ const Home: React.FC = () => {
 
       <br />
 
-      <div className="border-t-2 border-[#7d2ae7] text-center"></div>
+      <div className="border-t-2 border-black text-center"></div>
       <div className="border-t-4 border-[#6420ff] text-center"></div>
       <div className="border-t-8 border-[#00c4cc] pb-4 text-center"></div>
 
