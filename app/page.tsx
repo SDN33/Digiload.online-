@@ -98,7 +98,6 @@ const Home: React.FC = () => {
                 rounded-lg
                 leading-none
                 hover:bg-opacity-80
-                focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50
                 group
               "
               onClick={() => setShowPopup(true)}
