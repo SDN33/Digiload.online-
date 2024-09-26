@@ -119,9 +119,9 @@ const Home: React.FC = () => {
 
       <br />
 
-      <div className="border-t border-[#7d2ae7] pt-4 text-center"></div>
-      <div className="border-t border-[#6420ff]  text-center"></div>
-      <div className="border-t border-[#00c4cc] pb-4 text-center"></div>
+      <div className="border-t-2 border-[#7d2ae7] text-center"></div>
+      <div className="border-t-4 border-[#6420ff] text-center"></div>
+      <div className="border-t-8 border-[#00c4cc] pb-4 text-center"></div>
 
 
       <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white overflow-x-hidden animate-gradient-x">
