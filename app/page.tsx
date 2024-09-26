@@ -9,6 +9,7 @@ import PopupContent from "./components/PopupContent";
 import Svg from "./components/Svg";
 import { motion } from 'framer-motion';
 import { Analytics } from "@vercel/analytics/react";
+import ShareComponent from "./components/ShareComponent";
 
 const Home: React.FC = () => {
   const [step1Completed, setStep1Completed] = useState(false);
@@ -206,7 +207,7 @@ const Home: React.FC = () => {
       )}
 
       <Cookies />
-
+      <ShareComponent />
       <Analytics />
     </div>
   );
