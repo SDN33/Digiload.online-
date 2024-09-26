@@ -119,8 +119,6 @@ const Home: React.FC = () => {
 
       <br />
 
-      <div className="border-t-8 border-black text-center"></div>
-      <div className="border-t-8 border-[#6420ff] text-center"></div>
       <div className="border-t-8 border-[#00c4cc] text-center"></div>
       <div className="border-t-8 border-black pb-4 text-center"></div>
 
