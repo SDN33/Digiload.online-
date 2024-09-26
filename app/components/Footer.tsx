@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
             href="https://STILLINOV.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-yellow-500"
+            className="text-[#00c4cc]"
           >
              Still-inov Agency
           </a>
