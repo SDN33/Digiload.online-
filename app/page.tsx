@@ -287,7 +287,7 @@ const Home: React.FC = () => {
         </div>
         <div className="p-4 text-gray-800">
           <p className="text-sm md:text-base mb-4">
-            Chez <strong>DigiLoad.online</strong>, nous croyons en l'égalité d'accès à des outils de qualité, tels que Canva Pro, pour tous. Nous mettons tout en œuvre pour rendre cela possible à travers notre plateforme.
+            Chez <strong>DigiLoad.online</strong>, nous croyons en l&apos;égalité d&apos;accès à des outils de qualité, tels que Canva Pro, pour tous. Nous mettons tout en œuvre pour rendre cela possible à travers notre plateforme.
           </p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
