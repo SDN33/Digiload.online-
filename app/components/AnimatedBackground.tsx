@@ -3,7 +3,7 @@ import React from 'react';
 
 const AnimatedBackground: React.FC = () => {
   return (
-    <div className="fixed inset-0 w-full h-full" style={{ zIndex: -1 }}>
+    <div className="fixed inset-0 w-full h-full" style={{ zIndex: 0 }}>
       <svg
         className="w-full h-full"
         xmlns="http://www.w3.org/2000/svg"
