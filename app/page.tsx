@@ -7,7 +7,6 @@ import Footer from "./components/Footer";
 import Cookies from "./components/Cookies";
 import PopupContent from "./components/PopupContent";
 import Svg from "./components/Svg";
-import AnimatedBackground from "./components/AnimatedBackground";
 import { motion } from 'framer-motion';
 import { Analytics } from "@vercel/analytics/react";
 import ShareComponent from "./components/ShareComponent";
@@ -69,7 +68,6 @@ const Home: React.FC = () => {
   return (
     <div className="flex flex-col h-screen bg-gradient-to-r from-purple-700 to-blue-500 bg-cover bg-center bg-no-repeat text-white overflow-x-hidden overflow-y-auto">
       <Header />
-      <AnimatedBackground />
 
       {/* Avertissement adblock */}
       {adBlockerDetected && (
