@@ -90,11 +90,10 @@ const Home: React.FC = () => {
                 La communauté francophone de Canva
               </h1>
             </div>
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt">
               {/* Button content */}
               <button
                 className="
-                  relative px-7 py-4
+                  relative px-7 py-4 from-green-400 via-blue-500 to-purple-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt
                   bg-black text-white font-bold text-lg
                   rounded-lg
                   leading-none
@@ -103,11 +102,10 @@ const Home: React.FC = () => {
                   focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50
                   group
                 "
-                onClick={() => setShowPopup(true)}
+                onClick={}
               >
                 Start Coding
               </button>
-            </div>
             <h2 className="text-sm md:text-lg font-light leading-tight mt-4">
               ✨ Accédez à Canva Pro <strong> Gratuitement </strong>✨
               <br />
