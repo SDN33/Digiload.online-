@@ -90,8 +90,17 @@ const Home: React.FC = () => {
                 La communauté francophone de Canva
               </h1>
             </div>
+            {/* Button content */}
             <button
-              className="btn bg-white text-blue-700 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-400 transition duration-300 ease-in-out"
+              className="
+                relative px-7 py-4 from-green-400 via-blue-500 to-purple-600 blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt
+                bg-black text-white font-bold text-lg
+                rounded-lg
+                leading-none
+                hover:bg-opacity-80
+                focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50
+                group
+              "
               onClick={() => setShowPopup(true)}
             >
               Canva Pro Gratuit
