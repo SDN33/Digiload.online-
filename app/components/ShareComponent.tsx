@@ -23,7 +23,7 @@ const ShareComponent: React.FC = () => {
         <Share2 size={24} />
       </button>
       {isOpen && (
-        <div className="mt-2 space-y-2 bg-black rounded-lg">
+        <div className="mt-2 space-y-2 bg-black rounded-lg p-2 shadow-lg">
           <a
             href="https://twitter.com/intent/tweet?url=https://digiload.online"
             target="_blank"
