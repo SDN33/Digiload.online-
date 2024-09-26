@@ -138,13 +138,11 @@ const Home: React.FC = () => {
               Découvrez les avantages de <span className="text-yellow-300">Canva Pro</span>
             </motion.h2>
           </div>
-
-          {/* First Card: Canva Pro Advantages */}
           <div className="p-8">
             <ul className="space-y-4">
               {[
                 "Des milliers de modèles pour tous vos projets",
-                "Des millions d&apos;images et d&apos;illustrations gratuites",
+                "Des millions d'images et d'illustrations gratuites",
                 "Des outils de design professionnels",
                 "Des fonctionnalités avancées pour gagner du temps",
                 "Des collaborations simplifiées",
@@ -163,23 +161,6 @@ const Home: React.FC = () => {
               ))}
             </ul>
           </div>
-
-          {/* Second Card: Our Values */}
-          <div className="p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Nos Valeurs</h2>
-            <p className="text-gray-700">
-              Chez Digiload, nous facilitons l&apos;accès à des outils comme Canva Pro pour que tout le monde puisse profiter de ses avantages, sans frais cachés ni engagements.
-            </p>
-          </div>
-
-          {/* Third Card: Email Reminder */}
-          <div className="p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Rappel par Email</h2>
-            <p className="text-gray-700">
-              Nous envoyons des emails de rappel lorsque la date du groupe arrive à expiration, afin de vous inviter à revenir sur notre site et rejoindre un autre groupe actif.
-            </p>
-          </div>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -195,116 +176,6 @@ const Home: React.FC = () => {
           </motion.div>
         </motion.div>
       </div>
-
-      {/* Deuxième carte: Email de rappel */}
-      <div className="bg-white rounded-2xl shadow-2xl overflow-hidden p-8">
-        <div className="bg-gradient-to-r from-green-500 to-teal-500 p-8 text-white rounded-t-2xl">
-          <motion.h2
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-2xl font-extrabold text-center mb-6"
-          >
-            Ne manquez pas votre groupe !
-          </motion.h2>
-        </div>
-        <div className="p-4 text-gray-800">
-          <p className="text-sm md:text-base mb-4">
-            Nous envoyons un email de rappel dès que la date de votre groupe arrive à expiration. Revenez sur notre site pour vous relancer sur un autre groupe actif !
-          </p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-            className="bg-gray-100 p-6 text-center"
-          >
-            <button
-              className="btn bg-green-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-400 transition duration-300 ease-in-out"
-              onClick={() => setShowPopup(true)}
-            >
-              Activer les rappels
-            </button>
-          </motion.div>
-        </div>
-    </div>
-      {/* Troisième carte: Avantages DigiLoad.online */}
-      <div className="bg-white rounded-2xl shadow-2xl overflow-hidden p-8">
-        <div className="bg-gradient-to-r from-indigo-500 to-purple-500 p-8 text-white rounded-t-2xl">
-          <motion.h2
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-2xl font-extrabold text-center mb-6"
-          >
-            Les avantages de <span className="text-yellow-300">DigiLoad.online</span>
-          </motion.h2>
-        </div>
-        <ul className="space-y-4 p-4">
-          {[
-            "Une plateforme facile d'accès pour essayer Canva Pro",
-            "Un support dédié pour tous vos besoins",
-            "Des ressources pour optimiser vos créations",
-            "Un suivi personnalisé de vos projets",
-            "Des conseils pour booster votre créativité"
-          ].map((item: string, index: number) => (
-            <motion.li
-              key={index}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
-              className="flex items-center text-sm md:text-base"
-            >
-              <span className="text-yellow-500 mr-4">🚀</span>
-              <span className="text-gray-800">{item}</span>
-            </motion.li>
-          ))}
-        </ul>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.6 }}
-          className="bg-gray-100 p-6 text-center"
-        >
-          <button
-            className="btn bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-400 transition duration-300 ease-in-out"
-            onClick={() => setShowPopup(true)}
-          >
-            Explorez DigiLoad.online
-          </button>
-        </motion.div>
-      </div>
-      {/* Quatrième carte: Nos Valeurs */}
-      <div className="bg-white rounded-2xl shadow-2xl overflow-hidden p-8">
-        <div className="bg-gradient-to-r from-red-500 to-orange-500 p-8 text-white rounded-t-2xl">
-          <motion.h2
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-2xl font-extrabold text-center mb-6"
-          >
-            Nos Valeurs
-          </motion.h2>
-        </div>
-        <div className="p-4 text-gray-800">
-          <p className="text-sm md:text-base mb-4">
-            Chez <strong>DigiLoad.online</strong>, nous croyons en l&apos;égalité d&apos;accès à des outils de qualité, tels que Canva Pro, pour tous. Nous mettons tout en œuvre pour rendre cela possible à travers notre plateforme.
-          </p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-            className="bg-gray-100 p-6 text-center"
-          >
-            <button
-              className="btn bg-red-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-400 transition duration-300 ease-in-out"
-              onClick={() => setShowPopup(true)}
-            >
-              En savoir plus
-            </button>
-          </motion.div>
-        </div>
-      </div>
-
       <br />
       <br />
 
