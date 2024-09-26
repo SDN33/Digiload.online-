@@ -91,7 +91,7 @@ const Home: React.FC = () => {
               </h1>
             </div>
             <button
-              className="btn bg-white text-blue-700 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-400 transition duration-300 ease-in-out"
+              className="btn bg-black text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-400 transition duration-300 ease-in-out"
               onClick={() => setShowPopup(true)}
             >
               Canva Pro Gratuit
