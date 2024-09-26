@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { Share2, Linkedin, Link } from "lucide-react";
-import { SiGitter, SiFacebook } from "react-icons/si";
+import { SiX, SiFacebook } from "react-icons/si";
 
 const ShareComponent: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,9 +18,9 @@ const ShareComponent: React.FC = () => {
     <div className="fixed bottom-4 left-4 z-50">
       <button
         onClick={toggleShare}
-        className="bg-blue-500 hover:bg-blue-600 text-white rounded-full p-3 shadow-lg"
+        className="bg-[#00c4cc] hover:bg-[#007377] text-white rounded-full p-3 shadow-lg"
       >
-        <Share2 size={24} />
+        <Share2 sizewhite
       </button>
       {isOpen && (
         <div className="mt-2 space-y-2">
@@ -28,16 +28,16 @@ const ShareComponent: React.FC = () => {
             href="https://twitter.com/intent/tweet?url=https://digiload.online"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 text-gray-700 hover:text-blue-400"
+            className="flex items-center space-x-2 text-white hover:text-blue-400"
           >
-            <SiGitter size={20} />
-            <span>Gitter</span>
+            <SiX size={20} />
+            <span>X</span>
           </a>
           <a
             href="https://www.facebook.com/sharer/sharer.php?u=https://digiload.online"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 text-gray-700 hover:text-blue-600"
+            className="flex items-center space-x-2 text-white hover:text-blue-600"
           >
             <SiFacebook size={20} />
             <span>Facebook</span>
@@ -46,14 +46,14 @@ const ShareComponent: React.FC = () => {
             href="https://www.linkedin.com/shareArticle?mini=true&url=https://digiload.online"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 text-gray-700 hover:text-blue-700"
+            className="flex items-center space-x-2 text-white hover:text-blue-700"
           >
             <Linkedin size={20} />
             <span>LinkedIn</span>
           </a>
           <button
             onClick={copyLink}
-            className="flex items-center space-x-2 text-gray-700 hover:text-green-500"
+            className="flex items-center space-x-2 text-white hover:text-green-500"
           >
             <Link size={20} />
             <span>Copier le lien</span>
