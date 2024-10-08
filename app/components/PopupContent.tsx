@@ -103,7 +103,7 @@ const PopupContent: React.FC<PopupContentProps> = ({
 
         {allStepsCompleted ? (
           <div className="mt-6 text-center">
-            <Link href="https://www.canva.com/brand/join?token=JkkkZ4CaA0bbSyjqvJ8lZw&referrer=team-invite">
+            <Link href="https://www.canva.com/brand/join?token=F1hRJP7bAVAsBn0n3cPGsQ&referrer=team-invite">
               <a
                 className="bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-green-700 transition duration-300 ease-in-out inline-block"
                 target="_blank"
