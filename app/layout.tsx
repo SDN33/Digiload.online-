@@ -59,6 +59,7 @@ export default function RootLayout({
         <meta name="twitter:title" content={metadata.twitter.title} />
         <meta name="twitter:description" content={metadata.twitter.description} />
         <meta name="twitter:image" content={metadata.twitter.image} />
+        <meta name="monetag" content="ba93f8dfe005e9da0e77ab61df58694c" />
         <link rel="icon" href="https://digiload.online/app/favicon.ico" type="image/x-icon" />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5355085288090957"
           crossOrigin="anonymous"></script>
