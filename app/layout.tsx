@@ -63,6 +63,7 @@ export default function RootLayout({
         <link rel="icon" href="https://digiload.online/app/favicon.ico" type="image/x-icon" />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5355085288090957"
           crossOrigin="anonymous"></script>
+        <script src="https://alwingulla.com/88/tag.min.js" data-zone="113276" async data-cfasync="false"></script>
         <Script
           id="brevo-conversations"
           strategy="afterInteractive"
