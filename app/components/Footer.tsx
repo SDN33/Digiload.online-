@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 const Footer: React.FC = () => {
   const [showLegalPopup, setShowLegalPopup] = useState(false);
@@ -15,12 +16,19 @@ const Footer: React.FC = () => {
     <>
       <footer className="bg-black text-white p-4 text-center relative">
 
-      <button
+        <button
           onClick={handleLegalClick}
           className="mt-1 mb-1 font-bold "
         >
           Mentions légales
         </button>
+        <Link
+          href="https://digitube.buzz"
+          className="mt-1 mb-1 font-bold "
+        >
+          Acheter des vues Youtube
+        </Link>
+
         <p>
           DigiLoad - &copy; {new Date().getFullYear()} Concept by{' '}
           <a

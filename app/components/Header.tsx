@@ -50,6 +50,11 @@ const Header: React.FC = () => {
               </Link>
             </li>
             <li>
+              <Link href="https://digitube.buzz">
+                <a onClick={() => setIsMenuOpen(false)} className="hover:text-gray-300">Acheter des vues Youtube</a>
+              </Link>
+            </li>
+            <li>
               <Link href="/contact">
                 <a onClick={() => setIsMenuOpen(false)} className="hover:text-gray-300">Contact 📨</a>
               </Link>
