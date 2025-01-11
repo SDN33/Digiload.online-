@@ -25,6 +25,8 @@ const Footer: React.FC = () => {
         <Link
           href="https://digitube.buzz"
           className="mt-1 mb-1 font-bold "
+          rel='noopener noreferrer'
+          target='_blank'
         >
           Acheter des vues Youtube
         </Link>
