@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
         </button>
         <Link
           href="https://digitube.buzz"
-          className="mt-1 mb-1 font-bold "
+          className="ml-4 mt-1 mb-1 font-bold "
           rel='noopener noreferrer'
           target='_blank'
         >
